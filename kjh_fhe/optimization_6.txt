@@ -1,0 +1,146 @@
+time obj_dir/Vfhe_alu_top 
+ntt_sequence start
+load set start
+load root start
+load data start
+load start
+bit_rev start
+bit rev queue flush start
+bit rev flush finish
+ntt start
+host_stateport.state0: 4000
+host_stateport.state0: 4000
+host_stateport.state0: 4000
+host_stateport.state0: 4000
+host_stateport.state0: 4000
+bit rev queue flush start
+bit rev flush finish
+store start
+store start
+check ntt result start
+check ntt result finish
+ntt_sequence finish
+
+intt_sequence start
+load start
+1
+host_stateport.state0: 400
+2
+host_stateport.state0: 400
+host_stateport.state0: 400
+host_stateport.state0: 1000
+3
+host_stateport.state0: 1000
+4
+5
+store start
+check intt result start
+intt INTT_result mismatch 0 0 140480156781728
+intt INTT_result mismatch 1 0 140480156781728
+check intt result finish
+intt_sequence finish
+
+test 0 start
+load start
+store start
+check vector test 0 result start
+check vector test 0 result finish
+test 0 finish
+
+test 1 start
+load start
+load start
+store start
+check vector test 1 result start
+check vector test 1 result finish
+test 1 finish
+
+test 2 start
+load start
+store start
+check vector test 2 result start
+check vector test 2 result finish
+test 2 finish
+
+test 3 start
+load start
+load start
+store start
+check vector test 3 result start
+check vector test 3 result finish
+test 3 finish
+
+test 4 start
+load start
+store start
+check vector test 4 result start
+check vector test 4 result finish
+test 4 finish
+
+test 5 start
+load start
+store start
+check vector test 5 result start
+check vector test 5 result finish
+test 5 finish
+
+test 6 start
+load start
+store start
+check vector test 6 result start
+check vector test 6 result finish
+test 6 finish
+
+test 7 start
+load start
+load start
+store start
+check vector test 7 result start
+check vector test 7 result finish
+test 7 finish
+
+test 8 start
+load start
+load start
+load start
+load start
+store start
+store start
+check vector test 8 result start
+check vector test 8 result finish
+test 8 finish
+
+test 9 start
+laod
+load start
+decomp
+store
+store start
+check vector test 9 result start
+check vector test 9 result finish
+test 9 finish
+
+test 10 start
+laod
+load start
+auto
+store
+store start
+check vector test 10 result start
+check vector test 10 result finish
+test 10 finish
+
+test 11 start
+laod
+load start
+set
+store
+store start
+check vector test 11 result start
+check vector test 11 result finish
+test 11 finish
+
+set  stop cycle at 2165142 current cycle 2165042
+finish
+joined
+Makefile:93: recipe for target 'run' failed

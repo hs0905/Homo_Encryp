@@ -1,0 +1,327 @@
+
+*** Running vivado
+    with args -log axi_benes_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_benes_wrapper.tcl
+
+
+****** Vivado v2020.2.2 (64-bit)
+  **** SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+  **** IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source axi_benes_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hs/Desktop/benes_axi/new_benes_with_32'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top axi_benes_wrapper -part xcu280-fsvh2892-2L-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17652
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3196.316 ; gain = 174.715 ; free physical = 13398 ; free virtual = 45704
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'axi_benes_wrapper' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/hdl/axi_benes_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'axi_benes' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:13]
+INFO: [Synth 8-6157] synthesizing module 'axi_benes_Axi_lite_v1_0_0_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_Axi_lite_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes_Axi_lite_v1_0_0_0' (1#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_Axi_lite_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_benes_util_ds_buf_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_util_ds_buf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes_util_ds_buf_0' (2#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_util_ds_buf_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_benes_xdma_0_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_xdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes_xdma_0_0' (3#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_xdma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'user_lnk_up' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 'usr_irq_ack' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 'msi_enable' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 'msi_vector_width' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_data' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_write_done' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_awready' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_wready' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_bvalid' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_bresp' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_arready' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_rdata' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_rresp' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7071] port 's_axil_rvalid' of module 'axi_benes_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+WARNING: [Synth 8-7023] instance 'xdma_0' of module 'axi_benes_xdma_0_0' has 75 connections declared, but only 61 given [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:129]
+INFO: [Synth 8-6157] synthesizing module 'axi_benes_xdma_0_axi_periph_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:254]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_NNXE74' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:554]
+INFO: [Synth 8-6157] synthesizing module 'axi_benes_auto_ds_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes_auto_ds_0' (4#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_benes_auto_pc_0' [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes_auto_pc_0' (5#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/.Xil/Vivado-17295-baldur/realtime/axi_benes_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_NNXE74' (6#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:554]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes_xdma_0_axi_periph_0' (7#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:254]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes' (8#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/synth/axi_benes.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'axi_benes_wrapper' (9#1) [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/hdl/axi_benes_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3243.223 ; gain = 221.621 ; free physical = 13407 ; free virtual = 45715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3262.035 ; gain = 240.434 ; free physical = 14094 ; free virtual = 46401
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3262.035 ; gain = 240.434 ; free physical = 14094 ; free virtual = 46401
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3262.035 ; gain = 0.000 ; free physical = 14087 ; free virtual = 46394
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_Axi_lite_v1_0_0_0/axi_benes_Axi_lite_v1_0_0_0/axi_benes_Axi_lite_v1_0_0_0_in_context.xdc] for cell 'axi_benes_i/Axi_lite_v1_0_0'
+Finished Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_Axi_lite_v1_0_0_0/axi_benes_Axi_lite_v1_0_0_0/axi_benes_Axi_lite_v1_0_0_0_in_context.xdc] for cell 'axi_benes_i/Axi_lite_v1_0_0'
+Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc] for cell 'axi_benes_i/xdma_0'
+Finished Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc] for cell 'axi_benes_i/xdma_0'
+Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0_in_context.xdc] for cell 'axi_benes_i/util_ds_buf'
+Finished Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0_in_context.xdc] for cell 'axi_benes_i/util_ds_buf'
+Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_auto_ds_0/axi_benes_auto_ds_0/axi_benes_auto_ds_0_in_context.xdc] for cell 'axi_benes_i/xdma_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_auto_ds_0/axi_benes_auto_ds_0/axi_benes_auto_ds_0_in_context.xdc] for cell 'axi_benes_i/xdma_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_auto_pc_0/axi_benes_auto_pc_0/axi_benes_auto_pc_0_in_context.xdc] for cell 'axi_benes_i/xdma_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_auto_pc_0/axi_benes_auto_pc_0/axi_benes_auto_pc_0_in_context.xdc] for cell 'axi_benes_i/xdma_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3376.598 ; gain = 0.000 ; free physical = 14029 ; free virtual = 46336
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3376.598 ; gain = 0.000 ; free physical = 14029 ; free virtual = 46336
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3376.598 ; gain = 354.996 ; free physical = 14125 ; free virtual = 46433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3376.598 ; gain = 354.996 ; free physical = 14128 ; free virtual = 46436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxn[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxn[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_rxp[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_rxp[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txn[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txn[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[0]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[1]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[2]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[3]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[4]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[5]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[6]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x8_txp[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x8_txp[7]. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_xdma_0_0/axi_benes_xdma_0_0/axi_benes_xdma_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_refclk_clk_n. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_refclk_clk_n. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_refclk_clk_p. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_refclk_clk_p. (constraint file  /home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.gen/sources_1/bd/axi_benes/ip/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0/axi_benes_util_ds_buf_0_in_context.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_benes_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_benes_i/Axi_lite_v1_0_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_benes_i/xdma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_benes_i/util_ds_buf. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_benes_i/xdma_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_benes_i/xdma_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for axi_benes_i/xdma_0_axi_periph. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3376.598 ; gain = 354.996 ; free physical = 14128 ; free virtual = 46435
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3376.598 ; gain = 354.996 ; free physical = 14131 ; free virtual = 46440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3376.598 ; gain = 354.996 ; free physical = 14119 ; free virtual = 46431
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 3732.098 ; gain = 710.496 ; free physical = 13605 ; free virtual = 45916
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 3732.098 ; gain = 710.496 ; free physical = 13604 ; free virtual = 45916
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 3752.137 ; gain = 730.535 ; free physical = 13602 ; free virtual = 45914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.074 ; gain = 736.473 ; free physical = 13597 ; free virtual = 45909
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.074 ; gain = 736.473 ; free physical = 13597 ; free virtual = 45909
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.074 ; gain = 736.473 ; free physical = 13595 ; free virtual = 45906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.074 ; gain = 736.473 ; free physical = 13594 ; free virtual = 45906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.074 ; gain = 736.473 ; free physical = 13594 ; free virtual = 45905
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.074 ; gain = 736.473 ; free physical = 13594 ; free virtual = 45905
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------+----------+
+|      |BlackBox name               |Instances |
++------+----------------------------+----------+
+|1     |axi_benes_auto_ds_0         |         1|
+|2     |axi_benes_auto_pc_0         |         1|
+|3     |axi_benes_Axi_lite_v1_0_0_0 |         1|
+|4     |axi_benes_util_ds_buf_0     |         1|
+|5     |axi_benes_xdma_0_0          |         1|
++------+----------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------+------+
+|      |Cell                      |Count |
++------+--------------------------+------+
+|1     |axi_benes_Axi_lite_v1_0_0 |     1|
+|2     |axi_benes_auto_ds         |     1|
+|3     |axi_benes_auto_pc         |     1|
+|4     |axi_benes_util_ds_buf     |     1|
+|5     |axi_benes_xdma_0          |     1|
+|6     |IBUF                      |     1|
++------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.074 ; gain = 736.473 ; free physical = 13594 ; free virtual = 45905
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3758.074 ; gain = 621.910 ; free physical = 13624 ; free virtual = 45935
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 3758.082 ; gain = 736.473 ; free physical = 13637 ; free virtual = 45949
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3766.012 ; gain = 0.000 ; free physical = 13728 ; free virtual = 46040
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3825.348 ; gain = 0.000 ; free physical = 13629 ; free virtual = 45940
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 3825.348 ; gain = 1463.109 ; free physical = 13761 ; free virtual = 46073
+INFO: [Common 17-1381] The checkpoint '/home/hs/Desktop/benes_axi_fck_prj/benes_axi_fck_prj.runs/synth_1/axi_benes_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file axi_benes_wrapper_utilization_synth.rpt -pb axi_benes_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 23:50:16 2023...

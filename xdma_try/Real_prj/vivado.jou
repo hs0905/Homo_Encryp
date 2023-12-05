@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Mon Nov 20 19:22:05 2023
+# Process ID: 24097
+# Current directory: /home/hs/Desktop/Real_prj
+# Command line: vivado
+# Log file: /home/hs/Desktop/Real_prj/vivado.log
+# Journal file: /home/hs/Desktop/Real_prj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project xdma_axi_benes_engine /home/hs/Desktop/Real_prj/xdma_axi_benes_engine -part xcu280-fsvh2892-2L-e
+set_property board_part xilinx.com:au280:part0:1.1 [current_project]
+set_property  ip_repo_paths  /home/hs/Desktop/Real_prj [current_project]
+update_ip_catalog
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:axi_lite_benes:1.0 axi_lite_benes_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xdma:4.1 xdma_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:xdma -config { accel {1} auto_level {IP Level} axi_clk {Maximum Data Width} axi_intf {AXI Memory Mapped} bar_size {Disable} bypass_size {Disable} c2h {4} cache_size {128k} h2c {4} lane_width {X8} link_speed {16.0 GT/s (PCIe Gen 4)}}  [get_bd_cells xdma_0]
+delete_bd_objs [get_bd_intf_nets xdma_0_pcie_mgt] [get_bd_nets pcie_perstn_1] [get_bd_nets util_ds_buf_IBUF_DS_ODIV2] [get_bd_nets util_ds_buf_IBUF_OUT] [get_bd_cells xdma_0]
+delete_bd_objs [get_bd_intf_nets pcie_refclk_1] [get_bd_cells util_ds_buf]
+undo
+undo
+undo
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xdma:4.1 xdma_0
+apply_board_connection -board_interface "pci_express_x8" -ip_intf "xdma_0/pcie_mgt" -diagram "design_1" 
+apply_board_connection -board_interface "pcie_perstn" -ip_intf "xdma_0/RST.sys_rst_n" -diagram "design_1" 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:xdma -config { accel {1} auto_level {IP Level} axi_clk {Maximum Data Width} axi_intf {AXI Memory Mapped} bar_size {Disable} bypass_size {Disable} c2h {4} cache_size {128k} h2c {4} lane_width {X8} link_speed {16.0 GT/s (PCIe Gen 4)}}  [get_bd_cells xdma_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/xdma_0/axi_aclk (250 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/xdma_0/M_AXI} Slave {/axi_lite_benes_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_lite_benes_0/s00_axi]
+regenerate_bd_layout
+validate_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+set_property location {4 1069 -44} [get_bd_cells ila_0]
+connect_bd_intf_net [get_bd_intf_pins ila_0/SLOT_0_AXI] [get_bd_intf_pins axi_lite_benes_0/s00_axi]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/xdma_0/axi_aclk (250 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ila_0/clk]
+make_wrapper -files [get_files /home/hs/Desktop/Real_prj/xdma_axi_benes_engine/xdma_axi_benes_engine.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse /home/hs/Desktop/Real_prj/xdma_axi_benes_engine/xdma_axi_benes_engine.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+generate_target all [get_files /home/hs/Desktop/Real_prj/xdma_axi_benes_engine/xdma_axi_benes_engine.srcs/sources_1/bd/design_1/design_1.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/hs/Desktop/Real_prj/xdma_axi_benes_engine/xdma_axi_benes_engine.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_lite_benes_0_0_synth_1
+wait_on_run design_1_axi_lite_benes_0_0_synth_1
+launch_runs design_1_xdma_0_1_synth_1
+wait_on_run design_1_xdma_0_1_synth_1
+launch_runs design_1_util_ds_buf_1_synth_1
+wait_on_run design_1_util_ds_buf_1_synth_1
+launch_runs design_1_auto_ds_0_synth_1
+wait_on_run design_1_auto_ds_0_synth_1
+launch_runs design_1_auto_pc_0_synth_1
+wait_on_run design_1_auto_pc_0_synth_1
+launch_runs design_1_ila_0_0_synth_1
+wait_on_run design_1_ila_0_0_synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_runs impl_1 -jobs 24
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+open_hw_manager

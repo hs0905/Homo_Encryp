@@ -1,0 +1,20 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.760204",
+   "Default View_TopLeft":"0,-150",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port pci_express_x1 -pg 1 -lvl 6 -x 1410 -y 100 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 3 -x 690 -y 140 -defaultsOSRD
+preplace inst Axi_lite_v1_0_0 -pg 1 -lvl 5 -x 1290 -y 240 -defaultsOSRD
+levelinfo -pg 1 0 170 420 690 1030 1290 1410
+pagesize -pg 1 -db -bbox -sgen 0 0 1570 360
+"
+}
+{
+   "da_axi4_cnt":"2",
+   "da_board_cnt":"18",
+   "da_clkrst_cnt":"4",
+   "da_xdma_cnt":"2"
+}

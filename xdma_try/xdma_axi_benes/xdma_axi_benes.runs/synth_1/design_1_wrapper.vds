@@ -1,0 +1,290 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Wed Nov 15 22:15:31 2023
+# Process ID: 20560
+# Current directory: /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hs/Desktop/benes_axi/new_benes_with_32'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top design_1_wrapper -part xcu280-fsvh2892-2L-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu280'
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21100
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3196.320 ; gain = 173.715 ; free physical = 8509 ; free virtual = 46018
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Axi_lite_v1_0_0_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_Axi_lite_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Axi_lite_v1_0_0_0' (1#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_Axi_lite_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_2' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_clk_wiz_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_2' (2#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_clk_wiz_2_stub.v:5]
+WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_2' is unconnected for instance 'clk_wiz' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:118]
+WARNING: [Synth 8-7023] instance 'clk_wiz' of module 'design_1_clk_wiz_2' has 4 connections declared, but only 3 given [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:118]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_1' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_clk_wiz_1_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_1' (3#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_clk_wiz_1_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_1_1' is unconnected for instance 'clk_wiz_1' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:122]
+WARNING: [Synth 8-7023] instance 'clk_wiz_1' of module 'design_1_clk_wiz_1_1' has 4 connections declared, but only 3 given [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:122]
+INFO: [Synth 8-6157] synthesizing module 'design_1_resetn_inv_0_1' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_resetn_inv_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_resetn_inv_0_1' (4#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_resetn_inv_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_resetn_inv_1_1' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_resetn_inv_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_resetn_inv_1_1' (5#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_resetn_inv_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_xdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0' (6#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/.Xil/Vivado-20560-baldur/realtime/design_1_xdma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'user_lnk_up' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'usr_irq_ack' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'msi_enable' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'msi_vector_width' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_data' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_write_done' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axis_c2h_tready_0' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'm_axis_h2c_tdata_0' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'm_axis_h2c_tlast_0' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'm_axis_h2c_tvalid_0' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 'm_axis_h2c_tkeep_0' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_awready' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_wready' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_bvalid' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_bresp' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_arready' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_rdata' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_rresp' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7071] port 's_axil_rvalid' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+WARNING: [Synth 8-7023] instance 'xdma_0' of module 'design_1_xdma_0_0' has 69 connections declared, but only 50 given [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:132]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_axi_periph_1' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:230]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_4M2UOV' [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:450]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_4M2UOV' (7#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:450]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_axi_periph_1' (8#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:230]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (9#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (10#1) [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3242.227 ; gain = 219.621 ; free physical = 8546 ; free virtual = 46056
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3260.039 ; gain = 237.434 ; free physical = 9284 ; free virtual = 46794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3260.039 ; gain = 237.434 ; free physical = 9284 ; free virtual = 46794
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3260.039 ; gain = 0.000 ; free physical = 9286 ; free virtual = 46796
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc] for cell 'design_1_i/xdma_0'
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc] for cell 'design_1_i/xdma_0'
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_Axi_lite_v1_0_0_0/design_1_Axi_lite_v1_0_0_0/design_1_Axi_lite_v1_0_0_0_in_context.xdc] for cell 'design_1_i/Axi_lite_v1_0_0'
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_Axi_lite_v1_0_0_0/design_1_Axi_lite_v1_0_0_0/design_1_Axi_lite_v1_0_0_0_in_context.xdc] for cell 'design_1_i/Axi_lite_v1_0_0'
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_2/design_1_clk_wiz_2/design_1_clk_wiz_2_in_context.xdc] for cell 'design_1_i/clk_wiz'
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_2/design_1_clk_wiz_2/design_1_clk_wiz_2_in_context.xdc] for cell 'design_1_i/clk_wiz'
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_resetn_inv_0_1/design_1_resetn_inv_0_1/design_1_resetn_inv_0_1_in_context.xdc] for cell 'design_1_i/resetn_inv_0'
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_resetn_inv_0_1/design_1_resetn_inv_0_1/design_1_resetn_inv_0_1_in_context.xdc] for cell 'design_1_i/resetn_inv_0'
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_resetn_inv_1_1/design_1_resetn_inv_1_1/design_1_resetn_inv_0_1_in_context.xdc] for cell 'design_1_i/resetn_inv_1'
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_resetn_inv_1_1/design_1_resetn_inv_1_1/design_1_resetn_inv_0_1_in_context.xdc] for cell 'design_1_i/resetn_inv_1'
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.srcs/constrs_1/new/alveo_u280_fhe.xdc]
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.srcs/constrs_1/new/alveo_u280_fhe.xdc]
+Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3371.633 ; gain = 0.000 ; free physical = 9168 ; free virtual = 46679
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3371.633 ; gain = 0.000 ; free physical = 9168 ; free virtual = 46679
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3371.633 ; gain = 349.027 ; free physical = 9265 ; free virtual = 46776
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu280-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3371.633 ; gain = 349.027 ; free physical = 9264 ; free virtual = 46775
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x1_rxn. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x1_rxn. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x1_rxp. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x1_rxp. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x1_txn. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x1_txn. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for pci_express_x1_txp. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pci_express_x1_txp. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_2/design_1_clk_wiz_2/design_1_clk_wiz_2_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_2/design_1_clk_wiz_2/design_1_clk_wiz_2_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz_1. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz_1. (constraint file  /home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xdma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Axi_lite_v1_0_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xdma_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/resetn_inv_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/resetn_inv_1. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3371.633 ; gain = 349.027 ; free physical = 9264 ; free virtual = 46775
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3371.633 ; gain = 349.027 ; free physical = 9257 ; free virtual = 46769
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3371.633 ; gain = 349.027 ; free physical = 9254 ; free virtual = 46768
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 3732.562 ; gain = 709.957 ; free physical = 8739 ; free virtual = 46253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 3732.562 ; gain = 709.957 ; free physical = 8739 ; free virtual = 46253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 3751.594 ; gain = 728.988 ; free physical = 8737 ; free virtual = 46251
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.531 ; gain = 734.926 ; free physical = 8735 ; free virtual = 46249
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.531 ; gain = 734.926 ; free physical = 8735 ; free virtual = 46249
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.531 ; gain = 734.926 ; free physical = 8735 ; free virtual = 46249
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.531 ; gain = 734.926 ; free physical = 8735 ; free virtual = 46249
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.531 ; gain = 734.926 ; free physical = 8735 ; free virtual = 46249
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.531 ; gain = 734.926 ; free physical = 8735 ; free virtual = 46249
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------+----------+
+|      |BlackBox name              |Instances |
++------+---------------------------+----------+
+|1     |design_1_Axi_lite_v1_0_0_0 |         1|
+|2     |design_1_clk_wiz_2         |         1|
+|3     |design_1_clk_wiz_1_1       |         1|
+|4     |design_1_resetn_inv_0_1    |         1|
+|5     |design_1_resetn_inv_1_1    |         1|
+|6     |design_1_xdma_0_0          |         1|
++------+---------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------+------+
+|      |Cell                     |Count |
++------+-------------------------+------+
+|1     |design_1_Axi_lite_v1_0_0 |     1|
+|2     |design_1_clk_wiz_1       |     1|
+|3     |design_1_clk_wiz         |     1|
+|4     |design_1_resetn_inv_0    |     1|
+|5     |design_1_resetn_inv_1    |     1|
+|6     |design_1_xdma_0          |     1|
+|7     |IBUF                     |     3|
++------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.531 ; gain = 734.926 ; free physical = 8735 ; free virtual = 46249
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3757.531 ; gain = 623.332 ; free physical = 8771 ; free virtual = 46285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 3757.539 ; gain = 734.926 ; free physical = 8771 ; free virtual = 46285
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3765.469 ; gain = 0.000 ; free physical = 8859 ; free virtual = 46373
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3822.773 ; gain = 0.000 ; free physical = 8763 ; free virtual = 46277
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3822.773 ; gain = 1463.531 ; free physical = 8896 ; free virtual = 46409
+INFO: [Common 17-1381] The checkpoint '/home/hs/Desktop/xdma_axi_benes/xdma_axi_benes.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 22:16:07 2023...

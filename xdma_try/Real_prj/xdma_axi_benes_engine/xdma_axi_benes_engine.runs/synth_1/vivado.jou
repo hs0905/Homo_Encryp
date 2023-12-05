@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Tue Nov 21 20:58:43 2023
+# Process ID: 17529
+# Current directory: /home/hs/Desktop/Real_prj/xdma_axi_benes_engine/xdma_axi_benes_engine.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/hs/Desktop/Real_prj/xdma_axi_benes_engine/xdma_axi_benes_engine.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/hs/Desktop/Real_prj/xdma_axi_benes_engine/xdma_axi_benes_engine.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

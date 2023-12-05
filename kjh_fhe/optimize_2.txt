@@ -1,0 +1,71 @@
+time obj_dir/Vfhe_alu_top 
+ntt_sequence start
+load set start
+load root start
+load data start
+load start
+bit_rev start
+bit rev queue flush start
+bit rev flush finish
+ntt start
+host_stateport.state0: 20000
+host_stateport.state0: 20000
+host_stateport.state0: 20000
+host_stateport.state0: 20000
+host_stateport.state0: 20000
+bit rev queue flush start
+bit rev flush finish
+store start
+store start
+check ntt result start
+check ntt result finish
+ntt_sequence finish
+
+load start
+load start
+load start
+load start
+load start
+load start
+load start
+load start
+load start
+load start
+load start
+host_stateport.state0: 800000
+host_stateport.state0: a00000
+host_stateport.state0: a80000
+host_stateport.state0: aa0000
+host_stateport.state0: ab0000
+host_stateport.state0: ab2000
+host_stateport.state0: ab3000
+host_stateport.state0: 8000
+host_stateport.state0: c000
+host_stateport.state0: c800
+host_stateport.state0: cc00
+store start
+store start
+store start
+store start
+store start
+store start
+store start
+store start
+store start
+store start
+store start
+diff trans
+diff perm
+diff auto
+diff ntt1
+diff ntt2
+diff ntt3
+diff ntt4
+diff intt1
+diff intt2
+diff intt3
+diff intt4
+set  stop cycle at 1722023 current cycle 1721923
+finish
+joined
+Makefile:93: recipe for target 'run' failed

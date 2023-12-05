@@ -1,0 +1,2 @@
+time obj_dir/Vfhe_alu_top 
+Makefile:93: recipe for target 'run' failed

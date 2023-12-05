@@ -1,0 +1,145 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBD23305EFB8DD9F4",
+      "device": "xcu280-fsvh2892-2L-e",
+      "gen_directory": "../../../../xdma_axi_benes.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2.2"
+    },
+    "design_tree": {
+      "xdma_0": "",
+      "Axi_lite_v1_0_0": ""
+    },
+    "interface_ports": {
+      "pci_express_x1": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:pcie_7x_mgt_rtl:1.0"
+      }
+    },
+    "components": {
+      "xdma_0": {
+        "vlnv": "xilinx.com:ip:xdma:4.1",
+        "xci_name": "design_1_xdma_0_0",
+        "xci_path": "ip/design_1_xdma_0_0/design_1_xdma_0_0.xci",
+        "inst_hier_path": "xdma_0",
+        "parameters": {
+          "PCIE_BOARD_INTERFACE": {
+            "value": "pci_express_x1"
+          },
+          "PF0_DEVICE_ID_mqdma": {
+            "value": "9031"
+          },
+          "PF2_DEVICE_ID_mqdma": {
+            "value": "9031"
+          },
+          "PF3_DEVICE_ID_mqdma": {
+            "value": "9031"
+          },
+          "SYS_RST_N_BOARD_INTERFACE": {
+            "value": "pcie_perstn"
+          },
+          "axi_data_width": {
+            "value": "64_bit"
+          },
+          "axil_master_64bit_en": {
+            "value": "false"
+          },
+          "axilite_master_en": {
+            "value": "true"
+          },
+          "axilite_master_size": {
+            "value": "1"
+          },
+          "axisten_freq": {
+            "value": "250"
+          },
+          "pf0_device_id": {
+            "value": "9031"
+          },
+          "pl_link_cap_max_link_speed": {
+            "value": "8.0_GT/s"
+          },
+          "plltype": {
+            "value": "QPLL1"
+          },
+          "xdma_axi_intf_mm": {
+            "value": "AXI_Stream"
+          },
+          "xdma_axilite_slave": {
+            "value": "true"
+          },
+          "xdma_rnum_chnl": {
+            "value": "1"
+          },
+          "xdma_sts_ports": {
+            "value": "false"
+          },
+          "xdma_wnum_chnl": {
+            "value": "1"
+          }
+        },
+        "addressing": {
+          "memory_maps": {
+            "S_AXI_LITE": {
+              "address_blocks": {
+                "CTL0": {
+                  "base_address": "0",
+                  "range": "64K",
+                  "width": "16",
+                  "usage": "memory",
+                  "offset_base_param": "baseaddr",
+                  "offset_high_param": "highaddr"
+                }
+              }
+            }
+          },
+          "address_spaces": {
+            "M_AXI_LITE": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        },
+        "interface_ports": {
+          "M_AXI_LITE": {
+            "mode": "Master",
+            "address_space_ref": "M_AXI_LITE",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "S_AXI_LITE": {
+            "mode": "Slave",
+            "memory_map_ref": "S_AXI_LITE"
+          }
+        }
+      },
+      "Axi_lite_v1_0_0": {
+        "vlnv": "user.org:user:Axi_lite_v1_0:1.0",
+        "xci_name": "design_1_Axi_lite_v1_0_0_0",
+        "xci_path": "ip/design_1_Axi_lite_v1_0_0_0/design_1_Axi_lite_v1_0_0_0.xci",
+        "inst_hier_path": "Axi_lite_v1_0_0"
+      }
+    },
+    "addressing": {
+      "/xdma_0": {
+        "address_spaces": {
+          "M_AXI_LITE": {
+            "segments": {
+              "SEG_Axi_lite_v1_0_0_reg0": {
+                "address_block": "/Axi_lite_v1_0_0/s00_axi/reg0",
+                "offset": "0x44A00000",
+                "range": "64K"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

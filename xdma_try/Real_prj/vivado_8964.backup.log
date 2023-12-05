@@ -1,0 +1,248 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Mon Nov 20 19:10:23 2023
+# Process ID: 8964
+# Current directory: /home/hs/Desktop/Real_prj
+# Command line: vivado
+# Log file: /home/hs/Desktop/Real_prj/vivado.log
+# Journal file: /home/hs/Desktop/Real_prj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+create_project xdma_engine_axi_benes /home/hs/Desktop/Real_prj/xdma_engine_axi_benes -part xcu280-fsvh2892-2L-e
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property board_part xilinx.com:au280:part0:1.1 [current_project]
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property  ip_repo_paths  /home/hs/Desktop/Real_prj [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hs/Desktop/Real_prj'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/hs/Desktop/Real_prj' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/hs/Desktop/Real_prj/xdma_engine_axi_benes'.)
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+create_bd_design "axi_benes_dma_engine"
+Wrote  : </home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/axi_benes_dma_engine.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:axi_lite_benes:1.0 axi_lite_benes_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xdma:4.1 xdma_0
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+xit::create_sub_core: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 10196.406 ; gain = 883.824 ; free physical = 75151 ; free virtual = 95973
+create_bd_cell: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 10196.406 ; gain = 883.828 ; free physical = 75112 ; free virtual = 95933
+endgroup
+WARNING: [BD 5-232] No interface pins matched 'get_bd_intf_pins -of_objects {}'
+WARNING: [BD 5-233] No interface ports matched 'get_bd_intf_ports -of_objects {}'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /xdma_0/pcie_mgt'
+INFO: [XDMA-105] pl_link_cap_max_link_width X1.
+INFO: [XDMA-105] enable_gen4 true.
+INFO: [XDMA-105] local_test true.
+INFO: [XDMA-105] pcie_blk_locn PCIE4C_X1Y0.
+INFO: [XDMA-105] range 2.5_GT/s,5.0_GT/s,8.0_GT/s,16.0_GT/s.
+apply_bd_automation -rule xilinx.com:bd_rule:xdma -config { accel {1} auto_level {IP Level} axi_clk {Maximum Data Width} axi_intf {AXI Memory Mapped} bar_size {Disable} bypass_size {Disable} c2h {1} cache_size {128k} h2c {1} lane_width {X8} link_speed {16.0 GT/s (PCIe Gen 4)}}  [get_bd_cells xdma_0]
+INFO: [XDMA-105] pl_link_cap_max_link_width X1.
+INFO: [XDMA-105] enable_gen4 true.
+INFO: [XDMA-105] local_test true.
+INFO: [XDMA-105] pcie_blk_locn PCIE4C_X1Y0.
+INFO: [XDMA-105] range 2.5_GT/s,5.0_GT/s,8.0_GT/s,16.0_GT/s.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+INFO: [board_rule 100-100] set_property CONFIG.PCIE_BOARD_INTERFACE pci_express_x8 [get_bd_cells /xdma_0]
+INFO: [BoardRule 102-8] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:pcie_7x_mgt_rtl:1.0 pci_express_x8
+INFO: [BoardRule 102-9] connect_bd_intf_net /pci_express_x8 /xdma_0/pcie_mgt
+INFO: [board_rule 100-100] set_property CONFIG.SYS_RST_N_BOARD_INTERFACE pcie_perstn [get_bd_cells /xdma_0]
+INFO: [BoardRule 102-10] create_bd_port -dir I pcie_perstn -type rst
+INFO: [BoardRule 102-7] set_property CONFIG.POLARITY ACTIVE_LOW /pcie_perstn
+INFO: [BoardRule 102-15] connect_bd_net /pcie_perstn /xdma_0/sys_rst_n
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_LOW /pcie_perstn
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /util_ds_buf]
+INFO: [board_rule 100-100] set_property CONFIG.DIFF_CLK_IN_BOARD_INTERFACE pcie_refclk [get_bd_cells /util_ds_buf]
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+INFO: [BoardRule 102-8] create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 pcie_refclk
+INFO: [BoardRule 102-4] set_property CONFIG.FREQ_HZ 100000000 /pcie_refclk
+INFO: [BoardRule 102-9] connect_bd_intf_net /pcie_refclk /util_ds_buf/CLK_IN_D
+INFO: [BoardRule 102-16] set_property CONFIG.FREQ_HZ 100000000 /pcie_refclk
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/xdma_0/axi_aclk (250 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/xdma_0/M_AXI} Slave {/axi_lite_benes_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_lite_benes_0/s00_axi]
+Slave segment '/axi_lite_benes_0/s00_axi/reg0' is being assigned into address space '/xdma_0/M_AXI' at <0x44A0_0000 [ 64K ]>.
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+endgroup
+set_property location {5 1206 -86} [get_bd_cells ila_0]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property location {4 1332 -99} [get_bd_cells ila_0]
+set_property location {3 1164 -45} [get_bd_cells ila_0]
+connect_bd_intf_net [get_bd_intf_pins ila_0/SLOT_0_AXI] [get_bd_intf_pins axi_lite_benes_0/s00_axi]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/xdma_0/axi_aclk (250 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ila_0/clk]
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+Wrote  : </home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/axi_benes_dma_engine.bd> 
+Wrote  : </home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/ui/bd_f1807abc.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+INFO: [BD 41-1662] The design 'axi_benes_dma_engine.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/synth/axi_benes_dma_engine.v
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/sim/axi_benes_dma_engine.v
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hdl/axi_benes_dma_engine_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_lite_benes_0 .
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+INFO: [Common 17-365] Interrupt caught but 'launch_runs' cannot be canceled. Please wait for command to finish.
+INFO: [IP_Flow 19-3499] Reset cancelled 'Synthesis' target for IP 'axi_benes_dma_engine_xdma_0_0/axi_benes_dma_engine_xdma_0_0_pcie4c_ip'.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf .
+INFO: [BD 41-1171] User-interrupt detected : Generation halted successfully for IP Integrator design /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/axi_benes_dma_engine.bd
+INFO: [Common 17-681] Processing pending cancel.
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+INFO: [BD 41-1662] The design 'axi_benes_dma_engine.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/axi_benes_dma_engine.bd> 
+Wrote  : </home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/ui/bd_f1807abc.ui> 
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/synth/axi_benes_dma_engine.v
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/sim/axi_benes_dma_engine.v
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hdl/axi_benes_dma_engine_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0 .
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/ip/axi_benes_dma_engine_auto_ds_0/axi_benes_dma_engine_auto_ds_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/ip/axi_benes_dma_engine_auto_pc_0/axi_benes_dma_engine_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/ip/axi_benes_dma_engine_ila_0_0/axi_benes_dma_engine_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+Exporting to file /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hw_handoff/axi_benes_dma_engine.hwh
+Generated Block Design Tcl file /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hw_handoff/axi_benes_dma_engine_bd.tcl
+Generated Hardware Definition File /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/synth/axi_benes_dma_engine.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_auto_ds_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_axi_lite_benes_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_ila_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_util_ds_buf_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_xdma_0_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP axi_benes_dma_engine_axi_lite_benes_0_0, cache-ID = deb0081ec47ae07d; cache size = 174.665 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP axi_benes_dma_engine_auto_ds_0, cache-ID = 45106d050c012806; cache size = 174.665 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP axi_benes_dma_engine_auto_pc_0, cache-ID = 0919c66eab82b179; cache size = 174.665 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP axi_benes_dma_engine_ila_0_0, cache-ID = 7390a1f8c1e1ba10; cache size = 174.665 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP axi_benes_dma_engine_util_ds_buf_0, cache-ID = 5e4f650d5878b8b3; cache size = 174.665 MB.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+make_wrapper -files [get_files /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/axi_benes_dma_engine.bd] -top
+add_files -norecurse /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hdl/axi_benes_dma_engine_wrapper.v
+validate_bd_design -force
+save_bd_design
+Wrote  : </home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.srcs/sources_1/bd/axi_benes_dma_engine/axi_benes_dma_engine.bd> 
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+INFO: [BD 41-1662] The design 'axi_benes_dma_engine.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/synth/axi_benes_dma_engine.v
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/sim/axi_benes_dma_engine.v
+VHDL Output written to : /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hdl/axi_benes_dma_engine_wrapper.v
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/ip/axi_benes_dma_engine_auto_ds_0/axi_benes_dma_engine_auto_ds_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/ip/axi_benes_dma_engine_auto_pc_0/axi_benes_dma_engine_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hw_handoff/axi_benes_dma_engine.hwh
+Generated Block Design Tcl file /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/hw_handoff/axi_benes_dma_engine_bd.tcl
+Generated Hardware Definition File /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.gen/sources_1/bd/axi_benes_dma_engine/synth/axi_benes_dma_engine.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_auto_ds_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP axi_benes_dma_engine_xdma_0_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP axi_benes_dma_engine_auto_ds_0, cache-ID = 45106d050c012806; cache size = 174.665 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP axi_benes_dma_engine_auto_pc_0, cache-ID = 0919c66eab82b179; cache size = 174.665 MB.
+[Mon Nov 20 19:15:45 2023] Launched axi_benes_dma_engine_xdma_0_0_synth_1, synth_1...
+Run output will be captured here:
+axi_benes_dma_engine_xdma_0_0_synth_1: /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.runs/axi_benes_dma_engine_xdma_0_0_synth_1/runme.log
+synth_1: /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.runs/synth_1/runme.log
+[Mon Nov 20 19:15:45 2023] Launched impl_1...
+Run output will be captured here: /home/hs/Desktop/Real_prj/xdma_engine_axi_benes/xdma_engine_axi_benes.runs/impl_1/runme.log
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 20 19:22:00 2023...
