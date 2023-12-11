@@ -4,40 +4,39 @@
 
 package FHE_ALU_PKG;
 
-localparam DDR_WIDTH_BYTE = 64;
-localparam IN_BUFFER_SIZE = 32'h1000;      //4096
-localparam STACK_BUFFER_SIZE = 32;
-
+localparam DDR_WIDTH_BYTE         = 64;
+localparam IN_BUFFER_SIZE         = 32'h1000;      //4096
+localparam STACK_BUFFER_SIZE      = 32;
 localparam AXI_IN_FMAP_LOAD_ADDR  = 32'h10000000;
 
-localparam COMMAND_WIDTH=8;
-localparam FSIZE_60= 62;
-localparam FSIZE=64;
-localparam SSIZE=16;
-localparam STATE_WIDTH=32;
-localparam E = 8;
-localparam logE =3;
+localparam COMMAND_WIDTH          = 8;
+localparam FSIZE_60               = 62;
+localparam FSIZE                  = 64;
+localparam SSIZE                  = 16;
+localparam STATE_WIDTH            = 32;
+localparam E                      = 8;
+localparam logE                   = clog2(E);
 
-typedef struct  packed {
-  logic valid;
+typedef struct packed {
+  logic                     valid;
   logic [COMMAND_WIDTH-1:0] command;
-  logic [FSIZE-1:0] data0;
-  logic [FSIZE-1:0] data1;
+  logic [FSIZE-1:0]         data0;
+  logic [FSIZE-1:0]         data1;
 } CommandDataPort;
 
 typedef struct  packed {
-  logic [FSIZE-1:0] state0;
-  logic [FSIZE-1:0] state1;
-  logic [FSIZE-1:0] state2;
-  logic [FSIZE-1:0] state3;
+  logic [FSIZE-1:0]         state0;
+  logic [FSIZE-1:0]         state1;
+  logic [FSIZE-1:0]         state2;
+  logic [FSIZE-1:0]         state3;
 } StatePort;
 
 
 typedef struct packed{
-  logic [31:0]        raddr;
-  logic [31:0]        waddr;
-  logic [FSIZE-1:0]   wdata;
-  logic               wren;
+  logic [31:0]              raddr;
+  logic [31:0]              waddr;
+  logic [FSIZE-1:0]         wdata;
+  logic                     wren;
 } BufferRAMTFsizeInputs;
 
 
@@ -135,23 +134,20 @@ localparam COMMAND_SET_BACKGROUND2  = 13;
 // localparam COMMAND_INTT_GET  = 34;
 
 // prepare
-localparam COMMAND_VECTOR_MULT_MOD_PQ = 59;
-
-localparam COMMAND_BITREVERSE1  = 60;
-localparam COMMAND_TRANSPOSE1  = 61;
-localparam COMMAND_PERM_PATTERN1  = 62;
-localparam COMMAND_AUTO1 = 63;
-localparam COMMAND_VECTOR_ADD_MOD1 = 64;
-localparam COMMAND_VECTOR_ADD_MOD_SCALAR1 = 65;
-localparam COMMAND_VECTOR_MULT_MOD1 = 66;
-localparam COMMAND_VECTOR_SCALAR_MULT_MOD1 = 67;
-localparam COMMAND_VECTOR_BARRETT_REDUCTION1 = 68;
-localparam COMMAND_VECTOR_LAZY_REDUCTION1 = 69;
-localparam COMMAND_SET_UNIT1 = 70;
-localparam COMMAND_VECTOR_DECOMP1 = 71;
-localparam COMMAND_VECTOR_SUB1 = 72;
-
-
+localparam COMMAND_VECTOR_MULT_MOD_PQ       = 59;
+localparam COMMAND_BITREVERSE1              = 60;
+localparam COMMAND_TRANSPOSE1               = 61;
+localparam COMMAND_PERM_PATTERN1            = 62;
+localparam COMMAND_AUTO1                    = 63;
+localparam COMMAND_VECTOR_ADD_MOD1          = 64;
+localparam COMMAND_VECTOR_ADD_MOD_SCALAR1   = 65;
+localparam COMMAND_VECTOR_MULT_MOD1         = 66;
+localparam COMMAND_VECTOR_SCALAR_MULT_MOD1  = 67;
+localparam COMMAND_VECTOR_BARRETT_REDUCTION1= 68;
+localparam COMMAND_VECTOR_LAZY_REDUCTION1   = 69;
+localparam COMMAND_SET_UNIT1                = 70;
+localparam COMMAND_VECTOR_DECOMP1           = 71;
+localparam COMMAND_VECTOR_SUB1              = 72;
 localparam COMMAND_NTT_RUN1  = 41;
 localparam COMMAND_NTT_RUN2  = 42;
 localparam COMMAND_NTT_RUN3  = 43;
@@ -160,13 +156,10 @@ localparam COMMAND_INTT_RUN1  = 51;
 localparam COMMAND_INTT_RUN2  = 52;
 localparam COMMAND_INTT_RUN3  = 53;
 localparam COMMAND_INTT_RUN4  = 54;
-
 localparam COMMAND_MULTI_NTT_RUN1  = 55;
 localparam COMMAND_MULTI_NTT_RUN2  = 56;
 localparam COMMAND_MULTI_INTT_RUN1  = 57;
 localparam COMMAND_MULTI_INTT_RUN2  = 58;
-
-
 localparam COMMAND_BITREVERSE2  = 80;
 localparam COMMAND_TRANSPOSE2  = 81;
 localparam COMMAND_PERM_PATTERN2  = 82;
@@ -214,15 +207,8 @@ localparam MULT_CYCLES_60 = 18;
 localparam MULT_CYCLES_128 = 50;
 
 localparam VSIZE = 4;
-
-// localparam N = 8192;
-// localparam logN =13;
-// localparam N = 16384;
-// localparam logN =14;
-// localparam N = 32768;
-// localparam logN =15;
-localparam N = 65536;
-localparam logN =16;
+localparam N     = 65536;
+localparam logN  = 16;
 
 
 
