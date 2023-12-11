@@ -10,14 +10,14 @@ localparam  LAYER_NUM = $clog2(SIZE);
 localparam  STAGE_NUM = (LAYER_NUM*2)-1; // number of stages in 
 localparam  BUFFER_NUM = STAGE_NUM - 1;
 localparam  MID_STAGE = STAGE_NUM/2;
-localparam DATA_SIZE = FSIZE; // Fsize == 64
-localparam CYCLES = 2;
-localparam SLOT_NUM_IN_BUFF = SLOT_NUM; // Slot_num == 20 -> number of buffer ram slots
-localparam MODULE_NUM_IN_BUFF = MODULE_NUM; // module_num == 20 -> total number of arithmetic modules(rev_trans, add, mult, etc.)
-localparam STAGE_MODULE_8_IN_BUFF = 2; 
-localparam STAGE_SLOT_8_IN_BUFF = 2;
-localparam STAGE_MODULE_POWER_8_IN_BUFF = 8**STAGE_MODULE_8_IN_BUFF;// 8**2 = 64
-localparam STAGE_SLOT_POWER_8_IN_BUFF = 8**STAGE_SLOT_8_IN_BUFF; // 8**2 = 64
+localparam  DATA_SIZE = FSIZE; // Fsize == 64
+localparam  CYCLES = 2;
+localparam  SLOT_NUM_IN_BUFF = SLOT_NUM; // Slot_num == 20 -> number of buffer ram slots
+localparam  MODULE_NUM_IN_BUFF = MODULE_NUM; // module_num == 20 -> total number of arithmetic modules(rev_trans, add, mult, etc.)
+localparam  STAGE_MODULE_8_IN_BUFF = 2; 
+localparam  STAGE_SLOT_8_IN_BUFF = 2;
+localparam  STAGE_MODULE_POWER_8_IN_BUFF = 8**STAGE_MODULE_8_IN_BUFF;// 8**2 = 64
+localparam  STAGE_SLOT_POWER_8_IN_BUFF = 8**STAGE_SLOT_8_IN_BUFF; // 8**2 = 64
 
 
 function int abs(int x);

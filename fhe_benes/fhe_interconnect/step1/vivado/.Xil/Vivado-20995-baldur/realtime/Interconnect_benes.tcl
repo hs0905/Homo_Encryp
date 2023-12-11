@@ -34,13 +34,16 @@ set rt::rc [catch {
 
     set rt::useElabCache false
     if {$rt::useElabCache == false} {
-      rt::read_verilog -sv -include {{/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1}} {
-      {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intf.sv}
-      {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/param_pack.sv}
-      {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/network_module.sv}
-      {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/stage_module.sv}
-      {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/switch_module.sv}
-      {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv}
+      rt::read_verilog -sv -include {
+    /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1
+    /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1
+  } {
+      /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/FHE_ALU_PKG.sv
+      /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/USER_PARAM_PKG.sv
+      /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/network_module.sv
+      /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/stage_module.sv
+      /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/switch_module.sv
+      /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
     }
       rt::filesetChecksum
     }
