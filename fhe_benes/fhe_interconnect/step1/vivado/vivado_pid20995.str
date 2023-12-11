@@ -925,3 +925,9 @@ selectButton(RDIResource.BaseDialog_OK, "OK"); // a
 // Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
 dismissDialog("Implementation Failed"); // ag
 selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-415] IO Placement failed due to overutilization. This design contains 20480 I/O ports.  while the target  device: xcu280 package: fsvh2892, contains only 746 available user I/O. The target device has 746 usable I/O pins of which 0 are already occupied by user-locked I/Os..  To rectify this issue:.  1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary..  2. Check the top-level ports of the design to ensure the correct number of ports are specified..  3. Consider design changes to reduce the number of I/Os necessary.. ]", 12, false); // ah
+// HMemoryUtils.trashcanNow. Engine heap size: 6,729 MB. GUI used memory: 293 MB. Current time: 12/11/23, 6:25:49 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,729 MB. GUI used memory: 216 MB. Current time: 12/11/23, 6:55:49 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,729 MB. GUI used memory: 215 MB. Current time: 12/11/23, 7:25:49 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,729 MB. GUI used memory: 215 MB. Current time: 12/11/23, 7:55:49 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,729 MB. GUI used memory: 216 MB. Current time: 12/11/23, 8:25:50 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 6,729 MB. GUI used memory: 215 MB. Current time: 12/11/23, 8:55:50 PM KST
