@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xcu280-fsvh2892-2L-e" LaunchTime="1702279418">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="Interconnect_benes.vdi"/>
+  <File Type="BG-DRC" Name="Interconnect_benes.drc"/>
+  <File Type="BG-BGN" Name="Interconnect_benes.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="Interconnect_benes.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Interconnect_benes.ltx"/>
+  <File Type="RBD_FILE" Name="Interconnect_benes.rbd"/>
+  <File Type="NPI_FILE" Name="Interconnect_benes.npi"/>
+  <File Type="RNPI_FILE" Name="Interconnect_benes.rnpi"/>
+  <File Type="CFI_FILE" Name="Interconnect_benes.cfi"/>
+  <File Type="RCFI_FILE" Name="Interconnect_benes.rcfi"/>
+  <File Type="PDI-FILE" Name="Interconnect_benes.pdi"/>
+  <File Type="BITSTR-MMI" Name="Interconnect_benes.mmi"/>
+  <File Type="BITSTR-BMM" Name="Interconnect_benes_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="Interconnect_benes.nky"/>
+  <File Type="BITSTR-RBT" Name="Interconnect_benes.rbt"/>
+  <File Type="BITSTR-MSK" Name="Interconnect_benes.msk"/>
+  <File Type="BG-BIN" Name="Interconnect_benes.bin"/>
+  <File Type="BG-BIT" Name="Interconnect_benes.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Interconnect_benes_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Interconnect_benes_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Interconnect_benes_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Interconnect_benes_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Interconnect_benes_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Interconnect_benes_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Interconnect_benes_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Interconnect_benes_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Interconnect_benes_bus_skew_routed.rpx"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Interconnect_benes_postplace_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Interconnect_benes_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Interconnect_benes_methodology_drc_routed.rpx"/>
+  <File Type="PLACE-UTIL" Name="Interconnect_benes_utilization_placed.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Interconnect_benes_methodology_drc_opted.rpt"/>
+  <File Type="PLACE-CLK" Name="Interconnect_benes_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="Interconnect_benes_io_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="Interconnect_benes_control_sets_placed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Interconnect_benes_methodology_drc_routed.pb"/>
+  <File Type="PLACE-DCP" Name="Interconnect_benes_placed.dcp"/>
+  <File Type="INIT-TIMING" Name="Interconnect_benes_timing_summary_init.rpt"/>
+  <File Type="PWROPT-DRC" Name="Interconnect_benes_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Interconnect_benes_timing_summary_pwropted.rpt"/>
+  <File Type="REPORTS-TCL" Name="Interconnect_benes_reports.tcl"/>
+  <File Type="PLACE-TIMING" Name="Interconnect_benes_timing_summary_placed.rpt"/>
+  <File Type="OPT-DRC" Name="Interconnect_benes_drc_opted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Interconnect_benes_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PA-TCL" Name="Interconnect_benes.tcl"/>
+  <File Type="OPT-TIMING" Name="Interconnect_benes_timing_summary_opted.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Interconnect_benes_utilization_placed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Interconnect_benes_methodology_drc_routed.rpt"/>
+  <File Type="OPT-DCP" Name="Interconnect_benes_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="Interconnect_benes.hwdef"/>
+  <File Type="PHYSOPT-TIMING" Name="Interconnect_benes_timing_summary_physopted.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Interconnect_benes_incremental_reuse_placed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Interconnect_benes_drc_routed.rpx"/>
+  <File Type="PWROPT-DCP" Name="Interconnect_benes_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="Interconnect_benes_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Interconnect_benes_drc_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Interconnect_benes_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Interconnect_benes_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Interconnect_benes_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Interconnect_benes_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Interconnect_benes_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="Interconnect_benes_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="Interconnect_benes_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Interconnect_benes_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Interconnect_benes_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Interconnect_benes_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Interconnect_benes_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Interconnect_benes_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Interconnect_benes_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Interconnect_benes_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Interconnect_benes_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Interconnect_benes_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Interconnect_benes_bus_skew_routed.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/step1/defines.vh">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../defines.vh"/>
+        <Attr Name="ImportTime" Val="1698058489"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/step1/intf.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../intf.sv"/>
+        <Attr Name="ImportTime" Val="1702275698"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/step1/param_pack.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../param_pack.sv"/>
+        <Attr Name="ImportTime" Val="1702275706"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/step1/network_module.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../network_module.sv"/>
+        <Attr Name="ImportTime" Val="1702023882"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/step1/stage_module.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../stage_module.sv"/>
+        <Attr Name="ImportTime" Val="1698146225"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/step1/switch_module.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../switch_module.sv"/>
+        <Attr Name="ImportTime" Val="1698134966"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/step1/intc_benes.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../intc_benes.sv"/>
+        <Attr Name="ImportTime" Val="1702279216"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../defines.vh">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Interconnect_benes"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Mon Dec 11 16:20:43 2023
+# Process ID: 20995
+# Current directory: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado
+# Command line: vivado
+# Log file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/vivado.log
+# Journal file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project {benes with async reset logic} {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic} -part xcu280-fsvh2892-2L-e
+set_property board_part xilinx.com:au280:part0:1.1 [current_project]
+add_files -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/defines.vh
+import_files -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/defines.vh
+add_files -norecurse -scan_for_includes {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/param_pack.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intf.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv}
+import_files -norecurse {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/param_pack.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intf.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_runs impl_1 -jobs 24
+wait_on_run impl_1
