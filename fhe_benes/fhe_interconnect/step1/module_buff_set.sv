@@ -19,7 +19,8 @@ module module_set #(
         // param auto
         parameter MODULE_NUM_IN_SET = (1 + REV_TRANS_MODULE_NUM_IN_SET + PERM_MODULE_NUM_IN_SET*2 + AUTO_MODULE_NUM_IN_SET
                                          + NTT_MODULE_NUM_IN_SET + INTT_MODULE_NUM_IN_SET+ ADD_MODULE_NUM_IN_SET*2
-                                         + MULTI_MODULE_NUM_IN_SET*2 + LAZY_MODULE_NUM_IN_SET*4 + SET_UINT_MODULE_NUM_IN_SET*2 + DECOMP_MODULE_NUM_IN_SET), // number of module(20)
+                                         + MULTI_MODULE_NUM_IN_SET*2 + LAZY_MODULE_NUM_IN_SET*4 + SET_UINT_MODULE_NUM_IN_SET*2 
+                                         + DECOMP_MODULE_NUM_IN_SET), // number of module(20)
         parameter SLOT_NUM_IN_SET = MODULE_NUM_IN_SET, // number of buffer ram slot (equal to number of module)
 
         parameter NTT_INTT_NUM_IN_SET = NTT_MODULE_NUM_IN_SET + INTT_MODULE_NUM_IN_SET, // 4
@@ -75,8 +76,8 @@ module module_set #(
         input logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_WQ_wdata,
         input logic [logE-1:0][E/2-1:0]                 ntt_input_WQ_wren,
 
-        input logic [SLOT_NUM_IN_SET-1:0][$clog2(MODULE_NUM_IN_SET)-1:0] module_select	,
-        input logic [MODULE_NUM_IN_SET-1:0][$clog2(SLOT_NUM_IN_SET)-1:0] slot_select	,
+        input logic [SLOT_NUM_IN_SET-1:0][$clog2(MODULE_NUM_IN_SET)-1:0]         module_select	,
+        input logic [MODULE_NUM_IN_SET-1:0][$clog2(SLOT_NUM_IN_SET)-1:0]         slot_select	,
         input logic [ROOT_POWER_NUM_IN_SET-1:0][$clog2(NTT_INTT_NUM_IN_SET)-1:0] ntt_intt_select	,
         input logic [NTT_INTT_NUM_IN_SET-1:0][$clog2(ROOT_POWER_NUM_IN_SET)-1:0] root_select	,
 
@@ -102,16 +103,16 @@ module module_set #(
 	);
 
     //ROOT_POWER
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][$clog2(N/(E/2))-1:0]     W_ram_raddr;
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]  W_ram_rdata;
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]  WQ_ram_rdata;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][$clog2(N/(E/2))-1:0]    W_ram_raddr;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]     W_ram_rdata;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]     WQ_ram_rdata;
 
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][$clog2(N/(E/2))-1:0]     W_ram_waddr;
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]  W_ram_wdata;
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0]             W_ram_wren;
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][$clog2(N/(E/2))-1:0]     WQ_ram_waddr;
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]  WQ_ram_wdata;
-    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0]             WQ_ram_wren;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][$clog2(N/(E/2))-1:0]    W_ram_waddr;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]     W_ram_wdata;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0]                W_ram_wren;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][$clog2(N/(E/2))-1:0]    WQ_ram_waddr;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0][FSIZE-1:0]     WQ_ram_wdata;
+    logic [ROOT_POWER_NUM_IN_SET-1:0][logE-1:0][E/2-1:0]                WQ_ram_wren;
 
     
     genvar gi, gj;
