@@ -21,8 +21,8 @@ module module_set #(
                                          + NTT_MODULE_NUM_IN_SET + INTT_MODULE_NUM_IN_SET+ ADD_MODULE_NUM_IN_SET*2
                                          + MULTI_MODULE_NUM_IN_SET*2 + LAZY_MODULE_NUM_IN_SET*4 + SET_UINT_MODULE_NUM_IN_SET*2 
                                          + DECOMP_MODULE_NUM_IN_SET), // number of module(20)
-        parameter SLOT_NUM_IN_SET = MODULE_NUM_IN_SET, // number of buffer ram slot (equal to number of module)
 
+        parameter SLOT_NUM_IN_SET = MODULE_NUM_IN_SET, // number of buffer ram slot (equal to number of module)
         parameter NTT_INTT_NUM_IN_SET = NTT_MODULE_NUM_IN_SET + INTT_MODULE_NUM_IN_SET, // 4
         parameter ROOT_POWER_NUM_IN_SET = NTT_INTT_NUM_IN_SET 
 	) (

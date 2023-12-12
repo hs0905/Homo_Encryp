@@ -1,7 +1,6 @@
-package USER_PARAM_PKG;
+package USER_PKG;
 
 import FHE_ALU_PKG::*;
-
 
 localparam  SIZE = 32; // number of ports
 localparam  SWITCH_NUM = SIZE/2;
