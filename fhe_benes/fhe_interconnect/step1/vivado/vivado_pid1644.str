@@ -1,0 +1,325 @@
+/*
+
+Xilinx Vivado v2020.2.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3118627 on Tue Feb  9 05:13:49 MST 2021
+IP Build: 3115676 on Tue Feb  9 10:48:11 MST 2021
+
+Process ID (PID): 1644
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Dec 13 21:18:17 KST 2023
+Time zone: 	Korean Standard Time (Asia/Seoul)
+
+OS: Ubuntu
+OS Version: 5.4.0-150-generic
+OS Architecture: amd64
+Available processors (cores): 24
+
+Display: 18.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/tools/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/tools/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	hs
+User home directory: /home/hs
+User working directory: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2020.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: /home/hs/.Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: /home/hs/.Xilinx/Vivado/2020.2/
+Vivado layouts directory: /home/hs/.Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/vivado.log
+Vivado journal file location: 	/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1644-baldur
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2020.2
+XILINX_VITIS: 
+XILINX_VIVADO: /tools/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,578 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,578 MB. GUI used memory: 65 MB. Current time: 12/13/23, 9:18:18 PM KST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 90 MB (+91778kb) [00:09:18]
+// [Engine Memory]: 1,582 MB (+1507473kb) [00:09:18]
+// [GUI Memory]: 111 MB (+17827kb) [00:09:19]
+// [GUI Memory]: 120 MB (+2620kb) [00:09:19]
+// f (cr): New Project: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // i
+// WARNING: HEventQueue.dispatchEvent() is taking  1815 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,659 MB. GUI used memory: 71 MB. Current time: 12/13/23, 9:27:38 PM KST
+selectTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Alveo U280 Data Center Accelerator Card ; Alveo U280 Data Center Accelerator Card ; xilinx.com ; 1.1 ; xcu280-fsvh2892-2L-e ; 2892 ; 1.2 ; 624 ; 1303680 ; 2607360 ; 2016 ; 960 ; 9024 ; 24 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 24 ; 0 ; 0 ; 0 ; 0 ; 6 ; 12 ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 8, "Alveo U280 Data Center Accelerator Card", 0); // d
+// [GUI Memory]: 167 MB (+43328kb) [00:09:29]
+selectButton("NEXT", "Next >"); // JButton
+// bz (cr):  Create Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project project_2 /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_2 -part xcu280-fsvh2892-2L-e 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,698 MB (+38353kb) [00:09:32]
+// WARNING: HEventQueue.dispatchEvent() is taking  1048 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: set_property board_part xilinx.com:au280:part0:1.1 [current_project] 
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 15 seconds
+dismissDialog("Create Project"); // bz
+dismissDialog("New Project"); // f
+// [GUI Memory]: 213 MB (+39600kb) [00:09:34]
+// [Engine Memory]: 1,798 MB (+15792kb) [00:09:34]
+// Elapsed time: 32 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 25 seconds
+String[] filenames31467 = {"/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/FHE_ALU_PKG.sv", "/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/USER_PKG.sv", "/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv", "/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv", "/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 28 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse -scan_for_includes {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/FHE_ALU_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/USER_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv} 
+// c (cr): Add Sources: addNotify
+// bz (c):  Add Sources  : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -norecurse {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/FHE_ALU_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/USER_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv} 
+dismissDialog("Add Sources"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 1,838 MB. GUI used memory: 149 MB. Current time: 12/13/23, 9:28:48 PM KST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, type_network_module (network_module.sv)]", 3, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, type_network_module (network_module.sv)]", 3); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, type_network_module (network_module.sv)]", 3); // D
+// HMemoryUtils.trashcanNow. Engine heap size: 1,858 MB. GUI used memory: 150 MB. Current time: 12/13/23, 9:29:08 PM KST
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_2/project_2.srcs/sources_1/imports/step1/network_module.sv] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_2/project_2.srcs/sources_1/imports/step1/network_module.sv 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 1,890 MB (+2895kb) [00:11:08]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 10 seconds
+dismissDialog("Add Sources"); // c
+// c (cr): Add Sources: addNotify
+// bV (c): Import Source Conflicts: addNotify
+selectRadioButton(PAResourceQtoS.SrcConflictDialog_DONT_OVERWRITE_EXISTING_FILES, "Don't overwrite existing files"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Import Source Conflicts"); // bV
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv 
+// bz (c):  Add Sources  : addNotify
+// Tcl Message: import_files -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv 
+dismissDialog("Add Sources"); // bz
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,924 MB. GUI used memory: 151 MB. Current time: 12/13/23, 9:29:53 PM KST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, network_module (network_module.sv)]", 2); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, type_network_module (network_module.sv)]", 12); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, network_module (network_module.sv)]", 2); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// bz (cr):  Open Elaborated Design : addNotify
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xcu280-fsvh2892-2L-e Top: network_module 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,677 MB. GUI used memory: 151 MB. Current time: 12/13/23, 9:30:13 PM KST
+// TclEventType: ELABORATE_START
+// [Engine Memory]: 2,820 MB (+875846kb) [00:12:04]
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 3,625 MB (+696254kb) [00:12:13]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,654 MB. GUI used memory: 151 MB. Current time: 12/13/23, 9:30:25 PM KST
+// [GUI Memory]: 229 MB (+5302kb) [00:12:14]
+// TclEventType: DESIGN_NEW
+// [GUI Memory]: 258 MB (+18382kb) [00:12:14]
+// [GUI Memory]: 296 MB (+26540kb) [00:12:14]
+// [Engine Memory]: 3,903 MB (+101103kb) [00:12:15]
+// Xgd.load filename: /tools/Xilinx/Vivado/2020.2/data/parts/xilinx/virtexuplusHBM/devint/virtexuplusHBM/xcu280/xcu280.xgd; ZipEntry: xcu280_detail.xgd elapsed time: 1s
+// [GUI Memory]: 333 MB (+23723kb) [00:12:15]
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 1.2s
+// Device: addNotify
+// DeviceView Instantiated
+// [GUI Memory]: 352 MB (+2534kb) [00:12:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// TclEventType: CURR_DESIGN_SET
+// [Engine Memory]: 4,100 MB (+2153kb) [00:12:15]
+// Tcl Message: INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 8480.434 ; gain = 172.547 ; free physical = 31532 ; free virtual = 43675 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8624.410 ; gain = 316.523 ; free physical = 31492 ; free virtual = 43638 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8639.254 ; gain = 331.367 ; free physical = 31495 ; free virtual = 43641 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8639.254 ; gain = 331.367 ; free physical = 31495 ; free virtual = 43641 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.97 . Memory (MB): peak = 8819.230 ; gain = 0.000 ; free physical = 31170 ; free virtual = 43316 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 9255.598 ; gain = 0.000 ; free physical = 30872 ; free virtual = 43018 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// [GUI Memory]: 370 MB (+378kb) [00:12:16]
+// [GUI Memory]: 389 MB (+220kb) [00:12:16]
+// [Engine Memory]: 4,552 MB (+258987kb) [00:12:17]
+// [GUI Memory]: 410 MB (+1015kb) [00:12:17]
+// [Engine Memory]: 4,816 MB (+37373kb) [00:12:17]
+// [Engine Memory]: 5,067 MB (+10724kb) [00:12:17]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 2.4s
+// [GUI Memory]: 430 MB (+252kb) [00:12:17]
+// WARNING: HEventQueue.dispatchEvent() is taking  2222 ms.
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 9394.320 ; gain = 1086.434 ; free physical = 30633 ; free virtual = 42807 
+// Tcl Message: 9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 9394.320 ; gain = 1805.957 ; free physical = 30633 ; free virtual = 42806 
+// [GUI Memory]: 453 MB (+1297kb) [00:12:18]
+// Device view-level: 0.0
+// 'dV' command handler elapsed time: 22 seconds
+// Elapsed time: 23 seconds
+dismissDialog("Open Elaborated Design"); // bz
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// 'cL' command handler elapsed time: 4 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  4170 ms.
+// u:  Generate Schematic : addNotify
+// [GUI Memory]: 481 MB (+5298kb) [00:12:27]
+// [GUI Memory]: 505 MB (+222kb) [00:12:28]
+dismissDialog("Generate Schematic"); // u
+// HMemoryUtils.trashcanNow. Engine heap size: 5,232 MB. GUI used memory: 363 MB. Current time: 12/13/23, 9:30:53 PM KST
+// [Engine Memory]: 5,364 MB (+45666kb) [00:12:44]
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+// Elapsed time: 75 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+// Elapsed time: 1130 seconds
+selectTab((HResource) null, (HResource) null, "Physical Constraints", 0); // aK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE

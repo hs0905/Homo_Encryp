@@ -55,3 +55,49 @@ stage_module stage_8(
 );
 
 endmodule
+
+module type_stage_module
+(
+    input   logic                   clk,
+    input   logic [SWITCH_NUM-1:0]  switch_set, // 16bit -> number of switch
+    input   BufferRAMTEFsizeInputs  i_port      [0:SIZE-1], // 4bit * 32 vector -> input port
+    output  BufferRAMTEFsizeInputs  o_port      [0:SIZE-1] // 4bit * 32 vector -> output port
+);
+
+generate
+    for(genvar i=0; i<SWITCH_NUM; i++) begin:switch_instance
+    switch_module s(
+        .clk(clk),
+        .switch_set(switch_set[i]),
+        .i_port_0(i_port[2*i]),
+        .i_port_1(i_port[2*i+1]),
+        .o_port_0(o_port[2*i]),
+        .o_port_1(o_port[2*i+1])
+    );
+    end
+endgenerate
+
+endmodule
+
+module type_switch_module(
+    input BufferRAMTEFsizeInputs i_port_0,
+    input BufferRAMTEFsizeInputs i_port_1,
+    input logic clk,
+    input logic switch_set,
+    output BufferRAMTEFsizeInputs o_port_0,
+    output BufferRAMTEFsizeInputs o_port_1
+);
+
+always_comb begin
+    if(!switch_set)//bar
+    begin
+        o_port_0 = i_port_0;
+        o_port_1 = i_port_1;        
+    end
+    else begin
+        o_port_0 = i_port_1;
+        o_port_1 = i_port_0;
+    end
+end
+
+endmodule

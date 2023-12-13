@@ -1,0 +1,283 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Mon Dec 11 16:20:43 2023
+# Process ID: 20995
+# Current directory: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado
+# Command line: vivado
+# Log file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/vivado.log
+# Journal file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+create_project {benes with async reset logic} {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic} -part xcu280-fsvh2892-2L-e
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property board_part xilinx.com:au280:part0:1.1 [current_project]
+add_files -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/defines.vh
+import_files -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/defines.vh
+add_files -norecurse -scan_for_includes {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/param_pack.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intf.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv}
+import_files -norecurse {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/param_pack.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intf.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xcu280-fsvh2892-2L-e
+Top: Interconnect_benes
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 8407.340 ; gain = 168.547 ; free physical = 16486 ; free virtual = 25097
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'network_module' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/network_module.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'stage_module' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/stage_module.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'switch_module' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/switch_module.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'switch_module' (1#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/switch_module.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'stage_module' (2#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/stage_module.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'network_module' (3#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/network_module.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'Interconnect_benes' (4#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8565.668 ; gain = 326.875 ; free physical = 16432 ; free virtual = 25048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8580.512 ; gain = 341.719 ; free physical = 16434 ; free virtual = 25051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8580.512 ; gain = 341.719 ; free physical = 16434 ; free virtual = 25051
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 9164.980 ; gain = 20.000 ; free physical = 15743 ; free virtual = 24360
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9819.176 ; gain = 0.000 ; free physical = 15158 ; free virtual = 23789
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:22 . Memory (MB): peak = 10239.461 ; gain = 2000.668 ; free physical = 14615 ; free virtual = 23247
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:30 . Memory (MB): peak = 10242.938 ; gain = 2766.641 ; free physical = 14615 ; free virtual = 23247
+launch_runs impl_1 -jobs 24
+[Mon Dec 11 16:23:38 2023] Launched synth_1...
+Run output will be captured here: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.runs/synth_1/runme.log
+[Mon Dec 11 16:23:38 2023] Launched impl_1...
+Run output will be captured here: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files {{/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv}}] -no_script -reset -force -quiet
+remove_files  {{/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv}}
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
+import_files -force -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10785.613 ; gain = 0.000 ; free physical = 13353 ; free virtual = 21270
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:12]
+ERROR: [Synth 8-359] invalid assignment pattern [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:32]
+ERROR: [Synth 8-6156] failed synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10785.613 ; gain = 0.000 ; free physical = 13399 ; free virtual = 21316
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xcu280-fsvh2892-2L-e
+Top: Interconnect_benes
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10785.613 ; gain = 0.000 ; free physical = 14733 ; free virtual = 22660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:12]
+ERROR: [Synth 8-359] invalid assignment pattern [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:32]
+ERROR: [Synth 8-6156] failed synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/benes with async reset logic/benes with async reset logic.srcs/sources_1/imports/step1/intc_benes.sv:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10785.613 ; gain = 0.000 ; free physical = 14787 ; free virtual = 22715
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+close_project
+create_project project_1 /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1 -part xcu280-fsvh2892-2L-e
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+set_property board_part xilinx.com:au280:part0:1.1 [current_project]
+add_files -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/defines.vh
+import_files -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/defines.vh
+add_files -norecurse -scan_for_includes {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/USER_PARAM_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/FHE_ALU_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv}
+import_files -norecurse {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/USER_PARAM_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/FHE_ALU_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/switch_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/stage_module.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xcu280-fsvh2892-2L-e
+Top: Interconnect_benes
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10785.613 ; gain = 0.000 ; free physical = 14807 ; free virtual = 22760
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/intc_benes.sv:12]
+ERROR: [Synth 8-359] invalid assignment pattern [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/intc_benes.sv:32]
+ERROR: [Synth 8-6156] failed synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/intc_benes.sv:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10785.613 ; gain = 0.000 ; free physical = 14836 ; free virtual = 22789
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+1 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+export_ip_user_files -of_objects  [get_files /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/intc_benes.sv] -no_script -reset -force -quiet
+remove_files  /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/intc_benes.sv
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
+import_files -force -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/intc_benes.sv] -no_script -reset -force -quiet
+remove_files  /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/intc_benes.sv
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
+import_files -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
+WARNING: [filemgmt 20-354] The following file(s) were not imported. Local copy of file(s) already exists:
+/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv
+Hint: use the '-force' option to overwrite the local copies.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xcu280-fsvh2892-2L-e
+Top: Interconnect_benes
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10812.164 ; gain = 0.000 ; free physical = 14683 ; free virtual = 22654
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Interconnect_benes' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'network_module' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/network_module.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'stage_module' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/stage_module.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'switch_module' [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/switch_module.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'switch_module' (1#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/switch_module.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'stage_module' (2#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/stage_module.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'network_module' (3#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.srcs/sources_1/imports/step1/network_module.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'Interconnect_benes' (4#1) [/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/intc_benes.sv:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 10812.164 ; gain = 0.000 ; free physical = 14685 ; free virtual = 22657
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 10812.164 ; gain = 0.000 ; free physical = 14684 ; free virtual = 22655
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 10812.164 ; gain = 0.000 ; free physical = 14684 ; free virtual = 22655
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 10812.164 ; gain = 0.000 ; free physical = 13129 ; free virtual = 21102
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 10876.160 ; gain = 0.000 ; free physical = 12106 ; free virtual = 20079
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 10881.164 ; gain = 69.000 ; free physical = 11628 ; free virtual = 19628
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 10881.164 ; gain = 69.000 ; free physical = 11628 ; free virtual = 19628
+launch_runs impl_1 -jobs 24
+[Mon Dec 11 17:48:27 2023] Launched synth_1...
+Run output will be captured here: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.runs/synth_1/runme.log
+[Mon Dec 11 17:48:27 2023] Launched impl_1...
+Run output will be captured here: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/project_1/project_1.runs/impl_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xcu280-fsvh2892-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 11550.855 ; gain = 0.000 ; free physical = 43875 ; free virtual = 46883
+WARNING: [Netlist 29-101] Netlist 'Interconnect_benes' is not ideal for floorplanning, since the cellview 'Interconnect_benes' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11550.855 ; gain = 0.000 ; free physical = 43588 ; free virtual = 46607
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+

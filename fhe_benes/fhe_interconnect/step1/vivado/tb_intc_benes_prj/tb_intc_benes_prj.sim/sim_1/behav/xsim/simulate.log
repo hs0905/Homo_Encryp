@@ -1,0 +1,5 @@
+Vivado Simulator v2020.2.2
+Time resolution is 1 ps
+Start simulation
+wait for 20 clk cycles
+$finish called at time : 900 ps : File "/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/tb_intc_benes_prj/tb_intc_benes_prj.srcs/sim_1/imports/step1/tb_intc_benes.sv" Line 128
