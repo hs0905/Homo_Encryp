@@ -685,8 +685,9 @@ void print_stage_switch_num(int current_size){
 
 for(int j = 0; j < cols; j++){
     for(int i = 0; i < rows; i++){
-        printf("%d",stage_switch_arr[i][j]);
+        printf("%d",stage_switch_arr[rows -1 - i][j]);
     }
+    printf("\n");
 }
 }
 
