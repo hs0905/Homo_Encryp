@@ -39,24 +39,24 @@ int * out_port_arr;
 /*=======================================================================================
 declare sub_function for main
 =======================================================================================*/
-void allocate_memory(int current_size);
-void free_memory(int current_size);
-void table_sort(int current_size);
-int start_point(int current_size);
-void get_used_switch(int port);
-void routing_path(int port, int position, int order);
-int outFind(int current_size, int order, int port, int position, int flag, int isFirstcall);
-void first_layer(int current_size);
-void path_divider(int current_size);
-void parameter_cal(int current_size);
-double logB(double x);
-void subnet_table_maker(int current_size, int layer);
-void mid_layer(int current_size);
-void set_switch(int current_size);
-int final_layer(int current_size);
-void transfer_switch_arr(int current_size);
-void print_stage_switch(int current_size);
-void print_stage_switch_num(int current_size);
+void 		allocate_memory				(int current_size);
+void 		free_memory						(int current_size);
+void 		table_sort						(int current_size);
+int 		start_point						(int current_size);
+void 		get_used_switch				(int port);
+void 		routing_path					(int port, int position, int order);
+int 		outFind								(int current_size, int order, int port, int position, int flag, int isFirstcall);
+void 		first_layer						(int current_size);
+void 		path_divider					(int current_size);
+void 		parameter_cal					(int current_size);
+void 		mid_layer							(int current_size);
+void 		set_switch						(int current_size);
+int 		final_layer						(int current_size);
+void 		transfer_switch_arr		(int current_size);
+void 		print_stage_switch		(int current_size);
+void 		print_stage_switch_num(int current_size);
+void 		subnet_table_maker		(int current_size, int layer);
+double 	logB									(double x);
 /*=======================================================================================
 function for dynamic allocate array
 =======================================================================================*/

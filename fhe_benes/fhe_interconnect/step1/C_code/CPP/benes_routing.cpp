@@ -1,8 +1,37 @@
 #include <iostream>
 #include <array>
-#include <algorithm> // std::find 함수를 사용하기 위해 필요
-
+#include <algorithm> 
+#include<math.h>
+// parameter
 const int SIZE = 32;
+const int SW_SIZE = SIZE / 2;
+const int LAYER = log2(SIZE);
+const int STAGE = (LAYER * 2 ) -1;
+
+// Function Declaration
+void  get_num        (std::array<int, SIZE>& arr);
+void  table_gen      (std::array< std::array<int, 2>, SIZE*2> & table);
+int   start_point    (std::array< std::array<int, 2>, SIZE*2> & table);
+void  get_used_switch(int &port);
+
+int main() {
+  
+  std::array<int, SIZE> benes_num;
+  get_num(benes_num);
+  std::array< std::array<int, 2>, SIZE*2> table;
+  for(int i=0; i<SIZE; i++){
+    table[i][0] = i;
+    table[i][1] = benes_num[i];
+  }
+  table_gen(table);
+  int start = start_point(table);
+}
+
+//Funcion Definition
+void  get_used_switch(int &port, std::array<int, SW_SIZE> &output_switch){
+  int sw_num;
+  output_switch[sw_num] = output_switch[sw_num] + 1;
+} // 스위치의 사용 횟수 계산을 위한 함수
 
 void get_num(std::array<int, SIZE>& arr) 
 {
@@ -31,7 +60,7 @@ void get_num(std::array<int, SIZE>& arr)
     } while (!isValid); // 유효하지 않은 입력이 있으면 반복
 }
 
-void table_sort(std::array< std::array<int, 2>, SIZE*2> & table){
+void table_gen(std::array< std::array<int, 2>, SIZE*2> & table){
   int reverse_table[SIZE][2];
   for(int i = 0; i< SIZE; i++){
     reverse_table[i][1] = table[i][0];
@@ -57,21 +86,6 @@ void table_sort(std::array< std::array<int, 2>, SIZE*2> & table){
 
 int start_point(std::array< std::array<int, 2>, SIZE*2> & table){
   return table[SIZE][0];
-}
-
-int main() {
-    std::array<int, SIZE> benes_num;
-    get_num(benes_num);
-
-   std::array< std::array<int, 2>, SIZE*2> table;
-    for(int i=0; i<SIZE; i++){
-        table[i][0] = i;
-        table[i][1] = benes_num[i];
-    return 0;
-    table_sort(table);
-    int start = start_point(table);
-
-}
 }
 
 
