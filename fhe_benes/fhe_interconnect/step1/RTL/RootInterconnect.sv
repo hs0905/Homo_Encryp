@@ -63,21 +63,24 @@ module RootInterconnect #(
 
     // module to ram => addr (3stage)
     for(gl = 0; gl < ROOT_POWER_NUM_IN_ROOT ; gl++) begin: module_to_rootpower
+      // [1:0][3:0][2:0][13:0]intc_set_in(midle/out)
       logic [STAGE_NTT_INTT_ROOT-1:0][STAGE_NTT_INTT_POWER_ROOT-1:0][logE-1:0][$clog2(N/(E/2))-1:0] intc_set_in ;
       logic [STAGE_NTT_INTT_ROOT-1:0][STAGE_NTT_INTT_POWER_ROOT-1:0][logE-1:0][$clog2(N/(E/2))-1:0] intc_set_middle ;
       logic [STAGE_NTT_INTT_ROOT-1:0][STAGE_NTT_INTT_POWER_ROOT-1:0][logE-1:0][$clog2(N/(E/2))-1:0] intc_set_out ;
 
       for(gi = 0; gi < STAGE_NTT_INTT_ROOT; gi++) begin : fifo_M_to_R
-       /* for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi) ; gj++ ) begin
-          for(gp = 0; gp < logE ; gp++ ) begin
-            FifoBuffer #(.DATA_SIZE($clog2(N/(E/2))),.CYCLES(1) )  
-              fifo_indi1  (.clk(clk),.rstn(1),.in(intc_set_in[gi][gj][gp]),.out(intc_set_middle[gi][gj][gp]));
+      
+        for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi) ; gj++ ) begin
+            for(gp = 0; gp < logE ; gp++ ) begin
+              FifoBuffer #(.DATA_SIZE($clog2(N/(E/2))),.CYCLES(1) )  
+                fifo_indi1  (.clk(clk),.rstn(1),.in(intc_set_in[gi][gj][gp]),.out(intc_set_middle[gi][gj][gp]));
+            end
           end
-        end */
+       
         for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi-1) ; gj++ ) begin
             assign intc_set_middle[gi][gj] = ntt_intt_select_fifo[gl][gi] ? intc_set_in[gi][2*gj+1] : intc_set_in[gi][2*gj];
           end
-    end
+      end
   
     end
   endgenerate
