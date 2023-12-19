@@ -68,8 +68,7 @@ module RootInterconnect #(
       logic [STAGE_NTT_INTT_ROOT-1:0][STAGE_NTT_INTT_POWER_ROOT-1:0][logE-1:0][$clog2(N/(E/2))-1:0] intc_set_middle ;
       logic [STAGE_NTT_INTT_ROOT-1:0][STAGE_NTT_INTT_POWER_ROOT-1:0][logE-1:0][$clog2(N/(E/2))-1:0] intc_set_out ;
 
-      for(gi = 0; gi < STAGE_NTT_INTT_ROOT; gi++) begin : fifo_M_to_R
-      
+      for(gi = 0; gi < STAGE_NTT_INTT_ROOT; gi++) begin : fifo_M_to_R // FIFOBuffer(intc_set_in => intc_set_middle)
         for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi) ; gj++ ) begin
             for(gp = 0; gp < logE ; gp++ ) begin
               FifoBuffer #(.DATA_SIZE($clog2(N/(E/2))),.CYCLES(1) )  
@@ -79,10 +78,32 @@ module RootInterconnect #(
        
         for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi-1) ; gj++ ) begin
             assign intc_set_middle[gi][gj] = ntt_intt_select_fifo[gl][gi] ? intc_set_in[gi][2*gj+1] : intc_set_in[gi][2*gj];
-          end
+            // if(ntt_intt_select_fifo[gl][gi] == 1) => intc_set_middle[gi][gj] = intc_set_in[gi][2*gj+1]
+            // else => intc_set_middle[gi][gj] = intc_set_in[gi][2*gj]
+        end
       end
-  
+      for(gi = 0; gi < STAGE_NTT_INTT_ROOT-1; gi++) begin
+        for(gj = 0 ; gj < 2**(STAGE_NTT_INTT_ROOT-gi-1); gj++)begin
+          for(gp = 0; gp <logE; gp++) begin
+            FifoBuffer #(.DATA_SIZE($clog2(N/(E/2))),.CYCLES(1) )
+              fifo_indi1  (.clk(clk), .rstn(1), .in(intc_set_middle[gi][gj][gp]), .out(intc_set_out[gi][gj][gp]));
+          end
+          assign intc_set_in[gi+1][gj] = intc_set_out[gi][gj];
+        end
+      end
+
+      for(gi = 0; gi < NTT_INTT_NUM_IN_ROOT; gi++) begin // NTT_INTT_NUM_IN_ROOT = 4
+        assign intc_set_in[0][gi] = ntt_output[gi];
+      end
+      for(gi = NTT_INTT_NUM_IN_ROOT; gi < NTT_INTT_NUM_IN_ROOT + 1 ; gi++) begin // non_assignment(out of range)
+        if( gi < 2**STAGE_NTT_INTT_POWER_ROOT)
+          assign intc_set_in[0][gi] = '{default:'0};
+      end
+      assign root_input[gl] = intc_set_middle[STAGE_NTT_INTT_ROOT-1][0]; 
     end
+
+
+
   endgenerate
 
 endmodule
