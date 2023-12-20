@@ -69,12 +69,12 @@ module RootInterconnect #(
       logic [STAGE_NTT_INTT_ROOT-1:0][STAGE_NTT_INTT_POWER_ROOT-1:0][logE-1:0][$clog2(N/(E/2))-1:0] intc_set_out ;
 
       for(gi = 0; gi < STAGE_NTT_INTT_ROOT; gi++) begin : fifo_M_to_R // FIFOBuffer(intc_set_in => intc_set_middle)
-        for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi) ; gj++ ) begin
+        /*for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi) ; gj++ ) begin
             for(gp = 0; gp < logE ; gp++ ) begin
               FifoBuffer #(.DATA_SIZE($clog2(N/(E/2))),.CYCLES(1) )  
                 fifo_indi1  (.clk(clk),.rstn(1),.in(intc_set_in[gi][gj][gp]),.out(intc_set_middle[gi][gj][gp]));
             end
-          end
+          end */
        
         for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi-1) ; gj++ ) begin
             assign intc_set_middle[gi][gj] = ntt_intt_select_fifo[gl][gi] ? intc_set_in[gi][2*gj+1] : intc_set_in[gi][2*gj];
@@ -102,6 +102,22 @@ module RootInterconnect #(
       assign root_input[gl] = intc_set_middle[STAGE_NTT_INTT_ROOT-1][0]; 
     end
 
+  logic [NTT_INTT_NUM_IN_ROOT-1:0][$clog2(ROOT_POWER_NUM_IN_ROOT)-1:0] root_select_fifo;
+    for(gi = 0; gi < NTT_INTT_NUM_IN_ROOT ; gi++) begin: slot_fifo2
+      FifoBuffer #(.DATA_SIZE($clog2(ROOT_POWER_NUM_IN_ROOT)),.CYCLES(1) )  
+        fifo_slot2  (.clk(clk),.rstn(1),.in(root_select[gi]),.out(root_select_fifo[gi]));
+    end
+
+  // ram to module => rootpower_data (2 stage)
+  for(gl = 0; gl < NTT_INTT_NUM_IN_ROOT ; gl++) begin: rootpower_to_module
+      logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_in_W;
+      logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_middle_W;
+      logic [STAGE_ROOT_POWER_ROOT:0]  [STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_out_W;
+
+      logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_in_WQ;
+      logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_middle_WQ;
+      logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_out_WQ;
+  end
 
 
   endgenerate
