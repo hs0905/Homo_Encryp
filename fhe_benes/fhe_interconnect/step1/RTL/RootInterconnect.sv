@@ -4,7 +4,7 @@
 import FHE_ALU_PKG::*;
 
 module RootInterconnect #(
-  parameter         DATA_SIZE = FSIZE,
+  parameter         DATA_SIZE = FSIZE, // 64
   parameter integer CYCLES = 2,
 
   // NTT_INTT parameters
@@ -110,6 +110,7 @@ module RootInterconnect #(
 
   // ram to module => rootpower_data (2 stage)
   for(gl = 0; gl < NTT_INTT_NUM_IN_ROOT ; gl++) begin: rootpower_to_module
+      // [1:0][3:0][2:0][3:0][63:0]
       logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_in_W;
       logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_middle_W;
       logic [STAGE_ROOT_POWER_ROOT:0]  [STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_out_W;
