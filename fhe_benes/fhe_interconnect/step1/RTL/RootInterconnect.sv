@@ -113,7 +113,6 @@ module RootInterconnect #(
       logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_in_W;
       logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_middle_W;
       logic [STAGE_ROOT_POWER_ROOT:0]  [STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_out_W;
-
       logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_in_WQ;
       logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_middle_WQ;
       logic [STAGE_ROOT_POWER_ROOT-1:0][STAGE_ROOT_POWER_POWER_ROOT-1:0][logE-1:0][E/2-1:0][FSIZE-1:0] intc_indiv_out_WQ;
