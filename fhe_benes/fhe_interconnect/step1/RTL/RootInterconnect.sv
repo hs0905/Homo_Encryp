@@ -172,28 +172,75 @@ module RootInterconnect #(
     //================================================================================================
 
   // rootpower write => 2 stage
-    for(gl = 0; gl < ROOT_POWER_NUM_IN_ROOT ; gl++) begin: rootpower_write
-      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_W_wdata_stage[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_WQ_wdata_stage[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][E/2-1:0]                 ntt_input_W_wren_stage[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][E/2-1:0]                 ntt_input_WQ_wren_stage[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_W_waddr_stage[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_WQ_waddr_stage[0:STAGE_ROOT_POWER_ROOT];
+    for(gl = 0; gl < ROOT_POWER_NUM_IN_ROOT ; gl++) begin: rootpower_write 
+      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_W_wdata_stage     [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_WQ_wdata_stage    [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0]                 ntt_input_W_wren_stage      [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0]                 ntt_input_WQ_wren_stage     [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_W_waddr_stage     [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_WQ_waddr_stage    [0:STAGE_ROOT_POWER_ROOT];
 
-      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_W_wdata_stage_mid[0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_W_wdata_stage_mid [0:STAGE_ROOT_POWER_ROOT];
       logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_WQ_wdata_stage_mid[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][E/2-1:0]                 ntt_input_W_wren_stage_mid[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][E/2-1:0]                 ntt_input_WQ_wren_stage_mid[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_W_waddr_stage_mid[0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0]                 ntt_input_W_wren_stage_mid  [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0]                 ntt_input_WQ_wren_stage_mid [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_W_waddr_stage_mid [0:STAGE_ROOT_POWER_ROOT];
       logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_WQ_waddr_stage_mid[0:STAGE_ROOT_POWER_ROOT];
 
-      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_W_wdata_stage_out[0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_W_wdata_stage_out [0:STAGE_ROOT_POWER_ROOT];
       logic [logE-1:0][E/2-1:0][FSIZE-1:0]      ntt_input_WQ_wdata_stage_out[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][E/2-1:0]                 ntt_input_W_wren_stage_out[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][E/2-1:0]                 ntt_input_WQ_wren_stage_out[0:STAGE_ROOT_POWER_ROOT];
-      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_W_waddr_stage_out[0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0]                 ntt_input_W_wren_stage_out  [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][E/2-1:0]                 ntt_input_WQ_wren_stage_out [0:STAGE_ROOT_POWER_ROOT];
+      logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_W_waddr_stage_out [0:STAGE_ROOT_POWER_ROOT];
       logic [logE-1:0][$clog2(N/(E/2))-1:0]     ntt_input_WQ_waddr_stage_out[0:STAGE_ROOT_POWER_ROOT];
 
+      for(gi = 0; gi < STAGE_ROOT_POWER_ROOT; gi++) begin : fifo_Rootpower_write
+        for(gp = 0; gp < logE ; gp++ ) begin
+          for(gk = 0; gk < E/2 ; gk++ ) begin
+            FifoBuffer#(.DATA_SIZE(FSIZE),.CYCLES(1))
+              fifo_write1(.clk(clk),.rstn(1),.in(ntt_input_W_wdata_stage[gi][gp][gk]),.out(ntt_input_W_wdata_stage_mid[gi][gp][gk]));
+            FifoBuffer#(.DATA_SIZE(FSIZE),.CYCLES(1))
+              fifo_write2(.clk(clk),.rstn(1),.in(ntt_input_WQ_wdata_stage[gi][gp][gk]),.out(ntt_input_WQ_wdata_stage_mid[gi][gp][gk]));
+            FifoBuffer#(.DATA_SIZE(1),.CYCLES(1))
+              fifo_write3(.clk(clk),.rstn(1),.in(ntt_input_W_wren_stage[gi][gp][gk]),.out(ntt_input_W_wren_stage_mid[gi][gp][gk]));
+            FifoBuffer#(.DATA_SIZE(1),.CYCLES(1) )
+              fifo_write4(.clk(clk),.rstn(1),.in(ntt_input_WQ_wren_stage[gi][gp][gk]),.out(ntt_input_WQ_wren_stage_mid[gi][gp][gk]));
+          end
+          // W/WQ_waddr
+          FifoBuffer#(.DATA_SIZE($clog2(N/(E/2))),.CYCLES(1))
+            fifo_write5  (.clk(clk), .rstn(1), .in(ntt_input_W_waddr_stage[gi][gp]),.out(ntt_input_W_waddr_stage_mid[gi][gp]));
+          FifoBuffer#(.DATA_SIZE($clog2(N/(E/2))),.CYCLES(1))
+            fifo_write6  (.clk(clk), .rstn(1), .in(ntt_input_WQ_waddr_stage[gi][gp]),.out(ntt_input_WQ_waddr_stage_mid[gi][gp]));
+        end
+        
+        assign ntt_input_W_wdata_stage_out [gi] = ntt_intt_select[gl][gi] ? '{default:'0} : ntt_input_W_wdata_stage_mid [gi];
+        assign ntt_input_WQ_wdata_stage_out[gi] = ntt_intt_select[gl][gi] ? '{default:'0} : ntt_input_WQ_wdata_stage_mid[gi];
+        assign ntt_input_W_wren_stage_out  [gi] = ntt_intt_select[gl][gi] ? '{default:'0} : ntt_input_W_wren_stage_mid  [gi];
+        assign ntt_input_WQ_wren_stage_out [gi] = ntt_intt_select[gl][gi] ? '{default:'0} : ntt_input_WQ_wren_stage_mid [gi];
+        assign ntt_input_W_waddr_stage_out [gi] = ntt_intt_select[gl][gi] ? '{default:'0} : ntt_input_W_waddr_stage_mid [gi];
+        assign ntt_input_WQ_waddr_stage_out[gi] = ntt_intt_select[gl][gi] ? '{default:'0} : ntt_input_WQ_waddr_stage_mid[gi];
+
+        assign ntt_input_W_wdata_stage [gi+1] = ntt_input_W_wdata_stage_out [gi];
+        assign ntt_input_WQ_wdata_stage[gi+1] = ntt_input_WQ_wdata_stage_out[gi];
+        assign ntt_input_W_wren_stage  [gi+1] = ntt_input_W_wren_stage_out  [gi];
+        assign ntt_input_WQ_wren_stage [gi+1] = ntt_input_WQ_wren_stage_out [gi];
+        assign ntt_input_W_waddr_stage [gi+1] = ntt_input_W_waddr_stage_out [gi];
+        assign ntt_input_WQ_waddr_stage[gi+1] = ntt_input_WQ_waddr_stage_out[gi];
+      end
+      assign ntt_input_W_wdata_stage [0] = ntt_input_W_wdata;
+      assign ntt_input_WQ_wdata_stage[0] = ntt_input_WQ_wdata;
+      assign ntt_input_W_wren_stage  [0] = ntt_input_W_wren;
+      assign ntt_input_WQ_wren_stage [0] = ntt_input_WQ_wren;
+      assign ntt_input_W_waddr_stage [0] = ntt_input_W_waddr;
+      assign ntt_input_WQ_waddr_stage[0] = ntt_input_WQ_waddr;
+    
+      assign W_ram_wdata [gl] = ntt_input_W_wdata_stage [STAGE_ROOT_POWER_ROOT];
+      assign WQ_ram_wdata[gl] = ntt_input_WQ_wdata_stage[STAGE_ROOT_POWER_ROOT];
+      assign W_ram_wren  [gl] = ntt_input_W_wren_stage  [STAGE_ROOT_POWER_ROOT];
+      assign WQ_ram_wren [gl] = ntt_input_WQ_wren_stage [STAGE_ROOT_POWER_ROOT];
+      assign W_ram_waddr [gl] = ntt_input_W_waddr_stage [STAGE_ROOT_POWER_ROOT];
+      assign WQ_ram_waddr[gl] = ntt_input_WQ_waddr_stage[STAGE_ROOT_POWER_ROOT];
+    end
   endgenerate
 
 endmodule
