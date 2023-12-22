@@ -5,17 +5,17 @@ import FHE_ALU_PKG::*;
 
 
 module Transposer #(
-		parameter DATA_SIZE     = FSIZE,
-		parameter ELEMS         = E
+		parameter DATA_SIZE = FSIZE,  // 64
+		parameter ELEMS     = E       // 8
 	) (	
-	  input logic	                        clk,	
-	  input logic	                        rstn,	
-    input logic   [DATA_SIZE*E-1:0]     in,
-    input logic                         in_valid,
-    input logic                         in_last,
-    output logic  [DATA_SIZE*E-1:0]     out,
-    output logic                        out_valid,
-    output logic                        out_last
+	  input   logic	                    clk,	
+	  input   logic	                    rstn,	
+    input   logic  [DATA_SIZE*E-1:0]  in,
+    input   logic                     in_valid,
+    input   logic                     in_last,
+    output  logic  [DATA_SIZE*E-1:0]  out,
+    output  logic                     out_valid,
+    output  logic                     out_last
   );
 
   typedef struct packed {   

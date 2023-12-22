@@ -27,7 +27,6 @@ module BitCompose #(
       if (barrel == 1) mid_barreled = {mid[0],mid[MID_WIDTH-1:1]};
       if (barrel == 2) mid_barreled = {mid[1:0],mid[MID_WIDTH-1:2]};
     end
-
     // logN = 16
     // out = {in,mid_barreled};
     case (base)
