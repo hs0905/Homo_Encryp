@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Sat Dec 23 15:02:01 2023
+# Process ID: 24190
+# Current directory: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/RTL/resource_check
+# Command line: vivado
+# Log file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/RTL/resource_check/vivado.log
+# Journal file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/RTL/resource_check/vivado.jou
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vck190/production/2.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.0 available at /tools/Xilinx/Vivado/2020.2/data/boards/board_files/vmk180/production/2.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+create_project axi4_test /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/RTL/resource_check/axi4_test -part xcu280-fsvh2892-2L-e
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property board_part xilinx.com:au280:part0:1.1 [current_project]
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+create_peripheral user.org user axi4_test 1.0 -dir /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/RTL/resource_check/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type full [ipx::find_open_core user.org:user:axi4_test:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:axi4_test:1.0]
+write_peripheral [ipx::find_open_core user.org:user:axi4_test:1.0]
+set_property  ip_repo_paths  /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/RTL/resource_check/ip_repo/axi4_test_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/RTL/resource_check/ip_repo/axi4_test_1.0'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 23 15:11:52 2023...
