@@ -16,67 +16,67 @@
 	(
 		// Ports of Axi Slave Bus Interface S00_AXI
 
-		input wire  																s00_axi_aclk,
-		input wire  																s00_axi_aresetn,
+		input logic  																s00_axi_aclk,
+		input logic  																s00_axi_aresetn,
 		//================================================
 		//aw channel(address write)
 		//================================================
-		input wire 	[C_S00_AXI_ID_WIDTH-1 	: 0]		s00_axi_awid,
-		input wire 	[C_S00_AXI_ADDR_WIDTH-1 : 0]		s00_axi_awaddr,
-		input wire 	[7 : 0] 												s00_axi_awlen,
-		input wire 	[2 : 0] 												s00_axi_awsize,
-		input wire 	[1 : 0] 												s00_axi_awburst,
-		input wire  																s00_axi_awlock,
-		input wire 	[3 : 0] 												s00_axi_awcache,
-		input wire 	[2 : 0] 												s00_axi_awprot,
-		input wire 	[3 : 0] 												s00_axi_awqos,
-		input wire 	[3 : 0] 												s00_axi_awregion,
-		input wire [C_S00_AXI_AWUSER_WIDTH-1:0] 		s00_axi_awuser,
-		input wire  																s00_axi_awvalid,
-		output wire  															 	s00_axi_awready,
+		input logic 	[C_S00_AXI_ID_WIDTH-1 	: 0]		s00_axi_awid, 	 // address write id
+		input logic 	[C_S00_AXI_ADDR_WIDTH-1 : 0]		s00_axi_awaddr,  // address write address
+		input logic 	[7 : 0] 												s00_axi_awlen,   //한번의 write transaction에서 write할 data의 갯수
+		input logic 	[2 : 0] 												s00_axi_awsize,  //data의 크기(2의 지수 표현)(pow(2,awsize) = data의 크기))
+		input logic 	[1 : 0] 												s00_axi_awburst, //address write burst type(0:fix,1:incr,2:wrap,3:reserved)
+		input logic  																	s00_axi_awlock,  //address write lock type (not use)
+		input logic 	[3 : 0] 												s00_axi_awcache, //address write cache type(not use)
+		input logic 	[2 : 0] 												s00_axi_awprot,  //address write protection type(not use)
+		input logic 	[3 : 0] 												s00_axi_awqos,   //address write qos type(not use)
+		input logic 	[3 : 0] 												s00_axi_awregion,//address write region type(not use)
+		input logic [C_S00_AXI_AWUSER_WIDTH-1:0] 			s00_axi_awuser,  //address write user type(not use)
+		input logic  																	s00_axi_awvalid, //address write valid
+		output logic  															 	s00_axi_awready, //address write ready
 		//================================================
 		//w channel(write)
 		//================================================
-		input wire [C_S00_AXI_DATA_WIDTH-1 : 0] 	 	s00_axi_wdata,
-		input wire [(C_S00_AXI_DATA_WIDTH/8)-1: 0] 	s00_axi_wstrb,
-		input wire  																s00_axi_wlast,
-		input wire [C_S00_AXI_WUSER_WIDTH-1 : 0] 		s00_axi_wuser,
-		input wire  																s00_axi_wvalid,
-		output wire  																s00_axi_wready,
+		input logic [C_S00_AXI_DATA_WIDTH-1 : 0] 	 	s00_axi_wdata,
+		input logic [(C_S00_AXI_DATA_WIDTH/8)-1: 0] 	s00_axi_wstrb,
+		input logic  																s00_axi_wlast,
+		input logic [C_S00_AXI_WUSER_WIDTH-1 : 0] 		s00_axi_wuser,
+		input logic  																s00_axi_wvalid,
+		output logic  																s00_axi_wready,
 		//================================================
 		//b channel(write response)
 		//================================================
-		output wire [C_S00_AXI_ID_WIDTH-1 : 0] 			s00_axi_bid,
-		output wire [1 : 0] 												s00_axi_bresp,
-		output wire [C_S00_AXI_BUSER_WIDTH-1 : 0] 	s00_axi_buser,
-		output wire  																s00_axi_bvalid,
-		input wire  																s00_axi_bready,
+		output logic [C_S00_AXI_ID_WIDTH-1 : 0] 			s00_axi_bid,
+		output logic [1 : 0] 												s00_axi_bresp,
+		output logic [C_S00_AXI_BUSER_WIDTH-1 : 0] 	s00_axi_buser,
+		output logic  																s00_axi_bvalid,
+		input logic  																s00_axi_bready,
 		//================================================
 		//ar channel(address read)
 		//================================================
-		input wire [C_S00_AXI_ID_WIDTH-1 : 0] 			s00_axi_arid,
-		input wire [C_S00_AXI_ADDR_WIDTH-1 : 0] 		s00_axi_araddr,
-		input wire [7 : 0] 													s00_axi_arlen,
-		input wire [2 : 0] s00_axi_arsize,
-		input wire [1 : 0] s00_axi_arburst,
-		input wire  s00_axi_arlock,
-		input wire [3 : 0] s00_axi_arcache,
-		input wire [2 : 0] s00_axi_arprot,
-		input wire [3 : 0] s00_axi_arqos,
-		input wire [3 : 0] s00_axi_arregion,
-		input wire [C_S00_AXI_ARUSER_WIDTH-1 : 0] s00_axi_aruser,
-		input wire  s00_axi_arvalid,
-		output wire  s00_axi_arready,
+		input logic [C_S00_AXI_ID_WIDTH-1 : 0] 			s00_axi_arid,
+		input logic [C_S00_AXI_ADDR_WIDTH-1 : 0] 		s00_axi_araddr,
+		input logic [7 : 0] 													s00_axi_arlen,
+		input logic [2 : 0] s00_axi_arsize,
+		input logic [1 : 0] s00_axi_arburst,
+		input logic  s00_axi_arlock,
+		input logic [3 : 0] s00_axi_arcache,
+		input logic [2 : 0] s00_axi_arprot,
+		input logic [3 : 0] s00_axi_arqos,
+		input logic [3 : 0] s00_axi_arregion,
+		input logic [C_S00_AXI_ARUSER_WIDTH-1 : 0] s00_axi_aruser,
+		input logic  s00_axi_arvalid,
+		output logic  s00_axi_arready,
 		//================================================
 		//r channel(read response)
 		//================================================
-		output wire [C_S00_AXI_ID_WIDTH-1 : 0] s00_axi_rid,
-		output wire [C_S00_AXI_DATA_WIDTH-1 : 0] s00_axi_rdata,
-		output wire [1 : 0] s00_axi_rresp,
-		output wire  s00_axi_rlast,
-		output wire [C_S00_AXI_RUSER_WIDTH-1 : 0] s00_axi_ruser,
-		output wire  s00_axi_rvalid,
-		input wire  s00_axi_rready
+		output logic [C_S00_AXI_ID_WIDTH-1 : 0] s00_axi_rid,
+		output logic [C_S00_AXI_DATA_WIDTH-1 : 0] s00_axi_rdata,
+		output logic [1 : 0] s00_axi_rresp,
+		output logic  s00_axi_rlast,
+		output logic [C_S00_AXI_RUSER_WIDTH-1 : 0] s00_axi_ruser,
+		output logic  s00_axi_rvalid,
+		input logic  s00_axi_rready
 	);
 // Instantiation of Axi Bus Interface S00_AXI
 	axi4_test_v1_0_S00_AXI # ( 
