@@ -608,8 +608,14 @@
 	    end       
 	end    
 
-	// Add user logic here
-
-	// User logic ends
-
+	Interconnect_benes under_test(
+		.clk(S_AXI_ACLK),
+		.rst_n(S_AXI_ARESETN),
+		.i_ram_outputs({mem_data_out[0]}),
+		.i_module_outputs({{DATA_WIDTH{1'b0}}}),
+		.i_module_select({{SWITCH_NUM{1'b0}}}),
+		.i_slot_select({{SWITCH_NUM{1'b0}}}),
+		.o_ram_inputs({{DATA_WIDTH{1'b0}}}),
+		.o_module_inputs({{DATA_WIDTH{1'b0}}})
+	);
 	endmodule

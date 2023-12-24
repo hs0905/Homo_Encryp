@@ -38,45 +38,45 @@
 		//w channel(write)
 		//================================================
 		input logic [C_S00_AXI_DATA_WIDTH-1 : 0] 	 	s00_axi_wdata,
-		input logic [(C_S00_AXI_DATA_WIDTH/8)-1: 0] 	s00_axi_wstrb,
+		input logic [(C_S00_AXI_DATA_WIDTH/8)-1: 0] s00_axi_wstrb,
 		input logic  																s00_axi_wlast,
-		input logic [C_S00_AXI_WUSER_WIDTH-1 : 0] 		s00_axi_wuser,
+		input logic [C_S00_AXI_WUSER_WIDTH-1 : 0] 	s00_axi_wuser,
 		input logic  																s00_axi_wvalid,
-		output logic  																s00_axi_wready,
+		output logic  															s00_axi_wready,
 		//================================================
 		//b channel(write response)
 		//================================================
-		output logic [C_S00_AXI_ID_WIDTH-1 : 0] 			s00_axi_bid,
+		output logic [C_S00_AXI_ID_WIDTH-1 : 0] 		s00_axi_bid,
 		output logic [1 : 0] 												s00_axi_bresp,
 		output logic [C_S00_AXI_BUSER_WIDTH-1 : 0] 	s00_axi_buser,
-		output logic  																s00_axi_bvalid,
+		output logic  															s00_axi_bvalid,
 		input logic  																s00_axi_bready,
 		//================================================
 		//ar channel(address read)
 		//================================================
 		input logic [C_S00_AXI_ID_WIDTH-1 : 0] 			s00_axi_arid,
 		input logic [C_S00_AXI_ADDR_WIDTH-1 : 0] 		s00_axi_araddr,
-		input logic [7 : 0] 													s00_axi_arlen,
-		input logic [2 : 0] s00_axi_arsize,
-		input logic [1 : 0] s00_axi_arburst,
-		input logic  s00_axi_arlock,
-		input logic [3 : 0] s00_axi_arcache,
-		input logic [2 : 0] s00_axi_arprot,
-		input logic [3 : 0] s00_axi_arqos,
-		input logic [3 : 0] s00_axi_arregion,
-		input logic [C_S00_AXI_ARUSER_WIDTH-1 : 0] s00_axi_aruser,
-		input logic  s00_axi_arvalid,
-		output logic  s00_axi_arready,
+		input logic [7 : 0] 												s00_axi_arlen,
+		input logic [2 : 0] 												s00_axi_arsize,
+		input logic [1 : 0] 												s00_axi_arburst,
+		input logic  																s00_axi_arlock,
+		input logic [3 : 0] 												s00_axi_arcache,
+		input logic [2 : 0] 												s00_axi_arprot,
+		input logic [3 : 0] 												s00_axi_arqos,
+		input logic [3 : 0] 												s00_axi_arregion,
+		input logic [C_S00_AXI_ARUSER_WIDTH-1 : 0] 	s00_axi_aruser,
+		input logic  																s00_axi_arvalid,
+		output logic  															s00_axi_arready,
 		//================================================
 		//r channel(read response)
 		//================================================
-		output logic [C_S00_AXI_ID_WIDTH-1 : 0] s00_axi_rid,
-		output logic [C_S00_AXI_DATA_WIDTH-1 : 0] s00_axi_rdata,
-		output logic [1 : 0] s00_axi_rresp,
-		output logic  s00_axi_rlast,
-		output logic [C_S00_AXI_RUSER_WIDTH-1 : 0] s00_axi_ruser,
-		output logic  s00_axi_rvalid,
-		input logic  s00_axi_rready
+		output logic [C_S00_AXI_ID_WIDTH-1 : 0] 		s00_axi_rid,
+		output logic [C_S00_AXI_DATA_WIDTH-1 : 0] 	s00_axi_rdata,
+		output logic [1 : 0] 												s00_axi_rresp,
+		output logic  															s00_axi_rlast,
+		output logic [C_S00_AXI_RUSER_WIDTH-1 : 0] 	s00_axi_ruser,
+		output logic  															s00_axi_rvalid,
+		input logic  																s00_axi_rready
 	);
 // Instantiation of Axi Bus Interface S00_AXI
 	axi4_test_v1_0_S00_AXI # ( 
@@ -136,9 +136,4 @@
 		.S_AXI_RVALID					(s00_axi_rvalid),
 		.S_AXI_RREADY					(s00_axi_rready)
 	);
-
-	// Add user logic here
-
-	// User logic ends
-
 	endmodule
