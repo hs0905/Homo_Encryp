@@ -86,12 +86,16 @@ import FHE_ALU_PKG::*;
 	// AXI4FULL signals(internal register and wires = <logic>	)
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 	logic  														axi_awready;
+
 	logic  														axi_wready;
+
 	logic [1 : 0] 										axi_bresp;
 	logic [C_S_AXI_BUSER_WIDTH-1 : 0] axi_buser;
 	logic  														axi_bvalid;
+
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 	logic  														axi_arready;
+	
 	logic [C_S_AXI_DATA_WIDTH-1 : 0] 	axi_rdata;
 	logic [1 : 0] 										axi_rresp;
 	logic  														axi_rlast;
@@ -494,8 +498,7 @@ import FHE_ALU_PKG::*;
 	endgenerate
 	//Output register or memory read data
 
-	always @( mem_data_out, axi_rvalid)
-	begin
+	always_comb	begin
 	  if (axi_rvalid) 
 	    begin
 	      // Read address mux
