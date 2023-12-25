@@ -24,3 +24,39 @@ import_files -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/ne
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_project
+create_project check32net /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/check32net -part xc7vx485tffg1157-1
+add_files -norecurse -scan_for_includes {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/FHE_ALU_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/USER_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv}
+import_files -norecurse {/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/FHE_ALU_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/USER_PKG.sv /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/network_module.sv}
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/simulation/sim.sv
+import_files -fileset sim_1 -norecurse /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/simulation/sim.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source benes_32.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+close_project
+open_project /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/tb_intc_benes_prj/tb_intc_benes_prj.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_intc_benes.tcl
+synth_design -rtl -rtl_skip_mlo -name rtl_1

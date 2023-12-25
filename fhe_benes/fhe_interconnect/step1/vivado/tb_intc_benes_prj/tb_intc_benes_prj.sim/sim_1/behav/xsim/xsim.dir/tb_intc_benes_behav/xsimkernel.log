@@ -1,7 +1,4 @@
-Running: xsim.dir/tb_intc_benes_behav/xsimk -simmode gui -wdb tb_intc_benes_behav.wdb -simrunnum 0 -socket 59749
+Running: xsim.dir/tb_intc_benes_behav/xsimk -simmode gui -wdb tb_intc_benes_behav.wdb -simrunnum 0 -socket 52991
 Design successfully loaded
 Design Loading Memory Usage: 44732 KB (Peak: 44732 KB)
 Design Loading CPU Usage: 60 ms
-Simulation completed
-Simulation Memory Usage: 126980 KB (Peak: 184000 KB)
-Simulation CPU Usage: 130 ms

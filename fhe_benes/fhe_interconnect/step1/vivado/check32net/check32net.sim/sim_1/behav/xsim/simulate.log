@@ -1,0 +1,3 @@
+Vivado Simulator v2020.2.2
+Time resolution is 1 ps
+$finish called at time : 600 ps : File "/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/check32net/check32net.srcs/sim_1/imports/simulation/sim.sv" Line 49

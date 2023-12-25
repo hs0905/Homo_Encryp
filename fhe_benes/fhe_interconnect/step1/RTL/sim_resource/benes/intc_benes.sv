@@ -34,8 +34,8 @@ BufferRAMTEFsizeInputs ram_input_reg 			[0:SLOT_NUM_IN_BUFF-1]; 		// output reg
 always_ff@(posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
 		for(int i = 0; i<SLOT_NUM_IN_BUFF ; i++)begin
-			ram_output_reg	 [i] <= {DATA_WIDTH{1'b0}};
-			module_input_reg [i] <= {DATA_WIDTH{1'b0}};
+			ram_output_reg		[i] <= {DATA_WIDTH{1'b0}};
+			module_input_reg  [i] <= {DATA_WIDTH{1'b0}};
 
 			module_output_reg[i].raddr <= 0;
 			module_output_reg[i].waddr <= 0;

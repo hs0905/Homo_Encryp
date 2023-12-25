@@ -110,10 +110,6 @@ import FHE_ALU_PKG::*;
 	logic [1:0] 	axi_awburst;
 	logic [7:0] 	axi_arlen;
 	logic [7:0] 	axi_awlen;
-	//local parameter for addressing 32 bit / 64 bit C_S_AXI_DATA_WIDTH
-	//ADDR_LSB is used for addressing 32/64 bit registers/memories
-	//ADDR_LSB = 2 for 32 bits (n downto 2) 
-	//ADDR_LSB = 3 for 42 bits (n downto 3)
 
 	localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32)+ 1;
 	localparam integer OPT_MEM_ADDR_BITS = 3;
@@ -132,29 +128,23 @@ import FHE_ALU_PKG::*;
 	// I/O Connections assignments
 
 	assign S_AXI_AWREADY	= axi_awready;
-	assign S_AXI_WREADY	= axi_wready;
-	assign S_AXI_BRESP	= axi_bresp;
-	assign S_AXI_BUSER	= axi_buser;
-	assign S_AXI_BVALID	= axi_bvalid;
+	assign S_AXI_WREADY		= axi_wready;
+	assign S_AXI_BRESP		= axi_bresp;
+	assign S_AXI_BUSER		= axi_buser;
+	assign S_AXI_BVALID		= axi_bvalid;
 	assign S_AXI_ARREADY	= axi_arready;
-	assign S_AXI_RDATA	= axi_rdata;
-	assign S_AXI_RRESP	= axi_rresp;
-	assign S_AXI_RLAST	= axi_rlast;
-	assign S_AXI_RUSER	= axi_ruser;
-	assign S_AXI_RVALID	= axi_rvalid;
-	assign S_AXI_BID = S_AXI_AWID;
-	assign S_AXI_RID = S_AXI_ARID;
-	assign  aw_wrap_size = (C_S_AXI_DATA_WIDTH/8 * (axi_awlen)); 
-	assign  ar_wrap_size = (C_S_AXI_DATA_WIDTH/8 * (axi_arlen)); 
-	assign  aw_wrap_en = ((axi_awaddr & aw_wrap_size) == aw_wrap_size)? 1'b1: 1'b0;
-	assign  ar_wrap_en = ((axi_araddr & ar_wrap_size) == ar_wrap_size)? 1'b1: 1'b0;
-
-	// Implement axi_awready generation
-
-	// axi_awready is asserted for one S_AXI_ACLK clock cycle when both
-	// S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
-	// de-asserted when reset is low.
-
+	assign S_AXI_RDATA		= axi_rdata;
+	assign S_AXI_RRESP		= axi_rresp;
+	assign S_AXI_RLAST		= axi_rlast;
+	assign S_AXI_RUSER		= axi_ruser;
+	assign S_AXI_RVALID		= axi_rvalid;
+	assign S_AXI_BID 			= S_AXI_AWID;
+	assign S_AXI_RID 			= S_AXI_ARID;
+	assign  aw_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_awlen)); 
+	assign  ar_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_arlen)); 
+	assign  aw_wrap_en 		= ((axi_awaddr & aw_wrap_size) == aw_wrap_size)? 1'b1: 1'b0;
+	assign  ar_wrap_en 		= ((axi_araddr & ar_wrap_size) == ar_wrap_size)? 1'b1: 1'b0;
+	
 	always @( posedge S_AXI_ACLK )
 	begin
 	  if ( S_AXI_ARESETN == 1'b0 )

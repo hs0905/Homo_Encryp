@@ -1,0 +1,330 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:13:49 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Sun Dec 24 11:02:09 2023
+# Process ID: 4027
+# Current directory: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/tb_intc_benes_prj/tb_intc_benes_prj.runs/impl_1
+# Command line: vivado -log Interconnect_benes.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Interconnect_benes.tcl -notrace
+# Log file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/tb_intc_benes_prj/tb_intc_benes_prj.runs/impl_1/Interconnect_benes.vdi
+# Journal file: /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/tb_intc_benes_prj/tb_intc_benes_prj.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source Interconnect_benes.tcl -notrace
+Command: link_design -top Interconnect_benes -part xcu280-fsvh2892-2L-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2996.770 ; gain = 0.000 ; free physical = 18336 ; free virtual = 44489
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Interconnect_benes' is not ideal for floorplanning, since the cellview 'Interconnect_benes' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3139.941 ; gain = 0.000 ; free physical = 18178 ; free virtual = 44331
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+
+6 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 3139.941 ; gain = 777.703 ; free physical = 18178 ; free virtual = 44331
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu280'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.68 . Memory (MB): peak = 3268.379 ; gain = 128.438 ; free physical = 18166 ; free virtual = 44319
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 13b751e28
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3515.035 ; gain = 246.656 ; free physical = 17948 ; free virtual = 44101
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 13b751e28
+
+Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.30 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17803 ; free virtual = 43956
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1e3736950
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.99 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17799 ; free virtual = 43952
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 21268 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 192841ec3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17800 ; free virtual = 43952
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 3 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 4 BUFG optimization | Checksum: 192841ec3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17800 ; free virtual = 43952
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 192841ec3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17800 ; free virtual = 43952
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 192841ec3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17800 ; free virtual = 43952
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |           21268  |                                              0  |
+|  Sweep                        |               0  |               3  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17802 ; free virtual = 43955
+Ending Logic Optimization Task | Checksum: 102ded3e8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17803 ; free virtual = 43955
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 102ded3e8
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17803 ; free virtual = 43955
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 102ded3e8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17803 ; free virtual = 43955
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17803 ; free virtual = 43955
+Ending Netlist Obfuscation Task | Checksum: 102ded3e8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3693.910 ; gain = 0.000 ; free physical = 17803 ; free virtual = 43955
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3693.910 ; gain = 553.969 ; free physical = 17803 ; free virtual = 43955
+INFO: [Common 17-1381] The checkpoint '/home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/tb_intc_benes_prj/tb_intc_benes_prj.runs/impl_1/Interconnect_benes_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Interconnect_benes_drc_opted.rpt -pb Interconnect_benes_drc_opted.pb -rpx Interconnect_benes_drc_opted.rpx
+Command: report_drc -file Interconnect_benes_drc_opted.rpt -pb Interconnect_benes_drc_opted.pb -rpx Interconnect_benes_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/hs/Desktop/FHE/fhe_benes/fhe_interconnect/step1/vivado/tb_intc_benes_prj/tb_intc_benes_prj.runs/impl_1/Interconnect_benes_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcu280'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu280'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC CHECK-2] Report rule not checked: BGIVC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIIVRC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BISLIM-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVB-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVRU-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DCIP-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DCIP-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DIFFISTD-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DIFFISTDDrv-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DIFFISTDSlew-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOBUSSLRC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOCNT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOCNT-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOCTMGT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IODIR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCBUFG-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCMGT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCMGT-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCPR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCPR-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCSLR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCSLR-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-3 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-4 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-5 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-6 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-7 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: LVDS-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-3 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-4 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-5 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: VCCAUX1-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: VCCAUX1-2 rule not checked: Too many IO ports
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 39 Advisories
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-113] Running place_design in ultrathreads mode using maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4804.254 ; gain = 0.000 ; free physical = 16865 ; free virtual = 43020
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 58855eb1
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4804.254 ; gain = 0.000 ; free physical = 16864 ; free virtual = 43020
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4804.254 ; gain = 0.000 ; free physical = 16864 ; free virtual = 43020
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 21780 I/O ports
+ while the target  device: xcu280 package: fsvh2892, contains only 746 available user I/O. The target device has 746 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+ERROR: [Place 30-68] Instance o_module_inputs[0][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][100]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][101]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][102]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][103]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][104]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][105]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][106]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][107]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][108]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][109]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][110]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][111]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][112]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][113]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][114]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][115]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][116]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][117]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][118]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][119]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][120]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][121]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][122]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][123]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][124]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][125]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][126]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][127]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][128]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][129]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][130]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][131]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][132]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][133]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][134]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][135]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][136]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][137]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][138]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][139]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][140]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][141]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][142]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][143]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][144]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][145]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][146]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][147]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][148]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][149]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][150]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][151]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][152]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][153]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][154]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][155]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][156]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][157]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][158]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][159]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][160]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][161]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][162]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][163]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][164]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][165]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][166]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][167]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][168]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][169]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][16]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][170]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][171]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][172]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][173]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][174]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][175]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][176]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][177]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][178]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][179]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][17]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][180]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][181]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][182]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][183]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][184]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][185]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][186]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][187]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][188]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][189]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance o_module_inputs[0][18]_INST_0 (OBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 58855eb1
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4828.266 ; gain = 24.012 ; free physical = 16821 ; free virtual = 42976
+Phase 1 Placer Initialization | Checksum: 58855eb1
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4828.266 ; gain = 24.012 ; free physical = 16821 ; free virtual = 42976
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 58855eb1
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4828.266 ; gain = 24.012 ; free physical = 16821 ; free virtual = 42976
+INFO: [Common 17-83] Releasing license: Implementation
+81 Infos, 1 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 24 11:02:56 2023...

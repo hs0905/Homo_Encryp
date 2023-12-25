@@ -87,25 +87,26 @@ i_slot_select[7] = 16'h2810;
 i_slot_select[8] = 16'h2D00;*/
 
 
-i_module_select[0] = 16'd1984;
-i_module_select[1] = 16'd248;
-i_module_select[2] = 16'd2176;
-i_module_select[3] = 16'd26758;
-i_module_select[4] = 16'd16388;
-i_module_select[5] = 16'd16388;
-i_module_select[6] = 16'd17476;
-i_module_select[7] = 16'd20560;
-i_module_select[8] = 16'd21824;
+i_module_select[0] = 16'b0000001111100000;
+i_module_select[1] = 16'b0001111100000000;
+i_module_select[2] = 16'b0000000100010000;
+i_module_select[3] = 16'b0110000100010110;
+i_module_select[4] = 16'b0010000000000010;
+i_module_select[5] = 16'b0010000000000010;
+i_module_select[6] = 16'b0010001000100010;
+i_module_select[7] = 16'b0000101000001010;
+i_module_select[8] = 16'b0000001010101010;
 
-i_slot_select[0] = 16'd1984;
-i_slot_select[1] = 16'd248;
-i_slot_select[2] = 16'd2176;
-i_slot_select[3] = 16'd26758;
-i_slot_select[4] = 16'd16388;
-i_slot_select[5] = 16'd16388;
-i_slot_select[6] = 16'd17476;
-i_slot_select[7] = 16'd20560;
-i_slot_select[8] = 16'd21824;
+i_slot_select[0] = 16'b0000001111100000;
+i_slot_select[1] = 16'b0001111100000000;
+i_slot_select[2] = 16'b0000000100010000;
+i_slot_select[3] = 16'b0110000100010110;
+i_slot_select[4] = 16'b0010000000000010;
+i_slot_select[5] = 16'b0010000000000010;
+i_slot_select[6] = 16'b0010001000100010;
+i_slot_select[7] = 16'b0000101000001010;
+i_slot_select[8] = 16'b0000001010101010;
+
 
 #(CLK_PERIOD*10);
 $display("Start simulation");
