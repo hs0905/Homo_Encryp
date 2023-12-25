@@ -62,12 +62,19 @@ endfunction
   logic               wren;
 } BufferRAMTEFsizeInputs;*/
 
-typedef struct packed {
- logic [DATA_WIDTH-1:0] i_ram_outputs   [0:SLOT_NUM_IN_BUFF-1];
- BufferRAMTEFsizeInputs	i_module_outputs[0:MODULE_NUM_IN_BUFF-1];
- logic [SWITCH_NUM-1:0]	i_module_select	[0:STAGE_NUM-1];
- logic [SWITCH_NUM-1:0]	i_slot_select	[0:STAGE_NUM-1];
+typedef struct{
+  logic [DATA_WIDTH-1:0] 	i_ram_outputs   [0:SLOT_NUM_IN_BUFF-1];
+  BufferRAMTEFsizeInputs	i_module_outputs[0:MODULE_NUM_IN_BUFF-1];
+  logic [SWITCH_NUM-1:0]	i_module_select	[0:STAGE_NUM-1];
+  logic [SWITCH_NUM-1:0]	i_slot_select	[0:STAGE_NUM-1];
 } IntcBenesInputs;
+
+typedef struct{
+	BufferRAMTEFsizeInputs 	o_ram_inputs		[0:SLOT_NUM_IN_BUFF-1];
+	logic [DATA_WIDTH-1:0]  o_module_inputs	[0:MODULE_NUM_IN_BUFF-1];
+} IntcBenesOutputs;
+
+
 
 
 
