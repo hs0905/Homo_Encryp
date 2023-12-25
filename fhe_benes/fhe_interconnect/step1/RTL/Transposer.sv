@@ -21,9 +21,9 @@ module Transposer #(
   typedef struct packed {   
     logic [ELEMS-1:0][ELEMS-1:0][DATA_SIZE-1:0] data_in;
     logic [ELEMS-1:0][ELEMS-1:0][DATA_SIZE-1:0] data_out;
-    logic [$clog2(ELEMS+1)-1:0] in_count;
-    logic [$clog2(ELEMS+1)-1:0] out_count;
-    logic [ELEMS:0] last;
+    logic [$clog2(ELEMS+1)-1:0]                 in_count;
+    logic [$clog2(ELEMS+1)-1:0]                 out_count;
+    logic [ELEMS:0]                             last;
   } Registers;
   
   Registers reg_current,reg_next;

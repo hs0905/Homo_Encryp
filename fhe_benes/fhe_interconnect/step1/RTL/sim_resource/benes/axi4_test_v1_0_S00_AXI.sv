@@ -98,18 +98,18 @@ import FHE_ALU_PKG::*;
 	logic [C_S_AXI_RUSER_WIDTH-1 : 0] axi_ruser;
 	logic  														axi_rvalid;
 
-	logic aw_wrap_en;
-	logic ar_wrap_en;
+	logic 				aw_wrap_en;
+	logic 				ar_wrap_en;
 	logic [31:0]  aw_wrap_size ;
 	logic [31:0]  ar_wrap_size ;
-	logic axi_awv_awr_flag;
-	logic axi_arv_arr_flag;
-	logic [7:0] axi_awlen_cntr;
-	logic [7:0] axi_arlen_cntr;
-	logic [1:0] axi_arburst;
-	logic [1:0] axi_awburst;
-	logic [7:0] axi_arlen;
-	logic [7:0] axi_awlen;
+	logic 				axi_awv_awr_flag;
+	logic 				axi_arv_arr_flag;
+	logic [7:0] 	axi_awlen_cntr;
+	logic [7:0] 	axi_arlen_cntr;
+	logic [1:0] 	axi_arburst;
+	logic [1:0] 	axi_awburst;
+	logic [7:0] 	axi_arlen;
+	logic [7:0] 	axi_awlen;
 	//local parameter for addressing 32 bit / 64 bit C_S_AXI_DATA_WIDTH
 	//ADDR_LSB is used for addressing 32/64 bit registers/memories
 	//ADDR_LSB = 2 for 32 bits (n downto 2) 
@@ -121,8 +121,8 @@ import FHE_ALU_PKG::*;
 	//----------------------------------------------
 	//-- Signals for user logic memory space example
 	//------------------------------------------------
-	logic [OPT_MEM_ADDR_BITS:0] mem_address;
-	logic [USER_NUM_MEM-1:0] mem_select;
+	logic [OPT_MEM_ADDR_BITS:0] 	 mem_address;
+	logic [USER_NUM_MEM-1:0] 			 mem_select;
 	logic [C_S_AXI_DATA_WIDTH-1:0] mem_data_out[0 : USER_NUM_MEM-1];
 
 	genvar i;
