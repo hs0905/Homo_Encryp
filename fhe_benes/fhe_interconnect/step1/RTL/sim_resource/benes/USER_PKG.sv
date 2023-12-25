@@ -55,4 +55,20 @@ function int out_sw(int stage, int p_out);
     return p_in;
 endfunction
 
+  /*typedef struct packed{
+  logic [31:0]        raddr;
+  logic [31:0]        waddr;
+  logic [E*FSIZE-1:0] wdata;
+  logic               wren;
+} BufferRAMTEFsizeInputs;*/
+
+typedef struct packed {
+ logic [DATA_WIDTH-1:0] i_ram_outputs   [0:SLOT_NUM_IN_BUFF-1];
+ BufferRAMTEFsizeInputs	i_module_outputs[0:MODULE_NUM_IN_BUFF-1];
+ logic [SWITCH_NUM-1:0]	i_module_select	[0:STAGE_NUM-1];
+ logic [SWITCH_NUM-1:0]	i_slot_select	[0:STAGE_NUM-1];
+} IntcBenesInputs;
+
+
+
 endpackage

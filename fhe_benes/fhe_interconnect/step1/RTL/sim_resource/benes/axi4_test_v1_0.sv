@@ -1,11 +1,13 @@
-
-`timescale 1 ns / 1 ps
+	`timescale 1 ns/ 1 ns
+	`include "defines.vh"
+	import USER_PKG::*;
+	import FHE_ALU_PKG::*;
 
 	module axi4_test_v1_0 #
 	(
 		// Parameters of Axi Slave Bus Interface S00_AXI
 		parameter integer C_S00_AXI_ID_WIDTH			= 1,
-		parameter integer C_S00_AXI_DATA_WIDTH		= 32,
+		parameter integer C_S00_AXI_DATA_WIDTH		= 512,
 		parameter integer C_S00_AXI_ADDR_WIDTH		= 6,
 		parameter integer C_S00_AXI_AWUSER_WIDTH	= 0,
 		parameter integer C_S00_AXI_ARUSER_WIDTH	= 0,
@@ -15,7 +17,6 @@
 	)
 	(
 		// Ports of Axi Slave Bus Interface S00_AXI
-
 		input logic  																s00_axi_aclk,
 		input logic  																s00_axi_aresetn,
 		//================================================
