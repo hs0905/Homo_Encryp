@@ -40,7 +40,7 @@ import FHE_ALU_PKG::*;
 		//=============================================================================
 		// W channel(data write)
 		//=============================================================================
-		input 	logic [C_S_AXI_DATA_WIDTH-1 : 0] 		S_AXI_WDATA,
+		input 	IntcBenesInputs 										S_AXI_WDATA,
 		input 	logic [(C_S_AXI_DATA_WIDTH/8)-1 : 0]S_AXI_WSTRB, 	// write strb(bit verification)
 		input 	logic  															S_AXI_WLAST, 	// last signal in write transaction(burst type)
 		input 	logic [C_S_AXI_WUSER_WIDTH-1 : 0] 	S_AXI_WUSER, 	// user defined write transaction(non-essential)
@@ -75,7 +75,7 @@ import FHE_ALU_PKG::*;
 		// R channel(read data channel)
 		//=============================================================================
 		output 	logic [C_S_AXI_ID_WIDTH-1 : 0] 			S_AXI_RID,
-		output 	logic [C_S_AXI_DATA_WIDTH-1 : 0] 		S_AXI_RDATA,
+		output 	IntcBenesOutputs 										S_AXI_RDATA,
 		output 	logic [1 : 0] 											S_AXI_RRESP,
 		output 	logic  															S_AXI_RLAST,
 		output 	logic [C_S_AXI_RUSER_WIDTH-1 : 0] 	S_AXI_RUSER,
@@ -83,7 +83,7 @@ import FHE_ALU_PKG::*;
 		input 	logic  															S_AXI_RREADY
 	);
 
-	// AXI4FULL signals(internal register and wires = <logic>	)
+	// AXI4 standard register
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 	logic  														axi_awready;
 
@@ -95,8 +95,8 @@ import FHE_ALU_PKG::*;
 
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 	logic  														axi_arready;
-	
-	logic [C_S_AXI_DATA_WIDTH-1 : 0] 	axi_rdata;
+
+	IntcBenesOutputs 									axi_rdata;
 	logic [1 : 0] 										axi_rresp;
 	logic  														axi_rlast;
 	logic [C_S_AXI_RUSER_WIDTH-1 : 0] axi_ruser;
@@ -144,55 +144,37 @@ import FHE_ALU_PKG::*;
 	assign S_AXI_RVALID		= axi_rvalid;
 	assign S_AXI_BID 			= S_AXI_AWID;
 	assign S_AXI_RID 			= S_AXI_ARID;
-	assign  aw_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_awlen)); 
-	assign  ar_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_arlen)); 
-	assign  aw_wrap_en 		= ((axi_awaddr & aw_wrap_size) == aw_wrap_size)? 1'b1: 1'b0;
-	assign  ar_wrap_en 		= ((axi_araddr & ar_wrap_size) == ar_wrap_size)? 1'b1: 1'b0;
+	assign aw_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_awlen)); 
+	assign ar_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_arlen)); 
+	assign aw_wrap_en 		= ((axi_awaddr & aw_wrap_size) == aw_wrap_size)? 1'b1: 1'b0;
+	assign ar_wrap_en 		= ((axi_araddr & ar_wrap_size) == ar_wrap_size)? 1'b1: 1'b0;
 	
-	always @( posedge S_AXI_ACLK )
+	always_ff@( posedge S_AXI_ACLK )
 	begin
-	  if ( S_AXI_ARESETN == 1'b0 )
+	  if (!S_AXI_ARESETN)
 	    begin
-	      axi_awready <= 1'b0;
+	      axi_awready 		 <= 1'b0;
 	      axi_awv_awr_flag <= 1'b0;
-	    end 
-	  else
-	    begin    
+	    end else begin    
 	      if (~axi_awready && S_AXI_AWVALID && ~axi_awv_awr_flag && ~axi_arv_arr_flag)
 	        begin
-	          // slave is ready to accept an address and
-	          // associated control signals
-	          axi_awready <= 1'b1;
+	          axi_awready 			<= 1'b1;
 	          axi_awv_awr_flag  <= 1'b1; 
-	          // used for generation of bresp() and bvalid
-	        end
-	      else if (S_AXI_WLAST && axi_wready)          
-	      // preparing to accept next address after current write burst tx completion
-	        begin
+	        end else if (S_AXI_WLAST && axi_wready) begin
 	          axi_awv_awr_flag  <= 1'b0;
-	        end
-	      else        
-	        begin
+	        end else begin
 	          axi_awready <= 1'b0;
 	        end
 	    end 
 	end       
-	// Implement axi_awaddr latching
 
-	// This process is used to latch the address when both 
-	// S_AXI_AWVALID and S_AXI_WVALID are valid. 
-
-	always @( posedge S_AXI_ACLK )
-	begin
-	  if ( S_AXI_ARESETN == 1'b0 )
-	    begin
+	always_ff@( posedge S_AXI_ACLK ) begin
+	  if (!S_AXI_ARESETN) begin
 	      axi_awaddr <= 0;
 	      axi_awlen_cntr <= 0;
 	      axi_awburst <= 0;
 	      axi_awlen <= 0;
-	    end 
-	  else
-	    begin    
+	    end else begin    
 	      if (~axi_awready && S_AXI_AWVALID && ~axi_awv_awr_flag)
 	        begin
 	          // address latching 
@@ -513,7 +495,7 @@ import FHE_ALU_PKG::*;
 	Interconnect_benes under_test(
 		.clk(S_AXI_ACLK),
 		.rst_n(S_AXI_ARESETN),
-		.i_ram_outputs({mem_data_out[0]}),
+		.i_ram_outputs(),
 		.i_module_outputs(),
 		.i_module_select(),
 		.i_slot_select(),

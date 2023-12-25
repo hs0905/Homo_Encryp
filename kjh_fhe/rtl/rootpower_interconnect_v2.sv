@@ -86,8 +86,9 @@ module RootInterconnect_v2 #(
         for(gj = 0; gj < 2**(STAGE_NTT_INTT_ROOT-gi-1) ; gj++ ) begin
           assign intc_set_middle[gi][gj] = ntt_intt_select_fifo[gl][gi] ? intc_set_in[gi][2*gj+1] : intc_set_in[gi][2*gj];
         end
-
       end
+  /*================================================================================================
+  ==================================================================================================*/
 
       for(gi = 0; gi < STAGE_NTT_INTT_ROOT-1; gi++) begin
         for(gj = 0 ; gj < 2**(STAGE_NTT_INTT_ROOT-gi-1); gj++)begin
@@ -149,10 +150,10 @@ module RootInterconnect_v2 #(
         end
 
       end
-
+//================================================================================================
+//=================================================================================================
       for(gi = 0; gi < STAGE_ROOT_POWER_ROOT-1; gi++) begin
         for(gj = 0 ; gj < 2**(STAGE_ROOT_POWER_ROOT-gi-1); gj++)begin
-
             for(gp = 0; gp < logE ; gp++ ) begin
               for(gk = 0; gk < E/2 ; gk++ ) begin
                 FifoBuffer #(.DATA_SIZE(FSIZE),       .CYCLES(1) )  fifo_indi1  (.clk(clk), .rstn(1), .in(intc_indiv_middle_W[gi][gj][gp][gk]), .out(intc_indiv_out_W[gi][gj][gp][gk]));
@@ -179,6 +180,10 @@ module RootInterconnect_v2 #(
       assign ntt_input_W[gl] = intc_indiv_middle_W[STAGE_ROOT_POWER_ROOT-1][0];
       assign ntt_input_WQ[gl] = intc_indiv_middle_WQ[STAGE_ROOT_POWER_ROOT-1][0];
     end
+
+    //================================================================================================
+    // 20231220 23:36
+    //================================================================================================
 
     //rootpower write => 2 stage
     for(gl = 0; gl < ROOT_POWER_NUM_IN_ROOT ; gl++) begin: rootpower_write

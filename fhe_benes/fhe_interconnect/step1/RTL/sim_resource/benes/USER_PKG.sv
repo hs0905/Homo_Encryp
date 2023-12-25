@@ -70,7 +70,7 @@ typedef struct{
 } IntcBenesInputs;
 
 typedef struct{
-	BufferRAMTEFsizeInputs 	o_ram_inputs		[0:SLOT_NUM_IN_BUFF-1];
+	BufferRAMTEFsizeInputs 	o_ram_inputs	[0:SLOT_NUM_IN_BUFF-1];
 	logic [DATA_WIDTH-1:0]  o_module_inputs	[0:MODULE_NUM_IN_BUFF-1];
 } IntcBenesOutputs;
 
