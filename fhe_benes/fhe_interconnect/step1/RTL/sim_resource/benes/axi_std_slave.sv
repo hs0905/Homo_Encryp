@@ -134,7 +134,7 @@ module axi_std_slave #(
   logic [7:0] 	axi_awlen_cntr;
   logic [7:0] 	axi_arlen_cntr;
 
-	localparam integer ADDR_LSB = log2(C_S_AXI_DATA_WIDTH/8);
+	localparam integer ADDR_LSB = $clog2(C_S_AXI_DATA_WIDTH/8);
 	localparam integer OPT_MEM_ADDR_BITS = 3; // additonal address bits for addressing memory
 	localparam integer USER_NUM_MEM      = 1; // Number of using memory
 
@@ -354,23 +354,24 @@ module axi_std_slave #(
       end
     endgenerate
 
+      localparam RAM_DEPTH = 16;
+
+        IntcBenesInputs   input_ram_data_in;
+        IntcBenesInputs   input_ram_data_out;
+        IntcBenesInputs   input_byte_ram [0:RAM_DEPTH - 1];
+        IntcBenesOutputs  output_ram_data_in;
+        IntcBenesOutputs  output_ram_data_out;
+        IntcBenesOutputs  output_byte_ram  [0:RAM_DEPTH - 1];
+
   // implement Block RAM(s)
   generate
     for(genvar i = 0; i< USER_NUM_MEM; i++) begin : BRAM_GEN
       logic mem_rden;
       logic mem_wren;
-      localparam RAM_DEPTH = 16;
       assign mem_wren = axi_wready && S_AXI_WVALID; // write enable
       assign mem_rden = axi_arv_arr_flag;          // read enable
 
       for(genvar mem_byte_index = 0; mem_byte_index < RAM_DEPTH; mem_byte_index++) begin : BYTE_BRAM_GEN
-        IntcBenesInputs   input_ram_data_in;
-        IntcBenesInputs   input_ram_data_out;
-        IntcBenesInputs   input_byte_ram [0:RAM_DEPTH - 1];
-        
-        IntcBenesOutputs output_ram_data_in;
-        IntcBenesOutputs output_ram_data_out;
-        IntcBenesOutputs output_byte_ram  [0:RAM_DEPTH - 1];
 
         assign input_ram_data_in  = S_AXI_WDATA; // combination logic(everytime updat)
         // ram_write transaction
@@ -410,12 +411,12 @@ module axi_std_slave #(
 Interconnect_benes DUT(
 	.clk(S_AXI_ACLK),
 	.rst_n(S_AXI_ARESETN),
-	.i_ram_outputs(input_ram_data_out.i_ram_outputs),
-	.i_module_outputs(input_ram_data_out.i_module_outputs),
-	.i_module_select(input_ram_data_out.i_module_select),
-	.i_slot_select(input_ram_data_out.i_slot_select),
-	.o_ram_inputs(output_ram_data_out.o_ram_inputs),
-	.o_module_inputs(output_ram_data_out.o_module_inputs)
+	.i_ram_outputs    (input_ram_data_out.i_ram_outputs),
+	.i_module_outputs (input_ram_data_out.i_module_outputs),
+	.i_module_select  (input_ram_data_out.i_module_select),
+	.i_slot_select    (input_ram_data_out.i_slot_select),
+	.o_ram_inputs     (output_ram_data_out.o_ram_inputs),
+	.o_module_inputs  (output_ram_data_out.o_module_inputs)
 );
 
 
