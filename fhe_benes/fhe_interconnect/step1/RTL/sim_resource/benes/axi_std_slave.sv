@@ -8,7 +8,7 @@ import FHE_ALU_PKG::*;
 module axi_std_slave #(
   parameter integer C_S_AXI_ID_WIDTH			= 1,
 	parameter integer C_S_AXI_DATA_WIDTH		= 512,
-	parameter integer C_S_AXI_ADDR_WIDTH		= 6,
+	parameter integer C_S_AXI_ADDR_WIDTH		= 10,
 	parameter integer C_S_AXI_AWUSER_WIDTH	= 0,
 	parameter integer C_S_AXI_ARUSER_WIDTH	= 0,
 	parameter integer C_S_AXI_WUSER_WIDTH		= 0,
@@ -134,7 +134,7 @@ module axi_std_slave #(
   logic [7:0] 	axi_awlen_cntr;
   logic [7:0] 	axi_arlen_cntr;
 
-	localparam integer ADDR_LSB          = (C_S_AXI_DATA_WIDTH/32)+ 1; // LSB of address bus 
+	localparam integer ADDR_LSB = log2(C_S_AXI_DATA_WIDTH/8);
 	localparam integer OPT_MEM_ADDR_BITS = 3; // additonal address bits for addressing memory
 	localparam integer USER_NUM_MEM      = 1; // Number of using memory
 
