@@ -38,7 +38,7 @@
 		//================================================
 		//w channel(write)
 		//================================================
-		input logic [C_S00_AXI_DATA_WIDTH-1 : 0] 	 	s00_axi_wdata,
+		input IntcBenesInputs										 	 	s00_axi_wdata,
 		input logic [(C_S00_AXI_DATA_WIDTH/8)-1: 0] s00_axi_wstrb,
 		input logic  																s00_axi_wlast,
 		input logic [C_S00_AXI_WUSER_WIDTH-1 : 0] 	s00_axi_wuser,
@@ -72,7 +72,7 @@
 		//r channel(read response)
 		//================================================
 		output logic [C_S00_AXI_ID_WIDTH-1 : 0] 		s00_axi_rid,
-		output logic [C_S00_AXI_DATA_WIDTH-1 : 0] 	s00_axi_rdata,
+		output IntcBenesOutputs											s00_axi_rdata,
 		output logic [1 : 0] 												s00_axi_rresp,
 		output logic  															s00_axi_rlast,
 		output logic [C_S00_AXI_RUSER_WIDTH-1 : 0] 	s00_axi_ruser,
