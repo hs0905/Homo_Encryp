@@ -340,51 +340,52 @@ module axi_std_slave #(
 	    end      
     end
   end
-// need to double check from here
-  generate
-	  if (USER_NUM_MEM >= 1)
-	    begin
-	      assign mem_select  = 1;
-	      assign mem_address = (axi_arv_arr_flag? axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]:
-                             (axi_awv_awr_flag? axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]:0));
-	    end
-  endgenerate
 
-  // implement Block Ram
-   generate
-    for(genvar i = 0; i < USER_NUM_MEM; i = i++) begin : BRAM_GEN
+  // memory interface
+
+    generate
+      if(USER_NUM_MEM >= 1)
+      begin 
+        assign mem_select = 1;
+        assign mem_address = (axi_arv_arr_flag?axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]:(axi_awv_awr_flag? axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]:0));
+        // if read flag is high => mem_address = read address
+        // if read flag is low and write flag is high => mem_address = write address
+        // else => mem_address = 0
+      end
+    endgenerate
+
+  // implement Block RAM(s)
+  generate
+    for(genvar i = 0; i< USER_NUM_MEM; i++) begin : BRAM_GEN
       logic mem_rden;
       logic mem_wren;
+      localparam RAM_DEPTH = 16;
+      assign mem_wren = axi_wready && S_AXI_WVALID; // write enable
+      assign mem_rden = axi_arv_arr_flag;          // read enable
 
-      assign mem_wren = axi_wready && S_AXI_WVALID;
-      assign mem_rden = axi_arv_arr_flag;
-
-      for(genvar mem_byte_index = 0; mem_byte_index<(C_S_AXI_DATA_WIDTH/8); mem_byte_index++) begin : BYTE_BRAM_GEN
-        logic [7:0] data_in;
-        logic [7:0] data_out;
-        logic [7:0] byte_ram[0:15];
+      for(genvar mem_byte_index = 0; mem_byte_index < (C_S_AXI_DATA_WIDTH/8); mem_byte_index++) begin : BYTE_BRAM_GEN
+        IntcBenesInputs   data_in;
+        IntcBenesInputs   data_out;
+        IntcBenesInputs   byte_ram [0:RAM_DEPTH - 1];
         integer j;
-      // need to be modified "HERE!!"
-      // understand the BYTE_BRAM_GEN logic
-        assign data_in = axi_wdata.i_ram_outputs[mem_byte_index];
-        assign axi_rdata.o_ram_inputs[mem_byte_index] = data_out;
 
-        always_ff@(posedge S_AXI_ACLK) begin
-          if(mem_wren && S_AXI_WSTRB[mem_byte_index]) begin
-            byte_ram[mem_byte_index] <= data_in;
-          end
+        assign data_in  = S_AXI_WDATA;
+      //assign data_out = byte_ram[mem_address]; // not sure
+
+      always_ff@(posedge S_AXI_ACLK) begin
+        if (mem_wren && S_AXI_WSTRB[mem_byte_index]) begin
+          byte_ram[mem_byte_index] <= data_in;
         end
+      end
 
-        always_ff@(posedge S_AXI_ACLK) begin
-          if(mem_rden) begin
-            mem_data_out[i] <= byte_ram[mem_byte_index];
-          end
+      always_ff@(posedge S_AXI_ACLK) begin
+        if(mem_rden) begin
+          data_out <= byte_ram[mem_byte_index];
         end
       end
     end
-   endgenerate
-
-
+    end
+  endgenerate
 
 
 endmodule
