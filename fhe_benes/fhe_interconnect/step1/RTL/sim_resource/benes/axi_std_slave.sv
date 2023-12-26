@@ -363,29 +363,62 @@ module axi_std_slave #(
       assign mem_wren = axi_wready && S_AXI_WVALID; // write enable
       assign mem_rden = axi_arv_arr_flag;          // read enable
 
-      for(genvar mem_byte_index = 0; mem_byte_index < (C_S_AXI_DATA_WIDTH/8); mem_byte_index++) begin : BYTE_BRAM_GEN
-        IntcBenesInputs   data_in;
-        IntcBenesInputs   data_out;
-        IntcBenesInputs   byte_ram [0:RAM_DEPTH - 1];
-        integer j;
+      for(genvar mem_byte_index = 0; mem_byte_index < RAM_DEPTH; mem_byte_index++) begin : BYTE_BRAM_GEN
+        IntcBenesInputs   input_ram_data_in;
+        IntcBenesInputs   input_ram_data_out;
+        IntcBenesInputs   input_byte_ram [0:RAM_DEPTH - 1];
+        
+        IntcBenesOutputs output_ram_data_in;
+        IntcBenesOutputs output_ram_data_out;
+        IntcBenesOutputs output_byte_ram  [0:RAM_DEPTH - 1];
 
-        assign data_in  = S_AXI_WDATA;
-      //assign data_out = byte_ram[mem_address]; // not sure
-
-      always_ff@(posedge S_AXI_ACLK) begin
-        if (mem_wren && S_AXI_WSTRB[mem_byte_index]) begin
-          byte_ram[mem_byte_index] <= data_in;
+        assign input_ram_data_in  = S_AXI_WDATA; // combination logic(everytime updat)
+        // ram_write transaction
+        always_ff@(posedge S_AXI_ACLK) begin
+          if (mem_wren) begin
+            if(mem_byte_index == 0)
+            begin
+              input_byte_ram[mem_byte_index] <= input_ram_data_in;
+            end else begin
+              input_byte_ram[mem_byte_index] <= input_ram_data_in;
+              input_ram_data_out             <= input_byte_ram[mem_byte_index - 1];
+            end 
+          end
+        end
+        // ram_read transaction
+        always_ff@(posedge S_AXI_ACLK) begin
+          if(mem_rden) 
+          begin
+            if(mem_byte_index == 0) 
+              begin
+                output_byte_ram[mem_byte_index] <= output_ram_data_in;
+              end 
+            else begin
+              output_byte_ram[mem_byte_index]   <= output_ram_data_in;
+              output_ram_data_out               <= output_byte_ram[mem_byte_index - 1];
+            end
+          end
         end
       end
-
-      always_ff@(posedge S_AXI_ACLK) begin
-        if(mem_rden) begin
-          data_out <= byte_ram[mem_byte_index];
-        end
-      end
-    end
     end
   endgenerate
+
+  // assign read data
+
+// instantiate DUT
+
+Interconnect_benes DUT(
+	.clk(S_AXI_ACLK),
+	.rst_n(S_AXI_ARESETN),
+	.i_ram_outputs(input_ram_data_out.i_ram_outputs),
+	.i_module_outputs(input_ram_data_out.i_module_outputs),
+	.i_module_select(input_ram_data_out.i_module_select),
+	.i_slot_select(input_ram_data_out.i_slot_select),
+	.o_ram_inputs(output_ram_data_out.o_ram_inputs),
+	.o_module_inputs(output_ram_data_out.o_module_inputs)
+);
+
+
 
 
 endmodule
