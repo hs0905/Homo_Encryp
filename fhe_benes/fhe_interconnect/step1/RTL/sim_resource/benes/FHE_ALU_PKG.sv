@@ -15,7 +15,6 @@ localparam FSIZE                  = 64;
 localparam SSIZE                  = 16;
 localparam STATE_WIDTH            = 32;
 localparam E                      = 8;
-//localparam logE                   = clog2(E);
 
 typedef struct packed {
   logic                     valid;
@@ -62,7 +61,7 @@ typedef struct packed{
 typedef struct packed{
   logic [31:0]        raddr;
   logic [31:0]        waddr;
-  logic [E*FSIZE-1:0] wdata;
+  logic [511:0] wdata;
   logic               wren;
 } BufferRAMTEFsizeInputs;
 
@@ -335,15 +334,15 @@ endfunction
 } BufferRAMTEFsizeInputs;*/
 
 typedef struct{
-  logic [DATA_WIDTH-1:0] 	i_ram_outputs   [0:SLOT_NUM_IN_BUFF-1];
+  logic [511:0] 	        i_ram_outputs   [0:SLOT_NUM_IN_BUFF-1];
   BufferRAMTEFsizeInputs	i_module_outputs[0:MODULE_NUM_IN_BUFF-1];
-  logic [SWITCH_NUM-1:0]	i_module_select	[0:STAGE_NUM-1];
-  logic [SWITCH_NUM-1:0]	i_slot_select	[0:STAGE_NUM-1];
+  logic [15:0]	          i_module_select	[0:STAGE_NUM-1];
+  logic [15:0]	          i_slot_select	  [0:STAGE_NUM-1];
 } IntcBenesInputs;
 
 typedef struct{
-	BufferRAMTEFsizeInputs 	o_ram_inputs	[0:SLOT_NUM_IN_BUFF-1];
-	logic [DATA_WIDTH-1:0]  o_module_inputs	[0:MODULE_NUM_IN_BUFF-1];
+	BufferRAMTEFsizeInputs 	o_ram_inputs	  [0:SLOT_NUM_IN_BUFF-1];
+	logic [511:0]           o_module_inputs	[0:MODULE_NUM_IN_BUFF-1];
 } IntcBenesOutputs;
 
 
