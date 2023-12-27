@@ -22,7 +22,7 @@
 		//================================================
 		//aw channel(address write)
 		//================================================
-		input logic 	[C_S00_AXI_ID_WIDTH-1 	: 0]	s00_axi_awid, 	 // address write id
+		input logic 	[C_S00_AXI_ID_WIDTH	-	1 : 0]	s00_axi_awid, 	 // address write id
 		input logic 	[C_S00_AXI_ADDR_WIDTH-1 : 0]	s00_axi_awaddr,  // address write address
 		input logic 	[7 : 0] 											s00_axi_awlen,   //한번의 write transaction에서 write할 data의 갯수
 		input logic 	[2 : 0] 											s00_axi_awsize,  //data의 크기(2의 지수 표현)(pow(2,awsize) = data의 크기))
@@ -38,7 +38,7 @@
 		//================================================
 		//w channel(write)
 		//================================================
-		input IntcBenesInputs										 	 	s00_axi_wdata,
+		input logic [C_S00_AXI_DATA_WIDTH -1 : 0]	 	s00_axi_wdata,
 		input logic [(C_S00_AXI_DATA_WIDTH/8)-1: 0] s00_axi_wstrb,
 		input logic  																s00_axi_wlast,
 		input logic [C_S00_AXI_WUSER_WIDTH-1 : 0] 	s00_axi_wuser,
@@ -72,7 +72,7 @@
 		//r channel(read response)
 		//================================================
 		output logic [C_S00_AXI_ID_WIDTH-1 : 0] 		s00_axi_rid,
-		output IntcBenesOutputs											s00_axi_rdata,
+		output logic [C_S00_AXI_DATA_WIDTH -1 : 0]	s00_axi_rdata,
 		output logic [1 : 0] 												s00_axi_rresp,
 		output logic  															s00_axi_rlast,
 		output logic [C_S00_AXI_RUSER_WIDTH-1 : 0] 	s00_axi_ruser,
