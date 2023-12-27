@@ -24,7 +24,7 @@ endgenerate
 
 endmodule
 
-module type_stage_module
+/*module type_stage_module
 (
     input   logic                   clk,
     input   logic [SWITCH_NUM-1:0]  switch_set, // 16bit -> number of switch
@@ -47,3 +47,4 @@ endgenerate
 
 endmodule
 
+*/

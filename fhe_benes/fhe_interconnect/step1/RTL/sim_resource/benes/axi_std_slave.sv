@@ -7,8 +7,8 @@ import FHE_ALU_PKG::*;
 
 module axi_std_slave #(
   parameter integer C_S_AXI_ID_WIDTH			= 1,
-	parameter integer C_S_AXI_DATA_WIDTH		= 256,
-	parameter integer C_S_AXI_ADDR_WIDTH		= 9,
+	parameter integer C_S_AXI_DATA_WIDTH		= 1024,
+	parameter integer C_S_AXI_ADDR_WIDTH		= 11,
 	parameter integer C_S_AXI_AWUSER_WIDTH	= 0,
 	parameter integer C_S_AXI_ARUSER_WIDTH	= 0,
 	parameter integer C_S_AXI_WUSER_WIDTH		= 0,
@@ -42,7 +42,7 @@ module axi_std_slave #(
     W channel(write)
   ----------------------------*/
   //<<MAIN>>
-	input 	IntcBenesInputs 										S_AXI_WDATA,
+	input 	logic [C_S_AXI_DATA_WIDTH -1 : 0]	  S_AXI_WDATA,
   input 	logic  															S_AXI_WVALID, // write valid
 	output 	logic  															S_AXI_WREADY,
   //<<SUB>>
@@ -86,7 +86,7 @@ module axi_std_slave #(
   //<<MAIN>>
 	input 	logic  															S_AXI_RREADY,
   output 	logic  															S_AXI_RVALID,
-	output 	IntcBenesOutputs 										S_AXI_RDATA,
+	output 	logic [C_S_AXI_DATA_WIDTH -1 : 0]		S_AXI_RDATA,
   //<<SUB>>
 	output 	logic [1 : 0] 											S_AXI_RRESP,
 	output 	logic  															S_AXI_RLAST,
@@ -99,7 +99,7 @@ module axi_std_slave #(
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 	logic  														axi_awready;
   // <<W>>
-  IntcBenesInputs 									axi_wdata;
+  logic [C_S_AXI_DATA_WIDTH -1 : 0] axi_wdata;
   logic  														axi_wready;
   // <<B>>
 	logic [1 : 0] 										axi_bresp;
@@ -109,7 +109,7 @@ module axi_std_slave #(
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 	logic  														axi_arready;
   // <<R>>
-	IntcBenesOutputs 									axi_rdata;
+	logic [C_S_AXI_DATA_WIDTH -1 : 0]	axi_rdata;
 	logic [1 : 0] 										axi_rresp;
 	logic  														axi_rlast;
 	logic [C_S_AXI_RUSER_WIDTH-1 : 0] axi_ruser;
@@ -354,14 +354,20 @@ module axi_std_slave #(
       end
     endgenerate
 
-      localparam RAM_DEPTH = 16;
+      localparam RAM_DEPTH = 20;
 
-        IntcBenesInputs   input_ram_data_in;
-        IntcBenesInputs   input_ram_data_out;
-        IntcBenesInputs   input_byte_ram [0:RAM_DEPTH - 1];
-        IntcBenesOutputs  output_ram_data_in;
-        IntcBenesOutputs  output_ram_data_out;
-        IntcBenesOutputs  output_byte_ram  [0:RAM_DEPTH - 1];
+        logic [C_S_AXI_DATA_WIDTH -1 : 0] input_ram_data_in;
+        logic [C_S_AXI_DATA_WIDTH -1 : 0] input_ram_data_out;
+        logic [C_S_AXI_DATA_WIDTH -1 : 0] input_byte_ram [0:RAM_DEPTH - 1];
+        logic [C_S_AXI_DATA_WIDTH -1 : 0] output_ram_data_in;
+        logic [C_S_AXI_DATA_WIDTH -1 : 0] output_ram_data_out;
+        logic [C_S_AXI_DATA_WIDTH -1 : 0] output_byte_ram [0:RAM_DEPTH - 1];
+
+        logic [C_S_AXI_DATA_WIDTH/2 -1 : 0] i_ram_outputs    [0:RAM_DEPTH - 1];
+        logic [C_S_AXI_DATA_WIDTH/2 -1 : 0] i_module_outputs [0:RAM_DEPTH - 1];
+        logic [C_S_AXI_DATA_WIDTH/2 -1 : 0] o_ram_inputs     [0:RAM_DEPTH - 1];
+        logic [C_S_AXI_DATA_WIDTH/2 -1 : 0] o_module_inputs  [0:RAM_DEPTH - 1];
+
 
   // implement Block RAM(s)
   generate
@@ -404,6 +410,15 @@ module axi_std_slave #(
     end
   endgenerate
 
+  always_comb begin
+    for(int i=0; i< RAM_DEPTH; i=i+1) begin
+      i_ram_outputs   [i]    = input_byte_ram [i][C_S_AXI_DATA_WIDTH/2 -1 : 0];
+      i_module_outputs[i]    = input_byte_ram [i][C_S_AXI_DATA_WIDTH -1 : C_S_AXI_DATA_WIDTH/2];
+      o_ram_inputs    [i]    = output_byte_ram[i][C_S_AXI_DATA_WIDTH/2 -1 : 0];
+      o_module_inputs [i]    = output_byte_ram[i][C_S_AXI_DATA_WIDTH -1 : C_S_AXI_DATA_WIDTH/2];
+    end
+  end
+
   // assign read data
 
 // instantiate DUT
@@ -411,12 +426,12 @@ module axi_std_slave #(
 Interconnect_benes DUT(
 	.clk(S_AXI_ACLK),
 	.rst_n(S_AXI_ARESETN),
-	.i_ram_outputs    (input_ram_data_out.i_ram_outputs),
-	.i_module_outputs (input_ram_data_out.i_module_outputs),
-	.i_module_select  (input_ram_data_out.i_module_select),
-	.i_slot_select    (input_ram_data_out.i_slot_select),
-	.o_ram_inputs     (output_ram_data_out.o_ram_inputs),
-	.o_module_inputs  (output_ram_data_out.o_module_inputs)
+	.i_ram_outputs    (i_ram_outputs),
+	.i_module_outputs (i_module_outputs),
+	.i_module_select  ({0}),
+	.i_slot_select    ({0}),
+	.o_ram_inputs     (o_ram_inputs),
+	.o_module_inputs  (o_module_inputs)
 );
 
 

@@ -5,9 +5,9 @@ import FHE_ALU_PKG::*;
 
 module	network_module(
 	input logic clk, //clock
-	input logic [DATA_WIDTH-1:0] i_port [0:SIZE-1], //input port bit size : 512
-  input logic [SWITCH_NUM-1:0]switch_set[0:STAGE_NUM-1],//switch set for each stage
-	output logic [DATA_WIDTH-1:0] o_port [0:SIZE-1] //output port bit size : 512
+	input logic [DATA_WIDTH-1:0] 	i_port 		[0:SIZE-1], //input port bit size : 512
+  input logic [SWITCH_NUM-1:0]	switch_set[0:STAGE_NUM-1],//switch set for each stage
+	output logic [DATA_WIDTH-1:0] o_port 		[0:SIZE-1] //output port bit size : 512
 );
 
 
@@ -56,7 +56,12 @@ stage_module stage_8(
 
 endmodule
 
-module	type_network_module(
+
+
+
+
+
+/*module	type_network_module(
 	input 	logic clk, //clock
 	input 	logic [SWITCH_NUM-1:0]	switch_set[0:STAGE_NUM-1],//switch set for each stage
 	input 	BufferRAMTEFsizeInputs 	i_port 		[0:SIZE-1], //input port bit size : 512
@@ -107,4 +112,4 @@ type_stage_module final_stage(
 	.switch_set(switch_set[BUFFER_NUM])
 );
 
-endmodule
+endmodule*/
