@@ -79,7 +79,7 @@ network_module R2M(
 	.switch_set(i_module_select)
 );
 
-network_modulee M2R(
+network_module M2R(
 	.clk(clk),
 	.i_port(input_benes_reg_M2R),
 	.o_port(output_benes_reg_M2R),

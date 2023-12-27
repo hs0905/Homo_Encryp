@@ -24,7 +24,7 @@ end
 
 endmodule
 
-module type_switch_module(
+/*module type_switch_module(
     input BufferRAMTEFsizeInputs i_port_0,
     input BufferRAMTEFsizeInputs i_port_1,
     input logic clk,
@@ -45,4 +45,4 @@ always_comb begin
     end
 end
 
-endmodule
+endmodule*/
