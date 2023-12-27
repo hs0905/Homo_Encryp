@@ -1,6 +1,6 @@
 `timescale 1 ns/ 1 ns
 `include "defines.vh"
-import USER_PKG::*;
+//import USER_PKG::*;
 import FHE_ALU_PKG::*;
 
 // data width : 512 == [E * FSIZE]

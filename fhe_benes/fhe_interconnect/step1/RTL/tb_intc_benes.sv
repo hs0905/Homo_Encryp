@@ -1,6 +1,6 @@
 `timescale 1ps / 1ps
 
-import USER_PKG::*;
+//import USER_PKG::*;
 import FHE_ALU_PKG::*;
 
 module tb_intc_benes;

@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-import USER_PKG::*;
+//import USER_PKG::*;
 import FHE_ALU_PKG::*;
 `include "defines.vh"
 

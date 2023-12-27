@@ -1,17 +1,7 @@
 `timescale 1 ns/ 1 ns
 `include "defines.vh"
-import USER_PKG::*;
+//import USER_PKG::*;
 import FHE_ALU_PKG::*;
-
-// data width : 512 == [E * FSIZE]
-// size : 32
-// STAGE_NUM : 5
-  /*typedef struct packed{
-  logic [31:0]        raddr;
-  logic [31:0]        waddr;
-  logic [E*FSIZE-1:0] wdata;
-  logic               wren;
-} BufferRAMTEFsizeInputs;*/
 
 module Interconnect_benes(
 	input  logic 										clk,
@@ -22,8 +12,6 @@ module Interconnect_benes(
 	input  logic [SWITCH_NUM-1:0]	  i_slot_select		[0:STAGE_NUM-1],
   output BufferRAMTEFsizeInputs 	o_ram_inputs		[0:SLOT_NUM_IN_BUFF-1],
 	output logic [DATA_WIDTH-1:0]   o_module_inputs	[0:MODULE_NUM_IN_BUFF-1] 	
-	//	input  logic [DATA_WIDTH-1:0]  	i_module_outputs[0:MODULE_NUM_IN_BUFF-1], 
-	//	output logic [DATA_WIDTH-1:0]	  o_ram_inputs		[0:SLOT_NUM_IN_BUFF-1], 	
 );
 
 logic [DATA_WIDTH-1:0] ram_output_reg 		[0:SLOT_NUM_IN_BUFF-1]; 		// input reg
