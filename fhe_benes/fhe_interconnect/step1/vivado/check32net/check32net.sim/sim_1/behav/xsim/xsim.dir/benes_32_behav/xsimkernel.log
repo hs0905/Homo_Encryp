@@ -1,7 +1,0 @@
-Running: xsim.dir/benes_32_behav/xsimk -simmode gui -wdb benes_32_behav.wdb -simrunnum 0 -socket 47467
-Design successfully loaded
-Design Loading Memory Usage: 44476 KB (Peak: 44476 KB)
-Design Loading CPU Usage: 60 ms
-Simulation completed
-Simulation Memory Usage: 126212 KB (Peak: 183744 KB)
-Simulation CPU Usage: 80 ms
