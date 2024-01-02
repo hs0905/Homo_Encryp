@@ -54,10 +54,6 @@ always_comb begin
 		input_benes_reg_R2M[i] = ram_output_reg		[i];
 		input_benes_reg_M2R[i] = module_output_reg[i];
 	end
-	for(int i=SLOT_NUM_IN_BUFF; i< SIZE; i++) begin
-		input_benes_reg_R2M[i] = 0 ;
-		input_benes_reg_M2R[i] = 0 ;
-	end
 end 
 // 	Output of the benes network, eliminate the dummy port 
 //	32(Dummy + Real) - 12(Dummy) = 20(Real)
