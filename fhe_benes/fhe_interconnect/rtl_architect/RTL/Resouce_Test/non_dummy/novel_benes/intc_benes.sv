@@ -50,11 +50,11 @@ BufferRAMTEFsizeInputs output_benes_reg_M2R [0:SIZE-1];
 
 // create dummy port for adjusting the size of the module(20) to benes network(32)
 always_comb begin
-	for(int i=0; i< SLOT_NUM_IN_BUFF; i=i+1) begin
+	for(int i=0; i< SLOT_NUM_IN_BUFF; i++) begin
 		input_benes_reg_R2M[i] = ram_output_reg		[i];
 		input_benes_reg_M2R[i] = module_output_reg[i];
 	end
-	for(int i=SLOT_NUM_IN_BUFF; i< SIZE; i=i+1) begin
+	for(int i=SLOT_NUM_IN_BUFF; i< SIZE; i++) begin
 		input_benes_reg_R2M[i] = 0 ;
 		input_benes_reg_M2R[i] = 0 ;
 	end

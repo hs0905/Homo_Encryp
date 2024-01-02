@@ -11,7 +11,7 @@ localparam AXI_IN_FMAP_LOAD_ADDR  = 32'h10000000;
 
 localparam COMMAND_WIDTH          = 8;
 localparam FSIZE_60               = 62;
-localparam FSIZE                  = 32; // 64
+localparam FSIZE                  = 64; // 64
 localparam SSIZE                  = 16;
 localparam STATE_WIDTH            = 32;
 localparam E                      = 8;
@@ -229,10 +229,7 @@ localparam LAZY_MODULE_NUM                = 1;
 localparam SET_UINT_MODULE_NUM            = 1;
 localparam DECOMP_MODULE_NUM              = 1;
 
-localparam MODULE_NUM                     = (1 + REV_TRANS_MODULE_NUM + PERM_MODULE_NUM*2     + AUTO_MODULE_NUM
-                                               + NTT_MODULE_NUM       + INTT_MODULE_NUM       + ADD_MODULE_NUM*2 + MULTI_MODULE_NUM*2
-                                               + LAZY_MODULE_NUM*4    + SET_UINT_MODULE_NUM*2 + DECOMP_MODULE_NUM
-                                            );
+localparam MODULE_NUM                     = 32;
 localparam STAGE_MODULE                   = $clog2(MODULE_NUM);
 localparam STAGE_MODULE_POWER             = 2**STAGE_MODULE;
 
@@ -244,7 +241,7 @@ localparam STAGE_MODULE_POWER_8           = 8**STAGE_MODULE_8;
 
 localparam STAGE_MODULE_DELAY             = STAGE_MODULE_8 - 1;
 
-localparam SLOT_NUM                       = 20; // number of buffer ram slot
+localparam SLOT_NUM                       = 32; // number of buffer ram slot
 localparam STAGE_SLOT                     = $clog2(SLOT_NUM);
 localparam STAGE_SLOT_POWER               = 2**STAGE_SLOT;
 
@@ -344,6 +341,16 @@ typedef struct{
 	BufferRAMTEFsizeInputs 	o_ram_inputs	  [0:SLOT_NUM_IN_BUFF-1];
 	logic [255:0]           o_module_inputs	[0:MODULE_NUM_IN_BUFF-1];
 } IntcBenesOutputs;
+
+typedef struct packed{
+  logic   [E*FSIZE-1:0]   ram_outputs;
+  BufferRAMTEFsizeInputs  module_outputs;
+}BufferInterconnectInputs;
+
+typedef struct packed{
+  logic   [E*FSIZE-1:0]   ram_inputs;
+  BufferRAMTEFsizeInputs  module_inputs;
+}BufferInterconnectOutputs;
 
 
 endpackage: FHE_ALU_PKG

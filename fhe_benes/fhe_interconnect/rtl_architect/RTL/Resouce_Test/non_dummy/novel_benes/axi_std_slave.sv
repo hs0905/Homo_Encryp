@@ -354,7 +354,7 @@ module axi_std_slave #(
       end
     endgenerate
 
-      localparam RAM_DEPTH = 20;
+      localparam RAM_DEPTH = 32;
 
         logic [C_S_AXI_DATA_WIDTH -1 : 0] input_ram_data_in;
         logic [C_S_AXI_DATA_WIDTH -1 : 0] input_ram_data_out;
@@ -447,10 +447,10 @@ module axi_std_slave #(
 Interconnect_benes DUT(
 	.clk(S_AXI_ACLK),
 	.rst_n(S_AXI_ARESETN),
+  .i_module_select  ({STAGE_NUM{16'h0}}),
+	.i_slot_select    ({STAGE_NUM{16'h0}}),
 	.i_ram_outputs    (i_ram_outputs),
 	.i_module_outputs (real_module_outputs),
-	.i_module_select  ({STAGE_NUM{16'h0}}),
-	.i_slot_select    ({STAGE_NUM{16'h0}}),
 	.o_ram_inputs     (real_ram_inputs),
 	.o_module_inputs  (o_module_inputs)
 );

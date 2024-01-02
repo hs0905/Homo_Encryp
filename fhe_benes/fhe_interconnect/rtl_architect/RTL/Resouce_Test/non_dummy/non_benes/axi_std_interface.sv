@@ -32,7 +32,7 @@
 		input logic 	[2 : 0] 											s00_axi_awprot,  //address write protection type(not use)
 		input logic 	[3 : 0] 											s00_axi_awqos,   //address write qos type(not use)
 		input logic 	[3 : 0] 											s00_axi_awregion,//address write region type(not use)
-		input logic [C_S00_AXI_AWUSER_WIDTH-1:0] 		s00_axi_awuser,  //address write user type(not use)
+		input logic 	[C_S00_AXI_AWUSER_WIDTH-1:0]	s00_axi_awuser,  //address write user type(not use)
 		input logic  																s00_axi_awvalid, //address write valid
 		output logic  															s00_axi_awready, //address write ready
 		//================================================
