@@ -447,8 +447,8 @@ module axi_std_slave #(
 Interconnect_benes DUT(
 	.clk(S_AXI_ACLK),
 	.rst_n(S_AXI_ARESETN),
-  .i_module_select  ({STAGE_NUM{16'h0}}),
-	.i_slot_select    ({STAGE_NUM{16'h0}}),
+  .i_module_select  (i_module_select),
+	.i_slot_select    (i_slot_select),
 	.i_ram_outputs    (i_ram_outputs),
 	.i_module_outputs (real_module_outputs),
 	.o_ram_inputs     (real_ram_inputs),
