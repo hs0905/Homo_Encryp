@@ -354,7 +354,7 @@ module axi_std_slave #(
       end
     endgenerate
 
-      localparam RAM_DEPTH = 20;
+      localparam RAM_DEPTH = 32;
 
         logic [C_S_AXI_DATA_WIDTH -1 : 0] input_ram_data_in;
         logic [C_S_AXI_DATA_WIDTH -1 : 0] input_ram_data_out;
@@ -456,7 +456,7 @@ module axi_std_slave #(
 
 
 
-BufferInterconnect_v6 DUT(
+BufferInterconnect_32 DUT(
   .clk(S_AXI_ACLK),
   .rstn(S_AXI_ARESETN),
   .module_select(module_select),

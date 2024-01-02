@@ -4,7 +4,7 @@
 import FHE_ALU_PKG::*;
 
 
-module BufferInterconnect_v6 #(
+module BufferInterconnect_32 #(
 		localparam DATA_SIZE                     = FSIZE, // Fsize == 64 , fsize는 data의 크기를 의미함.(polynomial의 coefficient의 개수)
 		localparam CYCLES                        = 2,
     localparam SLOT_NUM_IN_BUFF              = SLOT_NUM,   // Slot_num == 20 -> number of buffer ram slots
@@ -16,7 +16,7 @@ module BufferInterconnect_v6 #(
 	) (	
 	  input   logic	  clk,	
 	  input   logic	  rstn,
-    
+
     input   logic   [SLOT_NUM_IN_BUFF-1:0][$clog2(MODULE_NUM_IN_BUFF)-1:0] module_select, //module => slot
     input   logic   [MODULE_NUM_IN_BUFF-1:0][$clog2(SLOT_NUM_IN_BUFF)-1:0] slot_select, //module <= slot
 
