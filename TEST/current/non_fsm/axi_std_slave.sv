@@ -70,14 +70,14 @@ module axi_std_slave #(
   //<<SUB>>
 	input 	logic [7 : 0] 											S_AXI_ARLEN,
 	input 	logic [2 : 0] 											S_AXI_ARSIZE,
-	input 	logic [C_S_AXI_ID_WIDTH-1 : 0] 			S_AXI_ARID,
+	input 	logic [C_S_AXI_ID_WIDTH-1 : 0] 		  S_AXI_ARID,
   input 	logic [1 : 0] 											S_AXI_ARBURST,
-	input 	logic  															S_AXI_ARLOCK,
+	input 	logic  														  S_AXI_ARLOCK,
 	input 	logic [3 : 0] 											S_AXI_ARCACHE,
 	input 	logic [2 : 0] 											S_AXI_ARPROT,
-	input 	logic [3 : 0] 											S_AXI_ARQOS,
+	input 	logic [3 : 0] 										  S_AXI_ARQOS,
 	input 	logic [3 : 0] 											S_AXI_ARREGION,
-	input 	logic [C_S_AXI_ARUSER_WIDTH-1 : 0] 	S_AXI_ARUSER,
+	input 	logic [C_S_AXI_ARUSER_WIDTH-1 : 0]  S_AXI_ARUSER,
  
   /*----------------------------
     R channel(Read)
@@ -89,27 +89,26 @@ module axi_std_slave #(
   //<<SUB>>
 	output 	logic [1 : 0] 											S_AXI_RRESP,
 	output 	logic  															S_AXI_RLAST,
-	output 	logic [C_S_AXI_RUSER_WIDTH-1 : 0] 	S_AXI_RUSER,
+	output 	logic [C_S_AXI_RUSER_WIDTH-1 : 0]   S_AXI_RUSER,
   output 	logic [C_S_AXI_ID_WIDTH-1 : 0] 			S_AXI_RID
 );
 
 
   // Internal signals [Register]
 
-  // <<AW>>
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 	logic  														axi_awready;
-  // <<W>>
+
   logic [C_S_AXI_DATA_WIDTH -1 : 0] axi_wdata;
   logic  														axi_wready;
-  // <<B>>
+
 	logic [1 : 0] 										axi_bresp;
 	logic [C_S_AXI_BUSER_WIDTH-1 : 0] axi_buser;
 	logic  														axi_bvalid;
-  // <<AR>>
+
 	logic [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 	logic  														axi_arready;
-  // <<R>>
+
 	logic [C_S_AXI_DATA_WIDTH -1 : 0]	axi_rdata;
 	logic [1 : 0] 										axi_rresp;
 	logic  														axi_rlast;
@@ -117,26 +116,23 @@ module axi_std_slave #(
 	logic  														axi_rvalid;
 
   // <<SUB_Signals>>
-  //burst type wrapping enable
-  logic 			aw_wrap_en;
-  logic 			ar_wrap_en;
-  //burst type wrapping size
-  logic [31:0] aw_wrap_size ;
-  logic [31:0] ar_wrap_size ;
-  //Ready/Valid Flag
-  logic 		  aw_handshake;
-  logic 			ar_handshake;
-  //burst type
-	logic [1:0] axi_arburst;
-	logic [1:0] axi_awburst;
+  
+  logic 			  aw_wrap_en;
+  logic 			  ar_wrap_en;
+  logic [31:0]  aw_wrap_size;
+  logic [31:0]  ar_wrap_size;  
+  logic 		    aw_handshake;
+  logic 			  ar_handshake;
+	logic [1:0]   axi_arburst;
+	logic [1:0]   axi_awburst;
   // ar/aw burst transaction lenth
-  logic [7:0] axi_arlen;
-	logic [7:0] axi_awlen;
+  logic [7:0]   axi_arlen;
+	logic [7:0]   axi_awlen;
   //count Read/Write Num in a burst transaction (if len_cntr == len, last = 1)
-  logic [7:0] axi_awlen_cntr;
-  logic [7:0] axi_arlen_cntr;
+  logic [7:0]   axi_awlen_cntr;
+  logic [7:0]   axi_arlen_cntr;
 
-	localparam integer ADDR_LSB          = $clog2(C_S_AXI_DATA_WIDTH/8);
+	localparam integer ADDR_LSB = $clog2(C_S_AXI_DATA_WIDTH/8);
 
 
 always_comb begin
@@ -163,7 +159,6 @@ always_comb begin
 	ar_wrap_size 	  = (C_S_AXI_DATA_WIDTH/8 * (axi_arlen)); 
 	aw_wrap_en 		  = ((axi_awaddr & aw_wrap_size) == aw_wrap_size)? 1'b1: 1'b0;
 	ar_wrap_en 		  = ((axi_araddr & ar_wrap_size) == ar_wrap_size)? 1'b1: 1'b0;
-
 end
 
 // AW channel FSM
