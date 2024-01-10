@@ -3,27 +3,33 @@
 module packed_switch #(
     parameter integer DATA_WIDTH = 512
 )(
-  input  logic clk,
+  input logic  RST_N,
+  input  logic CLK,
   input  logic SWITCH_SET,
-  input  logic [DATA_WIDTH-1:0][0:1] I_SWITCH_PORT,
-  output logic [DATA_WIDTH-1:0][0:1] O_SWITCH_PORT
+  input  logic [0:1][DATA_WIDTH-1:0] I_PORT,
+  output logic [0:1][DATA_WIDTH-1:0] O_PORT
 );
-  logic [DATA_WIDTH-1:0][0:1] i_port;
-  logic [DATA_WIDTH-1:0][0:1] o_port;
+  logic [0:1][DATA_WIDTH-1:0] i_port;
+  logic [0:1][DATA_WIDTH-1:0] o_port;
+  logic switch_set_reg;
 
-  assign i_port 			 = I_SWITCH_PORT;
-  assign O_SWITCH_PORT = o_port;
+  assign O_PORT = o_port;
 
-  always_ff@(posedge clk) begin
-    if(!SWITCH_SET)begin
-      for(int i = 0; i < DATA_WIDTH; i = i++)begin
-        o_port[i][0] <= i_port[i][0];
-        o_port[i][1] <= i_port[i][1];
-      end
+  always_ff@(posedge CLK or negedge RST_N) begin
+    if(!RST_N)begin
+      switch_set_reg <= 0;
+      i_port         <= 0;
+      o_port         <= 0;
     end else begin
-      for(int i = 0; i < DATA_WIDTH; i = i++)begin
-        o_port[i][0] <= i_port[i][1];
-        o_port[i][1] <= i_port[i][0];
+      i_port         <= I_PORT;
+      switch_set_reg <= SWITCH_SET;
+      if(!switch_set_reg) begin
+        o_port <= i_port;
+      end else begin
+        for(int i = 0; i<DATA_WIDTH; i++) begin
+          o_port[0][i] <= i_port[1][i];
+          o_port[1][i] <= i_port[0][i];
+        end
       end
     end
   end
