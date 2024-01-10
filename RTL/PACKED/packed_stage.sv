@@ -7,12 +7,12 @@ module packed_stage #(
 )(
   input  logic                                CLK,
   input  logic                                RST_N,
-  input  logic [SWITCH_NUM-1:0]               SWITCH_SET,
+  input  logic [0:SWITCH_NUM-1]               SWITCH_SET,
   input  logic [0:PORT_NUM-1][DATA_WIDTH-1:0] I_PORT, // [511:0][0:31] I_PORT
   output logic [0:PORT_NUM-1][DATA_WIDTH-1:0] O_PORT // [511:0][0:31] O_PORT
 );
 
-  logic [SWITCH_NUM-1:0]               switch_set_reg;
+  logic [0:SWITCH_NUM-1]               switch_set_reg;
   logic [0:PORT_NUM-1][DATA_WIDTH-1:0] i_port;
   logic [0:PORT_NUM-1][DATA_WIDTH-1:0] o_port;
 
