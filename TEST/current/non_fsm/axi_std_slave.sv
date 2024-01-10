@@ -138,37 +138,33 @@ module axi_std_slave #(
 
 	localparam integer ADDR_LSB          = $clog2(C_S_AXI_DATA_WIDTH/8);
 
-	// <<AW>>
-  assign S_AXI_AWREADY	= axi_awready;
-	// <<W>>
-  assign S_AXI_WREADY		= axi_wready;
-  assign axi_wdata      = S_AXI_WDATA;
+
+always_comb begin
+  S_AXI_AWREADY	  = axi_awready;
+  S_AXI_WREADY		= axi_wready;
+  axi_wdata       = S_AXI_WDATA;
   // <<B>>
-	assign S_AXI_BRESP		= axi_bresp;
-	assign S_AXI_BUSER		= axi_buser;
-	assign S_AXI_BVALID		= axi_bvalid;
+  S_AXI_BRESP		  = axi_bresp;
+  S_AXI_BUSER		  = axi_buser;
+  S_AXI_BVALID		= axi_bvalid;
   // <<AR>>
-	assign S_AXI_ARREADY	= axi_arready;
+  S_AXI_ARREADY	  = axi_arready;
   // <<R>>
-	assign S_AXI_RDATA		= axi_rdata;
-	assign S_AXI_RRESP		= axi_rresp;
-	assign S_AXI_RLAST		= axi_rlast;
-	assign S_AXI_RUSER		= axi_ruser;
-	assign S_AXI_RVALID		= axi_rvalid;
+  S_AXI_RDATA		  = axi_rdata;
+  S_AXI_RRESP		  = axi_rresp;
+  S_AXI_RLAST		  = axi_rlast;
+	S_AXI_RUSER		  = axi_ruser;
+	S_AXI_RVALID		= axi_rvalid;
   // <<B <-> AW/AR>>
-	assign S_AXI_BID 			= S_AXI_AWID;
-	assign S_AXI_RID 			= S_AXI_ARID;
+	S_AXI_BID 			= S_AXI_AWID;
+	S_AXI_RID 			= S_AXI_ARID;
   // <<wrap>>
-	assign aw_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_awlen)); 
-	assign ar_wrap_size 	= (C_S_AXI_DATA_WIDTH/8 * (axi_arlen)); 
-	assign aw_wrap_en 		= ((axi_awaddr & aw_wrap_size) == aw_wrap_size)? 1'b1: 1'b0;
-	assign ar_wrap_en 		= ((axi_araddr & ar_wrap_size) == ar_wrap_size)? 1'b1: 1'b0;
+	aw_wrap_size 	  = (C_S_AXI_DATA_WIDTH/8 * (axi_awlen)); 
+	ar_wrap_size 	  = (C_S_AXI_DATA_WIDTH/8 * (axi_arlen)); 
+	aw_wrap_en 		  = ((axi_awaddr & aw_wrap_size) == aw_wrap_size)? 1'b1: 1'b0;
+	ar_wrap_en 		  = ((axi_araddr & ar_wrap_size) == ar_wrap_size)? 1'b1: 1'b0;
 
-
-
-
-
-
+end
 
 // AW channel FSM
     always_ff@(posedge S_AXI_ACLK)
@@ -389,7 +385,7 @@ parameter integer READ_MEM_DEPTH = SLOT_NUM_IN_BUFF;
   end
 end
 
-always_comb begin // 꽉 차면 write_data_storage를 write_real_transfer_data에 복사, 안찼을때는 항상 0
+always_ff@(posedge S_AXI_ACLK) begin 
   if(storage_full_flag) begin
     write_real_transfer_data = write_data_storage;
   end else begin
