@@ -1,12 +1,11 @@
-	`timescale 1 ns/ 1 ns
-	`include "defines.vh"
-	//import USER_PKG::*;
-	import FHE_ALU_PKG::*;
+`timescale 1 ns / 1 ps
+
+import util_pack::*;
 
 	module axi_std_interface #
 	(
 		// Parameters of Axi Slave Bus Interface S00_AXI
-		parameter integer C_S00_AXI_ID_WIDTH			= 1,
+		parameter integer C_S00_AXI_ID_WIDTH			= 4,
 		parameter integer C_S00_AXI_DATA_WIDTH		= 512,
 		parameter integer C_S00_AXI_ADDR_WIDTH		= 10,
 		parameter integer C_S00_AXI_AWUSER_WIDTH	= 0,
