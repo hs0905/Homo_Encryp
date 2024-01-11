@@ -9,8 +9,8 @@ module packed_intc_benes#(
   parameter integer LAYER_NUM   = $clog2(PORT_NUM),
   parameter integer STAGE_NUM   = 2*($clog2(PORT_NUM)) - 1,
   parameter integer BUFFER_NUM  = STAGE_NUM - 1,
-  parameter integer SLOT_NUM = 32,
-  parameter integer MOD_NUM  = 32
+  parameter integer SLOT_NUM    = 32,
+  parameter integer MOD_NUM     = 32
 )(
  input  logic CLK,
  input  logic RST_N,
