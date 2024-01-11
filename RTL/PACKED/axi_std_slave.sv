@@ -475,7 +475,7 @@ always_ff@(posedge S_AXI_ACLK) begin
   logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]o_ram_in_buff_wire;
   logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]o_module_in_buff_wire;
 
-assign o_ram_in_buff = o_ram_in_buff_wire;
+assign o_ram_in_buff    = o_ram_in_buff_wire;
 assign o_module_in_buff = o_module_in_buff_wire;
 
 always_ff@(posedge S_AXI_ACLK) begin
@@ -484,7 +484,7 @@ always_ff@(posedge S_AXI_ACLK) begin
   end else begin
     for(int i = 0; i< MEM_DEPTH; i++) begin
       for(int j = 0; j<C_S_AXI_DATA_WIDTH/2; j++)begin
-        read_transfer_data[i][j] = o_ram_in_buff[i][j];
+        read_transfer_data[i][j]                        = o_ram_in_buff[i][j];
         read_transfer_data[i][j + C_S_AXI_DATA_WIDTH/2] = o_module_in_buff[i][j];
       end
     end
