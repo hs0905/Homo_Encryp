@@ -460,7 +460,7 @@ always_ff@(posedge S_AXI_ACLK) begin
 // read data from memory
   logic [0:MEM_DEPTH-1][C_S_AXI_DATA_WIDTH-1:0] r_buff;
   logic [0:MEM_DEPTH-1][C_S_AXI_DATA_WIDTH-1:0] read_transfer_data;
-  logic [$clog2(MEM_DEPTH)-1:0]                 r_buff_cnt;
+  logic                [$clog2(MEM_DEPTH)-1:0]  r_buff_cnt;
   logic storage_empty_flag;
 
   logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]o_ram_in_buff;
@@ -519,14 +519,13 @@ end
 
 packed_intc_benes #(.DATA_WIDTH(DATA_WIDTH), .PORT_NUM(PORT_NUM), .SWITCH_NUM(SWITCH_NUM),.LAYER_NUM(LAYER_NUM)
 )packed_intc_benes_inst (
-  .CLK(S_AXI_ACLK),
-  .RST_N(S_AXI_ARESETN),
-  .I_RAM_OUTPUTS(i_ram_out_buff_wire),
+  .CLK             (S_AXI_ACLK),
+  .RST_N           (S_AXI_ARESETN),
+  .I_RAM_OUTPUTS   (i_ram_out_buff_wire),
   .I_MODULE_OUTPUTS(i_module_out_buff_wire),
-  .I_MODULE_SELECT(i_module_selection_wire),
-  .I_SLOT_SELECT(i_slot_selection_wire),
-  .O_RAM_INPUTS(o_ram_in_buff_wire),
-  .O_MODULE_INPUTS(o_module_in_buff_wire)
+  .I_MODULE_SELECT (i_module_selection_wire),
+  .I_SLOT_SELECT   (i_slot_selection_wire),
+  .O_RAM_INPUTS    (o_ram_in_buff_wire),
+  .O_MODULE_INPUTS (o_module_in_buff_wire)
 );
-
 endmodule

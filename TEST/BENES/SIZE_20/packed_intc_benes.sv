@@ -32,19 +32,30 @@ module packed_intc_benes#(
   logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0] o_ram_inputs_reg;
   logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0] o_module_inputs_reg;
 
+always_comb begin : dummy_port_process
+  for(int i = NON_DUMMY_NUM; i< MOD_NUM; i++) begin
+    i_ram_outputs_reg   [i] = 0;
+    i_module_outputs_reg[i] = 0;
+  end
+end
+
+
+
 always_ff@(posedge CLK or negedge RST_N) begin
   if(!RST_N) begin
-    i_ram_outputs_reg     <= 0;
-    i_module_outputs_reg  <= 0;
+    for(int i = 0; i< NON_DUMMY_NUM; i++) begin
+    i_ram_outputs_reg   [i]     <= 0;
+    i_module_outputs_reg[i]  <= 0;
+    end
   end else begin
     for(int i = 0; i< NON_DUMMY_NUM; i++) begin
       i_ram_outputs_reg   [i] <= I_RAM_OUTPUTS[i];
       i_module_outputs_reg[i] <= I_MODULE_OUTPUTS[i];
     end
-    for(int i = NON_DUMMY_NUM; i< MOD_NUM; i++) begin
+    /*for(int i = NON_DUMMY_NUM; i< MOD_NUM; i++) begin
       i_ram_outputs_reg   [i] <= 0;
       i_module_outputs_reg[i] <= 0;
-    end
+    end*/
   end
 end
 
@@ -60,11 +71,10 @@ end
 
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] i_R2M;
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] i_M2R; 
-
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] o_R2M; 	
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] o_M2R; 
 
-always_ff@(posedge CLK or negedge RST_N) begin
+/*always_ff@(posedge CLK or negedge RST_N) begin
   if(!RST_N) begin
     i_R2M <= 0;
     i_M2R <= 0;
@@ -72,20 +82,21 @@ always_ff@(posedge CLK or negedge RST_N) begin
     i_R2M <= i_ram_outputs_reg;
     i_M2R <= i_module_outputs_reg;
   end
-end
+end*/
 
+assign i_R2M = i_ram_outputs_reg;
+assign i_M2R = i_module_outputs_reg;
 always_ff@(posedge CLK or negedge RST_N) begin
   if(!RST_N) begin
     o_ram_inputs_reg    <= 0;
     o_module_inputs_reg <= 0;
   end else begin
     for(int i = 0; i< NON_DUMMY_NUM; i++)begin
-    o_ram_inputs_reg[i]    <= o_R2M[i];
+    o_ram_inputs_reg   [i] <= o_R2M[i];
     o_module_inputs_reg[i] <= o_M2R[i];
     end
   end
 end
-
 assign O_RAM_INPUTS    = o_ram_inputs_reg;
 assign O_MODULE_INPUTS = o_module_inputs_reg;
 
@@ -108,5 +119,4 @@ packed_network #(.DATA_WIDTH(DATA_WIDTH), .PORT_NUM(PORT_NUM), .SWITCH_NUM(SWITC
   .I_PORT(i_M2R),
   .O_PORT(o_M2R)
 );
-
 endmodule
