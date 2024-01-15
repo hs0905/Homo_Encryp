@@ -14,15 +14,15 @@ module axi_std_slave#(
 	parameter integer C_S_AXI_RUSER_WIDTH		= 0,
 	parameter integer C_S_AXI_BUSER_WIDTH		= 0,
   //user logic parameter
-  parameter integer DATA_WIDTH  = 256,
-  parameter integer PORT_NUM    = 32,
-  parameter integer SWITCH_NUM  = PORT_NUM/2,
-  parameter integer LAYER_NUM   = $clog2(PORT_NUM),
-  parameter integer STAGE_NUM   = 2*($clog2(PORT_NUM)) - 1,
-  parameter integer BUFFER_NUM  = STAGE_NUM - 1,
-  parameter integer SLOT_NUM    = 20,
-  parameter integer MOD_NUM     = 20,
-  parameter integer MEM_DEPTH   = 20
+  parameter integer DATA_WIDTH            = 256,
+  parameter integer PORT_NUM              = 32,
+  parameter integer SWITCH_NUM            = PORT_NUM/2,
+  parameter integer LAYER_NUM             = $clog2(PORT_NUM),
+  parameter integer STAGE_NUM             = 2*($clog2(PORT_NUM)) - 1,
+  parameter integer BUFFER_NUM            = STAGE_NUM - 1,
+  parameter integer SLOT_NUM              = 20,
+  parameter integer MOD_NUM               = 20,
+  parameter integer MEM_DEPTH             = 20
 )(
   input logic S_AXI_ACLK,
   input logic S_AXI_ARESETN,
@@ -358,7 +358,7 @@ logic read_run;
 // make simple memory
 // write data to memory
 
-  logic [0:MEM_DEPTH][C_S_AXI_DATA_WIDTH-1:0] w_buff;
+  logic [0:MEM_DEPTH]  [C_S_AXI_DATA_WIDTH-1:0] w_buff;
   logic [0:MEM_DEPTH-1][C_S_AXI_DATA_WIDTH-1:0] write_transfer_data;
   logic [$clog2(MEM_DEPTH)-1:0]                 w_buff_cnt;
   logic storage_full_flag;
@@ -370,41 +370,41 @@ logic read_run;
   logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]i_module_out_buff_wire;
 
 
-assign i_ram_out_buff_wire = i_ram_out_buff;
+assign i_ram_out_buff_wire    = i_ram_out_buff;
 assign i_module_out_buff_wire = i_module_out_buff;
 
 always_ff@(posedge S_AXI_ACLK) begin
   if(!S_AXI_ARESETN) begin
-    w_buff_cnt <= 0;
-    storage_full_flag <= 0;
-    w_buff <= 0;
+    w_buff_cnt              <= 0;
+    storage_full_flag       <= 0;
+    w_buff                  <= 0;
   end else begin
     if(write_run) begin
       if(w_buff_cnt == MEM_DEPTH - 1) begin
-      w_buff[w_buff_cnt] <= axi_wdata;
-      w_buff_cnt <= 0;
-      storage_full_flag <= 1;
+      w_buff[w_buff_cnt]    <= axi_wdata;
+      w_buff_cnt            <= 0;
+      storage_full_flag     <= 1;
       end else begin
-        w_buff[w_buff_cnt] <= axi_wdata;
-        w_buff_cnt <= w_buff_cnt + 1;
-        storage_full_flag <= 0;
+        w_buff[w_buff_cnt]  <= axi_wdata;
+        w_buff_cnt          <= w_buff_cnt + 1;
+        storage_full_flag   <= 0;
       end
     end else if(!write_run) begin
-      w_buff <= w_buff;
-      w_buff_cnt <= w_buff_cnt;
-      storage_full_flag <= storage_full_flag;
+      w_buff                <= w_buff;
+      w_buff_cnt            <= w_buff_cnt;
+      storage_full_flag     <= storage_full_flag;
     end
   end
 end
 
 always_ff@(posedge S_AXI_ACLK) begin
   if(!S_AXI_ARESETN) begin
-    write_transfer_data <= 0;
+    write_transfer_data     <= 0;
   end else begin
     if(storage_full_flag) begin
-      write_transfer_data <= w_buff;
+      write_transfer_data   <= w_buff;
     end else begin
-      write_transfer_data <= 0;
+      write_transfer_data   <= 0;
     end
   end
 end
@@ -423,14 +423,14 @@ always_ff@(posedge S_AXI_ACLK) begin
   end
 end
 
-logic [C_S_AXI_DATA_WIDTH-1:0]       selection_signal;
-logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_module_selection_reg;
-logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_slot_selection_reg;
-logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_module_selection_wire;
-logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_slot_selection_wire;
+logic [C_S_AXI_DATA_WIDTH-1:0]        selection_signal;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1] i_module_selection_reg;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1] i_slot_selection_reg;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1] i_module_selection_wire;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1] i_slot_selection_wire;
 
 assign i_module_selection_wire = i_module_selection_reg;
-assign i_slot_selection_wire = i_slot_selection_reg;
+assign i_slot_selection_wire   = i_slot_selection_reg;
 
 
 // module/ram selection signal maker
@@ -457,12 +457,6 @@ always_ff@(posedge S_AXI_ACLK) begin
       end
     end
   end
-
-
-
-
-
-
 // read data from memory
   logic [0:MEM_DEPTH-1][C_S_AXI_DATA_WIDTH-1:0] r_buff;
   logic [0:MEM_DEPTH-1][C_S_AXI_DATA_WIDTH-1:0] read_transfer_data;
@@ -501,9 +495,9 @@ end
 
 always_ff@(posedge S_AXI_ACLK) begin
   if(!S_AXI_ARESETN) begin
-    r_buff_cnt         <= 0;
-    storage_empty_flag <= 0;
-    axi_rdata          <= 0;
+    r_buff_cnt                <= 0;
+    storage_empty_flag        <= 0;
+    axi_rdata                 <= 0;
   end else begin
     if(read_run) begin
       if(r_buff_cnt == MEM_DEPTH - 1)begin
@@ -534,12 +528,5 @@ packed_intc_benes #(.DATA_WIDTH(DATA_WIDTH), .PORT_NUM(PORT_NUM), .SWITCH_NUM(SW
   .O_RAM_INPUTS(o_ram_in_buff_wire),
   .O_MODULE_INPUTS(o_module_in_buff_wire)
 );
-
-
-
-
-
-
-
 
 endmodule

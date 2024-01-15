@@ -36,11 +36,7 @@ always_ff@(posedge CLK or negedge RST_N) begin
   if(!RST_N) begin
     i_ram_outputs_reg     <= 0;
     i_module_outputs_reg  <= 0;
-    i_module_select_reg   <= 0;
-    i_slot_select_reg     <= 0;
   end else begin
-    i_module_select_reg   <= I_MODULE_SELECT;
-    i_slot_select_reg     <= I_SLOT_SELECT;
     for(int i = 0; i< NON_DUMMY_NUM; i++) begin
       i_ram_outputs_reg   [i] <= I_RAM_OUTPUTS[i];
       i_module_outputs_reg[i] <= I_MODULE_OUTPUTS[i];
@@ -49,6 +45,16 @@ always_ff@(posedge CLK or negedge RST_N) begin
       i_ram_outputs_reg   [i] <= 0;
       i_module_outputs_reg[i] <= 0;
     end
+  end
+end
+
+always_ff@(posedge CLK or negedge RST_N) begin
+  if(!RST_N) begin
+    i_module_select_reg   <= 0;
+    i_slot_select_reg     <= 0;
+  end else begin
+    i_module_select_reg   <= I_MODULE_SELECT;
+    i_slot_select_reg     <= I_SLOT_SELECT;
   end
 end
 
