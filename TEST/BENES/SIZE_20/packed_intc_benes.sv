@@ -29,8 +29,8 @@ module packed_intc_benes#(
   logic [0:STAGE_NUM-1][0:SWITCH_NUM-1] i_module_select_reg;
   logic [0:STAGE_NUM-1][0:SWITCH_NUM-1] i_slot_select_reg;
 
-  logic [0:SLOT_NUM -1][DATA_WIDTH-1:0] o_ram_inputs_reg;
-  logic [0:MOD_NUM  -1][DATA_WIDTH-1:0] o_module_inputs_reg;
+  logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0] o_ram_inputs_reg;
+  logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0] o_module_inputs_reg;
 
 always_ff@(posedge CLK or negedge RST_N) begin
   if(!RST_N) begin
@@ -74,8 +74,8 @@ always_ff@(posedge CLK or negedge RST_N) begin
     o_module_inputs_reg <= 0;
   end else begin
     for(int i = 0; i< NON_DUMMY_NUM; i++)begin
-    o_ram_inputs_reg    <= o_R2M;
-    o_module_inputs_reg <= o_M2R;
+    o_ram_inputs_reg[i]    <= o_R2M[i];
+    o_module_inputs_reg[i] <= o_M2R[i];
     end
   end
 end
