@@ -12,16 +12,16 @@ module packed_intc_benes#(
   parameter integer SLOT_NUM    = 32,
   parameter integer MOD_NUM     = 32,
   parameter integer DUMMY_NUM   = 12,
-  parameter integer NON_DUMMY_NUM = MOD_NUM - DUMMY_NUM
+  parameter integer NON_DUMMY_NUM = 20 // MOD_NUM - DUMMY_NUM
 )(
  input  logic CLK,
  input  logic RST_N,
- input  logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0]   I_RAM_OUTPUTS, 	
- input  logic [0:NON_DUMMY_NUM  -1][DATA_WIDTH-1:0]  I_MODULE_OUTPUTS, 
- input  logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]	       I_MODULE_SELECT,
- input  logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]	       I_SLOT_SELECT,
- output logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0]   O_RAM_INPUTS,
- output logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0]   O_MODULE_INPUTS
+ input  logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0]  I_RAM_OUTPUTS, 	
+ input  logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0]  I_MODULE_OUTPUTS, 
+ input  logic      [0:STAGE_NUM-1][0:SWITCH_NUM-1]	I_MODULE_SELECT,
+ input  logic      [0:STAGE_NUM-1][0:SWITCH_NUM-1]	I_SLOT_SELECT,
+ output logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0]  O_RAM_INPUTS,
+ output logic [0:NON_DUMMY_NUM -1][DATA_WIDTH-1:0]  O_MODULE_INPUTS
 );
 
   logic [0:SLOT_NUM -1][DATA_WIDTH-1:0] i_ram_outputs_reg;
@@ -52,13 +52,11 @@ always_ff@(posedge CLK or negedge RST_N) begin
   end
 end
 
-
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] i_R2M;
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] i_M2R; 
 
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] o_R2M; 	
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] o_M2R; 
-
 
 always_ff@(posedge CLK or negedge RST_N) begin
   if(!RST_N) begin
@@ -80,13 +78,10 @@ always_ff@(posedge CLK or negedge RST_N) begin
     o_module_inputs_reg <= o_M2R;
     end
   end
-
 end
 
 assign O_RAM_INPUTS    = o_ram_inputs_reg;
 assign O_MODULE_INPUTS = o_module_inputs_reg;
-
-
 
 packed_network #(.DATA_WIDTH(DATA_WIDTH), .PORT_NUM(PORT_NUM), .SWITCH_NUM(SWITCH_NUM),
                  .LAYER_NUM(LAYER_NUM), .STAGE_NUM(STAGE_NUM), .BUFFER_NUM(BUFFER_NUM)
@@ -107,9 +102,5 @@ packed_network #(.DATA_WIDTH(DATA_WIDTH), .PORT_NUM(PORT_NUM), .SWITCH_NUM(SWITC
   .I_PORT(i_M2R),
   .O_PORT(o_M2R)
 );
-
-
-
-
 
 endmodule
