@@ -5,7 +5,7 @@ import util_pack::*;
 module BufferInterconnect_v2 #(
 		parameter integer DATA_SIZE         = 512,
 		parameter integer CYCLES            = 2,
-    parameter integer MODULE_SLOTS      = 32,
+    parameter integer MODULE_SLOTS      = 20,
     parameter integer NTT_SLOTS         = 32,
     parameter integer STAGE_MODULE      = 5,
     parameter integer STAGE_MODULE_POWER= 32
@@ -27,8 +27,8 @@ module BufferInterconnect_v2 #(
   generate
 
     for(gl = 0; gl < MODULE_SLOTS ; gl++) begin: slot
-      (* max_fanout = 256 *)logic [$clog2(NTT_SLOTS)-1:0] module_slots_fifo_in[0:STAGE_MODULE];
-      (* max_fanout = 256 *)logic [$clog2(NTT_SLOTS)-1:0] ram_slots_fifo_in   [0:STAGE_MODULE];
+      logic [$clog2(NTT_SLOTS)-1:0] module_slots_fifo_in[0:STAGE_MODULE];
+      logic [$clog2(NTT_SLOTS)-1:0] ram_slots_fifo_in   [0:STAGE_MODULE];
 
       logic [$clog2(NTT_SLOTS)-1:0] module_slots_fifo_out [0:STAGE_MODULE];
       logic [$clog2(NTT_SLOTS)-1:0] ram_slots_fifo_out    [0:STAGE_MODULE];
@@ -45,11 +45,11 @@ module BufferInterconnect_v2 #(
       for(gi = 0; gi < STAGE_MODULE; gi++) begin : stage1
 
         for(gj = 0; gj < 2**(STAGE_MODULE-gi) ; gj++ ) begin :fifo
-          FifoBuffer #(.DATA_SIZE(32),        .CYCLES(1) )  fifo_raddr (.clk(clk), .rstn(1), .in(intc_set_in[gi][gj].raddr), .out(intc_set_middle[gi][gj].raddr));    
-          FifoBuffer #(.DATA_SIZE(32),        .CYCLES(1) )  fifo_waddr (.clk(clk), .rstn(1), .in(intc_set_in[gi][gj].waddr), .out(intc_set_middle[gi][gj].waddr));    
-          FifoBuffer #(.DATA_SIZE(DATA_SIZE), .CYCLES(1) )  fifo_wdata (.clk(clk), .rstn(1), .in(intc_set_in[gi][gj].wdata), .out(intc_set_middle[gi][gj].wdata));    
-          FifoBuffer #(.DATA_SIZE(1),         .CYCLES(1) )  fifo_wren  (.clk(clk), .rstn(1), .in(intc_set_in[gi][gj].wren ), .out(intc_set_middle[gi][gj].wren ));
-          FifoBuffer #(.DATA_SIZE(DATA_SIZE), .CYCLES(1) )  fifo_indi  (.clk(clk), .rstn(1), .in(intc_indiv_in[gi][gj]), .out(intc_indiv_middle[gi][gj]));
+          FifoBuffer #(.DATA_SIZE(32),        .CYCLES(1) )  fifo_raddr (.clk(clk), .rstn(1), .in(intc_set_in  [gi][gj].raddr), .out(intc_set_middle[gi][gj].raddr));    
+          FifoBuffer #(.DATA_SIZE(32),        .CYCLES(1) )  fifo_waddr (.clk(clk), .rstn(1), .in(intc_set_in  [gi][gj].waddr), .out(intc_set_middle[gi][gj].waddr));    
+          FifoBuffer #(.DATA_SIZE(DATA_SIZE), .CYCLES(1) )  fifo_wdata (.clk(clk), .rstn(1), .in(intc_set_in  [gi][gj].wdata), .out(intc_set_middle[gi][gj].wdata));    
+          FifoBuffer #(.DATA_SIZE(1),         .CYCLES(1) )  fifo_wren  (.clk(clk), .rstn(1), .in(intc_set_in  [gi][gj].wren ), .out(intc_set_middle[gi][gj].wren ));
+          FifoBuffer #(.DATA_SIZE(DATA_SIZE), .CYCLES(1) )  fifo_indi  (.clk(clk), .rstn(1), .in(intc_indiv_in[gi][gj]),       .out(intc_indiv_middle[gi][gj]));
         end
 
         for(gj = 0; gj < 2**(STAGE_MODULE-gi-1) ; gj++ ) begin :fifo1

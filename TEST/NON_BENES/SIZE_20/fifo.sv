@@ -1,7 +1,7 @@
 `timescale 1 ns / 1 ns
 
 module FifoBuffer #(
-		parameter integer DATA_SIZE     = 512,
+		parameter integer DATA_SIZE     = 256,
 		parameter integer CYCLES        = 2
 	) (	
 	  input logic	                        clk,	

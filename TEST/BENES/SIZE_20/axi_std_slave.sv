@@ -14,12 +14,12 @@ module axi_std_slave#(
 	parameter integer C_S_AXI_RUSER_WIDTH		= 0,
 	parameter integer C_S_AXI_BUSER_WIDTH		= 0,
   //user logic parameter
-	parameter integer DATA_SIZE         = 256,
-	parameter integer CYCLES            = 2,
-  parameter integer MODULE_SLOTS      = 20,
-  parameter integer NTT_SLOTS         = 20,
-  parameter integer STAGE_MODULE      = 5,
-  parameter integer STAGE_MODULE_POWER= 32,
+  parameter integer DATA_WIDTH  = 256,
+  parameter integer PORT_NUM    = 32,
+  parameter integer SWITCH_NUM  = PORT_NUM/2,
+  parameter integer LAYER_NUM   = $clog2(PORT_NUM),
+  parameter integer STAGE_NUM   = 2*($clog2(PORT_NUM)) - 1,
+  parameter integer BUFFER_NUM  = STAGE_NUM - 1,
   parameter integer SLOT_NUM    = 20,
   parameter integer MOD_NUM     = 20,
   parameter integer MEM_DEPTH   = 20
@@ -358,36 +358,20 @@ logic read_run;
 // make simple memory
 // write data to memory
 
-  logic [0:MEM_DEPTH][C_S_AXI_DATA_WIDTH-1:0]   w_buff;
+  logic [0:MEM_DEPTH][C_S_AXI_DATA_WIDTH-1:0] w_buff;
   logic [0:MEM_DEPTH-1][C_S_AXI_DATA_WIDTH-1:0] write_transfer_data;
   logic [$clog2(MEM_DEPTH)-1:0]                 w_buff_cnt;
   logic storage_full_flag;
 
   logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]i_ram_out_buff;
-  logic [(C_S_AXI_DATA_WIDTH/2)-1:0]typeswitch_ram_out[0:MODULE_SLOTS-1];
-  logic [(C_S_AXI_DATA_WIDTH/2)-1:0]i_ram_out_buff_wire[0:MODULE_SLOTS-1];
+  logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]i_module_out_buff;
+
+  logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]i_ram_out_buff_wire;
+  logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]i_module_out_buff_wire;
 
 
-always_ff@(posedge S_AXI_ACLK) begin
-  if(!S_AXI_ARESETN) begin
-    for(int i = 0; i < MODULE_SLOTS; i++) begin
-      typeswitch_ram_out[i] <= 0;
-    end
-  end else begin
-    for(int i = 0; i< MODULE_SLOTS; i++) begin
-      typeswitch_ram_out[i] <= i_ram_out_buff[i];
-    end
-  end
-end
-
-
-
-
-
-BufferRAMTEFsizeInputs  i_module_outputs_reg  [0:MODULE_SLOTS-1];
-BufferRAMTEFsizeInputs  i_module_outputs_wire [0:MODULE_SLOTS-1];
-assign i_module_outputs_wire = i_module_outputs_reg;
-assign i_ram_out_buff_wire = typeswitch_ram_out;
+assign i_ram_out_buff_wire = i_ram_out_buff;
+assign i_module_out_buff_wire = i_module_out_buff;
 
 always_ff@(posedge S_AXI_ACLK) begin
   if(!S_AXI_ARESETN) begin
@@ -428,30 +412,22 @@ end
 always_ff@(posedge S_AXI_ACLK) begin
   if(!S_AXI_ARESETN) begin
     i_ram_out_buff    <= 0;
-    for(int i=0; i<MODULE_SLOTS; i++)begin
-      i_module_outputs_reg[i].wdata <= 0;
-      i_module_outputs_reg[i].wren  <= 0;
-      i_module_outputs_reg[i].waddr <= 0;
-      i_module_outputs_reg[i].raddr <= 0;
-    end
+    i_module_out_buff <= 0;
   end else begin
     for(int i = 0; i< MEM_DEPTH; i++) begin
       for(int j = 0; j<C_S_AXI_DATA_WIDTH/2; j++)begin
         i_ram_out_buff[i][j]    <= write_transfer_data[i][j];
-        i_module_outputs_reg[i].wdata[j] <= write_transfer_data[i][j + C_S_AXI_DATA_WIDTH/2];
-        i_module_outputs_reg[i].wren     <= 1;
-        i_module_outputs_reg[i].waddr    <= i;
-        i_module_outputs_reg[i].raddr    <= i;
+        i_module_out_buff[i][j] <= write_transfer_data[i][j + C_S_AXI_DATA_WIDTH/2];
       end
     end
   end
 end
 
 logic [C_S_AXI_DATA_WIDTH-1:0]       selection_signal;
-logic [MODULE_SLOTS-1:0][$clog2(NTT_SLOTS)-1:0]i_module_selection_reg;
-logic [MODULE_SLOTS-1:0][$clog2(NTT_SLOTS)-1:0]i_slot_selection_reg;
-logic [MODULE_SLOTS-1:0][$clog2(NTT_SLOTS)-1:0]i_module_selection_wire;
-logic [MODULE_SLOTS-1:0][$clog2(NTT_SLOTS)-1:0]i_slot_selection_wire;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_module_selection_reg;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_slot_selection_reg;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_module_selection_wire;
+logic [0:STAGE_NUM-1][0:SWITCH_NUM-1]i_slot_selection_wire;
 
 assign i_module_selection_wire = i_module_selection_reg;
 assign i_slot_selection_wire = i_slot_selection_reg;
@@ -475,9 +451,9 @@ always_ff@(posedge S_AXI_ACLK) begin
     i_module_selection_reg <= 0;
     i_slot_selection_reg   <= 0;
   end else begin
-    for(int i = 0; i < MODULE_SLOTS; i++) begin
-        i_slot_selection_reg  [i] <=  selection_signal[(C_S_AXI_DATA_WIDTH -1) -(i * $clog2(NTT_SLOTS)) -:$clog2(NTT_SLOTS) ];
-        i_module_selection_reg[i] <=  selection_signal[((C_S_AXI_DATA_WIDTH/2)-1) -(i *$clog2(NTT_SLOTS)) -:$clog2(NTT_SLOTS) ];
+    for(int i = 0; i < STAGE_NUM; i++) begin
+        i_slot_selection_reg  [i] <=  selection_signal[(C_S_AXI_DATA_WIDTH -1) -(i * SWITCH_NUM) -:SWITCH_NUM ];
+        i_module_selection_reg[i] <=  selection_signal[((C_S_AXI_DATA_WIDTH/2)-1) -(i * SWITCH_NUM) -:SWITCH_NUM ];
       end
     end
   end
@@ -493,35 +469,14 @@ always_ff@(posedge S_AXI_ACLK) begin
   logic [$clog2(MEM_DEPTH)-1:0]                 r_buff_cnt;
   logic storage_empty_flag;
 
+  logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]o_ram_in_buff;
   logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]o_module_in_buff;
-    logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]type_module_in_buff;
-  logic [(C_S_AXI_DATA_WIDTH/2)-1:0]o_module_in_buff_wire[0:MODULE_SLOTS-1];
 
+  logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]o_ram_in_buff_wire;
+  logic [0:MEM_DEPTH-1][(C_S_AXI_DATA_WIDTH/2)-1:0]o_module_in_buff_wire;
 
-  BufferRAMTEFsizeInputs  o_ram_inputs_reg      [0:MODULE_SLOTS-1];
-  BufferRAMTEFsizeInputs  o_ram_inputs_wire     [0:MODULE_SLOTS-1];
-
-assign o_ram_inputs_reg      = o_ram_inputs_wire;
-assign o_module_in_buff      = type_module_in_buff;
-
-always_ff@(posedge S_AXI_ACLK)begin
-  if(!S_AXI_ARESETN) begin
-    for(int i = 0; i < MODULE_SLOTS; i++) begin
-      type_module_in_buff[i] <= 0;
-    end
-  end else begin
-    for(int j = 0; j <C_S_AXI_DATA_WIDTH/2;j++)begin
-      for(int i = 0; i< MODULE_SLOTS; i++) begin
-        type_module_in_buff[i][j] <= o_module_in_buff_wire[i][j];
-    end
-  end
-  end
-end
-
-
-
-
-
+assign o_ram_in_buff    = o_ram_in_buff_wire;
+assign o_module_in_buff = o_module_in_buff_wire;
 
 always_ff@(posedge S_AXI_ACLK) begin
   if(!S_AXI_ARESETN) begin
@@ -529,7 +484,7 @@ always_ff@(posedge S_AXI_ACLK) begin
   end else begin
     for(int i = 0; i< MEM_DEPTH; i++) begin
       for(int j = 0; j<C_S_AXI_DATA_WIDTH/2; j++)begin
-        read_transfer_data[i][j]                        = o_ram_inputs_reg[i].wdata[j];
+        read_transfer_data[i][j]                        = o_ram_in_buff[i][j];
         read_transfer_data[i][j + C_S_AXI_DATA_WIDTH/2] = o_module_in_buff[i][j];
       end
     end
@@ -568,17 +523,23 @@ always_ff@(posedge S_AXI_ACLK) begin
   end
 end
 
-BufferInterconnect_v2 #(.DATA_SIZE(DATA_SIZE), .CYCLES(CYCLES), .MODULE_SLOTS(MODULE_SLOTS), 
-                        .NTT_SLOTS(NTT_SLOTS)
-  )buffer_interconnect_v2_inst(
-  .clk(S_AXI_ACLK),
-  .rstn(S_AXI_ARESETN),
-  .ram_outputs    (i_ram_out_buff_wire),
-  .module_outputs (i_module_outputs_wire),
-  .ram_inputs     (o_ram_inputs_wire),
-  .module_inputs  (o_module_in_buff_wire),
-  .module_slots   (i_module_selection_wire),
-  .ram_slots      (i_slot_selection_wire)
+packed_intc_benes #(.DATA_WIDTH(DATA_WIDTH), .PORT_NUM(PORT_NUM), .SWITCH_NUM(SWITCH_NUM),.LAYER_NUM(LAYER_NUM)
+)packed_intc_benes_inst (
+  .CLK(S_AXI_ACLK),
+  .RST_N(S_AXI_ARESETN),
+  .I_RAM_OUTPUTS(i_ram_out_buff_wire),
+  .I_MODULE_OUTPUTS(i_module_out_buff_wire),
+  .I_MODULE_SELECT(i_module_selection_wire),
+  .I_SLOT_SELECT(i_slot_selection_wire),
+  .O_RAM_INPUTS(o_ram_in_buff_wire),
+  .O_MODULE_INPUTS(o_module_in_buff_wire)
 );
+
+
+
+
+
+
+
 
 endmodule
