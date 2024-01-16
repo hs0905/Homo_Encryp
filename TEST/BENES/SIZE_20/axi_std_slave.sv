@@ -19,9 +19,6 @@ module axi_std_slave#(
   parameter integer SWITCH_NUM            = PORT_NUM/2,
   parameter integer LAYER_NUM             = $clog2(PORT_NUM),
   parameter integer STAGE_NUM             = 2*($clog2(PORT_NUM)) - 1,
-  parameter integer BUFFER_NUM            = STAGE_NUM - 1,
-  parameter integer SLOT_NUM              = 20,
-  parameter integer MOD_NUM               = 20,
   parameter integer MEM_DEPTH             = 20
 )(
   input logic S_AXI_ACLK,
@@ -142,10 +139,10 @@ module axi_std_slave#(
 	localparam integer ADDR_LSB = $clog2(C_S_AXI_DATA_WIDTH/8);
 
 	// <<AW>>
-  assign S_AXI_AWREADY	= axi_awready;
+  assign S_AXI_AWREADY	      = axi_awready;
 	// <<W>>
-  assign S_AXI_WREADY		= axi_wready;
-  assign axi_wdata      = S_AXI_WDATA;
+  assign S_AXI_WREADY		      = axi_wready;
+  assign axi_wdata            = S_AXI_WDATA;
   // <<B>>
 	assign S_AXI_BRESP		= axi_bresp;
 	assign S_AXI_BUSER		= axi_buser;
