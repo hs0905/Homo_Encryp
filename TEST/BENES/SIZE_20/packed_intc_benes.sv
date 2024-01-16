@@ -74,15 +74,6 @@ logic [0:PORT_NUM-1][DATA_WIDTH-1:0] i_M2R;
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] o_R2M; 	
 logic [0:PORT_NUM-1][DATA_WIDTH-1:0] o_M2R; 
 
-/*always_ff@(posedge CLK or negedge RST_N) begin
-  if(!RST_N) begin
-    i_R2M <= 0;
-    i_M2R <= 0;
-  end else begin
-    i_R2M <= i_ram_outputs_reg;
-    i_M2R <= i_module_outputs_reg;
-  end
-end*/
 
 assign i_R2M = i_ram_outputs_reg;
 assign i_M2R = i_module_outputs_reg;
